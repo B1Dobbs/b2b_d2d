@@ -26,6 +26,7 @@ class Company(models.Model):
     def __str__(self):
         return self.name
 
+
 class User(models.Model):
     name = models.CharField(max_length = 250)
     email = models.EmailField(max_length = 250)
@@ -34,6 +35,7 @@ class User(models.Model):
 
     def __str__(self):
         return self.name
+
 
 class Query(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
