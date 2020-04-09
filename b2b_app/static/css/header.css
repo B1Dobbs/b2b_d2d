@@ -1,0 +1,22 @@
+/* Our navy color */
+/* #1B255A */
+
+/* our orange color #FF5722 */
+
+.title_bar {
+    overflow: hidden;
+    background-color: #1B255A;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+
+.title_bar h1{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 20px;
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+}
