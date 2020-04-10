@@ -22,18 +22,17 @@
       <div class="form-group">
         <label for="{{ field.id_for_label }}">{{ field.label }}</label>
         {% render_field field class="form-control" placeholder=field.label %}
-        <!-- <div class="{% if field.errors %} invalid{% endif %}">
+        <div class="{% if field.errors %} invalid{% endif %}">
           {% for error in field.errors %}
             <p class="help-block">{{ error }}</p>
           {% endfor %}
-        </div> -->
+        </div>
       </div>
     {% endfor %}
   </div>
 
   <div class="modal-footer">
-    <input type="submit" value="Submit" class="btn btn-primary">
-    <button type="button" class="btn btn-primary" data-dismiss="modal">Create</button>
+    <button type="button" class="submit-btn btn btn-primary">Update</button>
   </div>
 
 </form>
