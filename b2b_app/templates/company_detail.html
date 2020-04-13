@@ -9,6 +9,14 @@
         <li>{{ company.searchSites }}</li>
         <li>{{ company.bookFormats }}</li>
     </ul>
+    <div class="col"> 
+        <div class="row">
+            <div class="col-12 mb-3">
+            <button class="update-company btn btn-primary" type="button" name="button" data-id="{% url 'update_company' company.pk %}">
+                <span class="fa fa-plus mr-2"></span>Update</button>
+            </div>
+        </div>
+    </div>
     {% if users %}
         <table class="table">
         <thead>
@@ -54,6 +62,11 @@
 {% block extrascripts %}
   <script type="text/javascript">
     $(function () {
+
+      // Update company button
+      $(".update-company").each(function () {
+        $(this).modalForm({formURL: $(this).data('id')});
+      })
 
       // Create user button
       $(".create-user").modalForm({formURL: "{% url 'create_user' company.pk %}", modalID: "#create-modal"});

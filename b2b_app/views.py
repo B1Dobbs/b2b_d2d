@@ -34,6 +34,16 @@ class CompanyCreateView(BSModalCreateView):
     template_name = 'company/create_company.html'
     success_message = 'Success: Company was created.'
     success_url = reverse_lazy('company_list')
+
+class CompanyUpdateView(BSModalUpdateView):
+    model = Company
+    form_class = CompanyForm
+    template_name = 'company/update_company.html'
+    success_message = 'Success: Company was created.'
+
+    def post(self, request, **kwargs):
+        self.success_url = reverse('company_detail', kwargs={'pk':self.kwargs['pk']})
+        return super(CompanyUpdateView, self).post(request, **kwargs)
         
 class CompanyDetailView(DetailView):
     model = Company
