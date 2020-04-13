@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'users.apps.UsersConfig',
     'allauth', 
     'allauth.account', 
 ]
@@ -104,7 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = 'users.CustomUser'
+AUTH_USER_MODEL = 'b2b_app.CustomUser'
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
