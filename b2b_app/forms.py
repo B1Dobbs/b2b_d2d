@@ -9,13 +9,10 @@ from django.http import HttpResponseRedirect
 
 
 class CompanyForm(BSModalForm):
-    name = forms.CharField(
-        error_messages={'invalid': 'Enter a company name.'}
-    )
 
     class Meta:
         model = Company
-        exclude = ['timestamp']
+        fields = ['name', 'contactPerson', 'contactNumber', 'searchSites', 'bookFormats']
 
 
 class UserForm(BSModalForm):

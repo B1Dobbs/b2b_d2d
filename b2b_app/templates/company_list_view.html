@@ -1,7 +1,20 @@
+{% extends 'form_background.html' %}
+
+{% block content %}
+    {% include "_modal.html" %}
 <h1>Companies</h1>
+
+<div class="col"> 
+    <div class="row">
+        <div class="col-12 mb-3">
+        <button class="create-company btn btn-primary" type="button" name="button">
+            <span class="fa fa-plus mr-2"></span>Add User</button>
+        </div>
+    </div>
+</div>
 <ul>
 {% for company in company_list %}
-    <li><a href="/company-list/{{ company.id }}/">{{ company.name }}</a> {{ company.contactNumber }}</li>
+    <li><a href="{% url 'company_detail' company.pk %}">{{ company.name }}</a> {{ company.contactNumber }}</li>
 {% empty %}
     <li>No companies yet.</li>
 {% endfor %}
@@ -24,3 +37,15 @@
         {% endif %}
     </span>
 </div>
+{% endblock content %}
+
+{% block extrascripts %}
+  <script type="text/javascript">
+    $(function () {
+
+      // Create user button
+      $(".create-company").modalForm({formURL: "{% url 'create_company' %}", modalID: "#create-modal"});
+
+    });
+  </script>
+{% endblock extrascripts %}

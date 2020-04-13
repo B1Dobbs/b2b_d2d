@@ -28,6 +28,12 @@ class CompanyListView(ListView):
             'company_list': company_list,
         }
         return context
+
+class CompanyCreateView(BSModalCreateView):
+    form_class = CompanyForm
+    template_name = 'company/create_company.html'
+    success_message = 'Success: Company was created.'
+    success_url = reverse_lazy('company_list')
         
 class CompanyDetailView(DetailView):
     model = Company
