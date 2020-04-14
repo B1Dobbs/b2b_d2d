@@ -1,0 +1,86 @@
+{% extends 'form_background.html' %}
+
+{% block content %}
+    {% include "_modal.html" %}
+    <h1>{{ company.name }}</h1>
+    <ul>
+        <li>{{ company.contactPerson }}</li>
+        <li>{{ company.contactNumber }}</li>
+        <li>{{ company.searchSites }}</li>
+        <li>{{ company.bookFormats }}</li>
+    </ul>
+    <div class="col"> 
+        <div class="row">
+            <div class="col-12 mb-3">
+            <button class="update-company btn btn-primary" type="button" name="button" data-id="{% url 'update_company' company.pk %}">
+                <span class="fa fa-plus mr-2"></span>Update</button>
+            </div>
+        </div>
+    </div>
+    {% if users %}
+        <table class="table">
+        <thead>
+            <tr>
+            <th class="text-center" scope="col">Name</th>
+            <th class="text-center" scope="col">Email</th>
+            <th class="text-center" scope="col">Edit</th>
+            <th class="text-center" scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <th class="text-center">{{ user.name }}</th>
+                <th class="text-center">{{ user.email }}</th>
+                <td class="text-center">
+                    <button type="button" class="update-user btn btn-sm btn-primary" data-id="{% url 'update_user' company.pk user.pk %}">
+                        <span class="fa fa-eye">Edit</span>
+                    </button>
+                </td>
+                <td class="text-center">
+                    <button type="button" class="delete-user btn btn-sm btn-primary" data-id="{% url 'delete_user' company.pk user.pk %}">
+                        <span class="fa fa-eye">Delete</span>
+                    </button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+    {% else %}
+        <p class="no-books text-primary">No users added yet.</p>
+    {% endif %}
+    <div class="col"> 
+        <div class="row">
+            <div class="col-12 mb-3">
+            <button class="create-user btn btn-primary" type="button" name="button">
+                <span class="fa fa-plus mr-2"></span>Add User</button>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block extrascripts %}
+  <script type="text/javascript">
+    $(function () {
+
+      // Update company button
+      $(".update-company").each(function () {
+        $(this).modalForm({formURL: $(this).data('id')});
+      })
+
+      // Create user button
+      $(".create-user").modalForm({formURL: "{% url 'create_user' company.pk %}", modalID: "#create-modal"});
+
+      // Delete user buttons
+      $(".delete-user").each(function () {
+        $(this).modalForm({formURL: $(this).data('id')});
+      })
+
+      // Update user buttons
+      $(".update-user").each(function () {
+        $(this).modalForm({formURL: $(this).data('id')});
+      })
+
+    });
+  </script>
+{% endblock extrascripts %}
