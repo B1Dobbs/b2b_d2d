@@ -31,20 +31,11 @@ class Company(models.Model):
 class CustomUser(AbstractUser):
     # add additional fields in here
     company = models.ForeignKey(Company, on_delete=models.CASCADE, null = True)
+    active = models.BooleanField(default = True)
     def __str__(self):
         return self.email
 
-'''
-class User(models.Model):
-    name = models.CharField(max_length = 250)
-    email = models.EmailField(max_length = 250)
-    company = models.ForeignKey(Company, on_delete=models.CASCADE)
-    password = models.CharField(max_length = 150)
-    active = models.BooleanField(default = True)
 
-    def __str__(self):
-        return self.name
-'''
 
 class Query(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
