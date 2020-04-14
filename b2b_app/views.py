@@ -6,7 +6,7 @@ from django.views.generic import TemplateView
 def profile_page(request):
     template = loader.get_template('profile_page.html')
     company_name = "Helping Authors Inc."
-    company_contact = "Catherine Gates"
+    company_contact = "CatherineGates"
     company_number = "409-550-5500"
     user_list = [
         {   "name": "Catherine Gates",
