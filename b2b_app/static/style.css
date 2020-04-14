@@ -362,3 +362,48 @@ button:hover {
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+.search-results {
+    margin: 25px;
+}
+
+.search-tab-block {
+    display: inline-block;
+    margin: 10px;
+    width: 80%;
+    background-color: white;
+}
+
+.left {
+    text-align: left;
+}
+
+.tab-block {
+    padding: 11.5px;
+    background-color: #f7f6f6;
+}
+
+.site_tabs {
+    background-color: #1c2559;
+    padding: 15px;
+    color: white;
+}
+
+.profile-icon {
+    color: #ef320a;
+    font-size: 36px;
+    text-align: center;
+}
+
+.person {
+    width: 250px;
+}
+
+.number {
+    width: 100px;
+}
+
+.company {
+    width: 300px;
+}
+
