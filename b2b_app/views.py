@@ -1,12 +1,9 @@
-from checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo, Audiobooks
-from book_data import BookData, Format, ParseStatus
 from django.shortcuts import render
 from .models import Company, User, Query
 from django.template import loader
 from django.shortcuts import get_object_or_404
 from django.views.generic import DetailView, ListView, ListView, TemplateView
 from django import forms
-#pip install bootstrap_modal_forms
 from bootstrap_modal_forms.generic import (BSModalLoginView,
                                            BSModalCreateView,
                                            BSModalUpdateView,
@@ -17,29 +14,8 @@ from .forms import CompanyForm, UserForm, UserChangeForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.core.paginator import Paginator
-import json
 
 # Create your views here.
-class SearchCheckmateView():
-    
-    def post(self, request, **kwargs):
-
-        if 'searchJSON' in request.POST:
-            searchJSON = request.POST['searchJSON']
-            book_data = json.loads(searchJSON)
-
-        elif ('searchTitle' in request.POST) or ('searchAuthor' in request.POST) or ('searchISBN' in request.POST):
-            book_data = BookData()
-            if 'searchTitle' in request.POST:
-                book_data.title = request.POST['searchTitle']
-            if 'searchAuthor' in request.POST:
-                book_data.author = request.POST['searchAuthor']
-            if 'searchISBN' in request.POST:
-                book_data.ISBN = request.POST['searchISBN']
-
-            for site in Company.searchSites.choices:
-                data += get_book_site(site).find_book_matches(book_data)
-
 
 class CompanyListView(ListView):
     model = Company
