@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth', 
     'allauth.account', 
+    'b2b_app',
 ]
 
 MIDDLEWARE = [
@@ -144,3 +145,5 @@ ACCOUNT_UNIQUE_EMAIL = True
 LOGIN_REDIRECT_URL = 'home'
 ACCOUNT_LOGOUT_REDIRECT_URL = 'home'
 ACCOUNT_FORMS = {'signup': 'b2b_app.forms.CustomUserCreationForm'}
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'media') 
+MEDIA_URL = '/media/'
