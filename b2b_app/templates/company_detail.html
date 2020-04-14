@@ -1,59 +1,87 @@
 {% extends 'form_background.html' %}
+<!DOCTYPE html>
+{% load static %}
 
-{% block content %}
+<html> 
+    <body>
+    {% block content %}
+    <div class="title_bar">
+       <!-- <img src="d2d-logo.png">-->
+       <p style="color: white">D2D</p>
+    </div>
     {% include "_modal.html" %}
-    <h1>{{ company.name }}</h1>
-    <ul>
-        <li>{{ company.contactPerson }}</li>
-        <li>{{ company.contactNumber }}</li>
-        <li>{{ company.searchSites }}</li>
-        <li>{{ company.bookFormats }}</li>
-    </ul>
-    <div class="col"> 
-        <div class="row">
-            <div class="col-12 mb-3">
-            <button class="update-company btn btn-primary" type="button" name="button" data-id="{% url 'update_company' company.pk %}">
-                <span class="fa fa-plus mr-2"></span>Update</button>
-            </div>
+    <div class="link">
+            <button><a href="../../companyProfiles" class = "labels"> &#x2190 Profiles</a></button>
+            <div class = "details-block">
+            <span id = "title" class = "title"> <strong>{{ company.name }} </strong></span>
+            <button class="update-company" type="button" name="button" data-id="{% url 'update_company' company.pk %}">
+                <span><i class='fas fa-pen icons'></i></span></button>
+                    <i class='fas fa-trash icons'></i>
+                <div class="indent">
+                    <span class = "labels">Contact Person </span>
+                    <span class = "details" id = "contact">{{ company.contactPerson }}</span>
+                    <br>
+                    <span class = "labels">Company Number </span>
+                    <span class = "details" id = "number"> {{ company.contactNumber }}</span>
+                </div>
+                <div class = "grid-x grid-padding-x profile-custom">
+                    <div class = "large-6 medium-6 small-12 cell">
+                        <span class = "labels">Searchable Websites</span>
+                            {% for site in company.searchSites %}
+                                <p class="details bolded">{{site}}</p>
+                            {% endfor %}
+                    </div>
+                    <div class = "small-12 medium-6 large-6 cell">
+                            <span class = "labels">Book Formats </span>
+                            {% for bookFormat in company.bookFormats %}
+                                <p class="details bolded">{{bookFormat}}</p>
+                            {% endfor %}
+                    </div>
+                </div>
+
+    <div class = "grid-x grid-padding-x">
+        <div class = "large-8 medium-8 small-6 cell user-title">
+            <span class = "title">Users</span>
+            
+        </div>
+        <div class = "small-6 medium-4 large-4 cell button_padding user-title">
+            <button class="create-user btn button_css" type="button" name="button">ADD USER</button>
         </div>
     </div>
+    
     {% if users %}
-        <table class="table">
-        <thead>
-            <tr>
-            <th class="text-center" scope="col">Name</th>
-            <th class="text-center" scope="col">Email</th>
-            <th class="text-center" scope="col">Edit</th>
-            <th class="text-center" scope="col">Delete</th>
+    <div class="users_list ">
+        <table>
+            <tr class="headers">
+                <th>Name</th>
+                <th>Email</th>
+                <th>Actions</th>
             </tr>
-        </thead>
-        <tbody>
             {% for user in users %}
-            <tr>
-                <th class="text-center">{{ user.name }}</th>
-                <th class="text-center">{{ user.email }}</th>
-                <td class="text-center">
+            <tr class="details">    
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>
                     <button type="button" class="update-user btn btn-sm btn-primary" data-id="{% url 'update_user' company.pk user.pk %}">
-                        <span class="fa fa-eye">Edit</span>
+                        <i class='fas fa-pen icons'></i><span>Edit</span>
                     </button>
-                </td>
-                <td class="text-center">
+                    <br>
                     <button type="button" class="delete-user btn btn-sm btn-primary" data-id="{% url 'delete_user' company.pk user.pk %}">
-                        <span class="fa fa-eye">Delete</span>
+                        <i class='fas fa-trash icons'></i><span>Delete</span>
                     </button>
                 </td>
             </tr>
-            {% endfor %}
-        </tbody>
+        {% endfor %}
         </table>
     {% else %}
         <p class="no-books text-primary">No users added yet.</p>
     {% endif %}
+    </div>
+    </div>
     <div class="col"> 
         <div class="row">
             <div class="col-12 mb-3">
-            <button class="create-user btn btn-primary" type="button" name="button">
-                <span class="fa fa-plus mr-2"></span>Add User</button>
+            
             </div>
         </div>
     </div>
