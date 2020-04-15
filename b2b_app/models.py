@@ -34,6 +34,8 @@ class CustomUser(AbstractUser):
     active = models.BooleanField(default = True)
     def __str__(self):
         return self.email
+    def getCompany(self):
+        return self.company
 
 
 
