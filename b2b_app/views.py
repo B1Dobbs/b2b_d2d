@@ -14,8 +14,49 @@ from .forms import CompanyForm, UserForm, UserChangeForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.core.paginator import Paginator
-
+import json
+from book_data import BookData
+import sys
+from checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo
 # Create your views here.
+
+class SearchCheckmateView():
+    
+    def post(self, request, **kwargs):
+
+        if 'searchJSON' in request.POST:
+            searchJSON = request.POST['searchJSON']
+            book_data = json.loads(searchJSON)
+
+            result_data = []
+            for site in Company.searchSites.choices:
+                result_data[site] = get_book_site(site).find_book_matches(book_data)
+                
+            context = {
+                'searchResults': result_data
+            }
+            return context
+
+        elif ('searchTitle' in request.POST) or ('searchAuthor' in request.POST) or ('searchISBN' in request.POST):
+            book_data = BookData()
+            if 'searchTitle' in request.POST:
+                book_data.title = request.POST['searchTitle']
+            if 'searchAuthor' in request.POST:
+                book_data.author = request.POST['searchAuthor']
+            if 'searchISBN' in request.POST:
+                book_data.ISBN = request.POST['searchISBN']
+
+            result_data = []
+
+            for site in Company.searchSites.choices:
+                result_data[site] = get_book_site(site).find_book_matches(book_data)
+            
+            context = {
+                'searchResults': result_data
+            }
+
+        return context
+
 
 class CompanyListView(ListView):
     model = Company
@@ -112,4 +153,7 @@ def pretty_request(request):
         headers=headers,
         body=request.body,
     )
+
+
+
 

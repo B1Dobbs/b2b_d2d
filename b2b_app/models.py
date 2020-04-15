@@ -20,7 +20,7 @@ class Company(models.Model):
     name = models.CharField(max_length=250)
     contact_person = models.CharField(max_length = 250)
     contact_number = models.CharField(max_length = 12)
-    search_sites = MultiSelectField(max_length = 100, choices = SITE_CHOICES)
+    searchSites = MultiSelectField(max_length = 100, choices = SITE_CHOICES)
     book_formats = MultiSelectField(max_length = 100, choices = BOOK_FORMATS)
 
     def __str__(self):
