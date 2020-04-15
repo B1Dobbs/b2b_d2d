@@ -48,31 +48,27 @@
 
                     {% for company in company_list %}
                     <tr>
-                        <td><strong>{{company.company_name}}</strong></td>
-                        <td class="center">{{company.contact_number}}</td>
+                        <td><strong>{{company.name}}</strong></td>
+                        <td class="center">{{company.contactNumber}}</td>
                         <td class="center">Report</td>
                     </tr>
                     {% endfor %}
                 </table>
 
                 <div class="pages">
-                    {% if company_list.has_previous %}
-                        <a href="?page=1" class="prev">First</a>
-                        <a href="?page={{ company_list.previous_page_number}}" class="prev">Prev</a>
+                    {% if page_obj.has_previous %}
+                        <a href="?page=1" class="prev">&laquo; First</a>
+                        <a href="?page={{ page_obj.previous_page_number}}" class="prev">Prev</a>
                     {% endif %}
-                    
-                    {% for num in company_list.paginator.page_range %}
-                        {% if company_list.number == num %}
-                            <span class="cur_page">{{num}}</span>
-                        {% elif num > company_list.number|add:'-2' and num < company_list.number|add:'2' %}
-                            <span class="page_num">{{num}}</span>
-                        {% endif %}
-        
-                    {% endfor %}
 
-                    {% if company_list.has_next %}
-                        <a href="?page={{ company_list.next_page_number }}" class="next">Next</a>
-                        <a href="?page={{ company_list.paginator.num_pages }}" class="next">Last</a>
+
+                    <span class="current">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                    </span>
+
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}" class="next">Next</a>
+                        <a href="?page={{ page_obj.paginator.num_pages }}" class="next">Last &raquo;</a>
 
                     {% endif %}
                 </div>
@@ -84,6 +80,21 @@
         </div>
 
     {% endblock %}
+
+    {% block extrascripts %}
+    <script type="text/javascript">
+        $(function () {
+    
+          // Create user button
+          $(".create-company").modalForm({formURL: "{% url 'create_company' %}", modalID: "#create-modal"});
+    
+        });
+      </script>
+    {% endblock extrascripts %}
+    
+
+
+
     </body>
 
 </html>
