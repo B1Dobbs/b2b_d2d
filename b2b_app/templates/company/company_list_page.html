@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 {% load static %}
 
+{% include "_modal.html" %}
+
 <html> 
     <head>
         {% block title %}<title>B2B Site</title>{% endblock %}
@@ -33,7 +35,7 @@
         <div class='details'>
 
             <div class="title">Company Profiles
-                <button class="button_css" type="submit">ADD COMPANY</button>
+                <button class="create company button_css" type="submit" name="button">ADD COMPANY</button>
             </div>            
 
             {% if company_list %}

@@ -150,7 +150,7 @@ from django.core.paginator import Paginator
 
 class CompanyListView(ListView):
     model = Company
-    template_name = "company_list_page.html"
+    template_name = "company/company_list_page.html"
     company_list = Company.objects.all()
     paginate_by = 5
 
