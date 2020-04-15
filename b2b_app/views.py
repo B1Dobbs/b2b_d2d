@@ -2,6 +2,20 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from django.core.paginator import *
+from .models import Company, User, Query
+from django.shortcuts import get_object_or_404
+from django.views.generic import DetailView, ListView, ListView, TemplateView
+from django import forms
+from bootstrap_modal_forms.generic import (BSModalLoginView,
+                                           BSModalCreateView,
+                                           BSModalUpdateView,
+                                           BSModalReadView,
+                                           BSModalDeleteView)
+from django.urls import reverse_lazy
+from .forms import CompanyForm, UserForm, UserChangeForm
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+from django.core.paginator import Paginator
 
 def profile_page(request):
     template = loader.get_template('profile_page.html')
