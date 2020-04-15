@@ -74,44 +74,60 @@ def search_page(request):
     return HttpResponse(template.render(context, request))
 
 
-def company_list_page(request):
-    template = loader.get_template('company_list_page.html')
-
-    company_list = [
-        {
-            "company_name": "Helping Authors Inc.",
-            "contact_number": "911",
-        },
-        {
-            "company_name": "The Unhelpful Authors Inc.",
-            "contact_number": "119",
-        },
-        {
-            "company_name": "The Averagely Helpful Authors Inc.",
-            "contact_number": "191",
-        },
-        {
-            "company_name": "Helping Authors Inc.",
-            "contact_number": "911",
-        },
-        {
-            "company_name": "The Unhelpful Authors Inc.",
-            "contact_number": "119",
-        },
-        {
-            "company_name": "The Averagely Helpful Authors Inc.",
-            "contact_number": "191",
-        },
-    ]
-
-    # Paginate the list
+class CompanyListView(ListView):
+    model = Company
+    template_name = "company_list_page.html"
+    company_list = Company.objects.all()
     paginator = Paginator(company_list, 5)
     page = request.GET.get('page', '1')
     company_list = paginator.get_page(page)
-    context = {
-        'company_list' : company_list,
-        'page': page,
-    }
 
-    return HttpResponse(template.render(context,request))
+    def get_companies(self):
+        context = {
+            'company_list': company_list,
+            'page' : page
+        }
+        return context
+
+
+# def company_list_page(request):
+#     template = loader.get_template('company_list_page.html')
+
+#     company_list = [
+#         {
+#             "company_name": "Helping Authors Inc.",
+#             "contact_number": "911",
+#         },
+#         {
+#             "company_name": "The Unhelpful Authors Inc.",
+#             "contact_number": "119",
+#         },
+#         {
+#             "company_name": "The Averagely Helpful Authors Inc.",
+#             "contact_number": "191",
+#         },
+#         {
+#             "company_name": "Helping Authors Inc.",
+#             "contact_number": "911",
+#         },
+#         {
+#             "company_name": "The Unhelpful Authors Inc.",
+#             "contact_number": "119",
+#         },
+#         {
+#             "company_name": "The Averagely Helpful Authors Inc.",
+#             "contact_number": "191",
+#         },
+#     ]
+
+#     # Paginate the list
+#     paginator = Paginator(company_list, 5)
+#     page = request.GET.get('page', '1')
+#     company_list = paginator.get_page(page)
+#     context = {
+#         'company_list' : company_list,
+#         'page': page,
+#     }
+
+    # return HttpResponse(template.render(context,request))
 
