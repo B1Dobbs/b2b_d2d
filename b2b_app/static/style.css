@@ -383,6 +383,17 @@ button:hover {
     background-color: #f7f6f6;
 }
 
+.site_tabs:focus {
+    background-color: white;
+    padding: 15px;
+    color: #1c2559;
+}
+
+.site_tabs:hover{
+    background-color: white;
+    padding: 15px;
+    color: #1c2559;
+}
 .site_tabs {
     background-color: #1c2559;
     padding: 15px;

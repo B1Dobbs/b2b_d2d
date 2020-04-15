@@ -15,9 +15,8 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.core.paginator import Paginator
 import json
-from book_data import BookData
-import sys
-from checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo
+'''from checkmate_tool.book_data import BookData
+from checkmate_tool.checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo
 # Create your views here.
 
 class SearchCheckmateView():
@@ -56,7 +55,7 @@ class SearchCheckmateView():
             }
 
         return context
-
+'''
 
 class CompanyListView(ListView):
     model = Company
@@ -131,7 +130,7 @@ class UserDeleteView(BSModalDeleteView):
         self.success_url = reverse('company_detail', kwargs={'pk':self.kwargs['company_id']})
         return super(UserDeleteView, self).post(request, **kwargs)
 
-'''For printing post requests if needed. '''
+'''For printing post requests if needed.'''
 def pretty_request(request):
     headers = ''
     for header, value in request.META.items():
@@ -153,7 +152,6 @@ def pretty_request(request):
         headers=headers,
         body=request.body,
     )
-
 
 
 from django.http import HttpResponse
@@ -202,21 +200,32 @@ def search_page(request):
     company_name = "Helping Authors Inc."
     company_contact = "Catherine Gates"
     company_number = "409-550-5500"
-    user_list = [
-        {   "name": "Catherine Gates",
-            "email": "catherine.gates@email.com",
+    site_list = [ "Google Books", "Scribd", "Kobo"]
+    book_list = [
+        {   "title": "Adventures of Sherlock Holmes",
+            "author": "Sir Arthur Conan Doyle",
+            "format": "EBook",
+            "match": "90%",
         },
-        {   "name": "Brooke Dobbins",
-            "email": "brooke.dobbins@email.com",
+        {   "title": "Adventures of Sherlock Holmes",
+            "author": "Sir Arthur Conan Doyle",
+            "format": "EBook",
+            "match": "90%",
         },
-        {   "name": "Nathan Schrader",
-            "email": "nathan.schrader@email.com",
+        {   "title": "Adventures of Sherlock Holmes",
+            "author": "Sir Arthur Conan Doyle",
+            "format": "EBook",
+            "match": "90%",
         },
-        {   "name": "Trevor Bailey",
-            "email": "trevor.bailey@email.com",
+        {   "title": "Adventures of Sherlock Holmes",
+            "author": "Sir Arthur Conan Doyle",
+            "format": "EBook",
+            "match": "90%",
         },
-        {   "name": "Tyler Matthews",
-            "email": "tyler.matthews@email.com",
+        {   "title": "Adventures of Sherlock Holmes",
+            "author": "Sir Arthur Conan Doyle",
+            "format": "EBook",
+            "match": "90%",
         },
     ]
 
@@ -225,7 +234,8 @@ def search_page(request):
         'company_name': company_name,
         'company_contact': company_contact,
         'company_number': company_number,
-        'user_list' : user_list,
+        'site_list' : site_list,
+        'book_list' : book_list,
     }
     return HttpResponse(template.render(context, request))
 
