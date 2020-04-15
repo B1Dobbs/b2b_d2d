@@ -61,10 +61,10 @@ body {
     display: inline-block;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 11px;
-    padding: 8px;
+    padding: 12px;
     width: auto;
     font-weight: normal;
-    background-color:#ef320a ;
+    background-color:#ef320a;
     border: none;
     color: white;
     cursor: pointer;
