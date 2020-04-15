@@ -7,12 +7,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    {% block title %}<title>B2B Site</title>{% endblock %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto|Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     {% block stylesheets %}
-      <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/companies.css'%}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/pages.css'%}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/header.css'%}">
+      <link rel="shortcut icon" href="{%static 'images/d2d-icon.ico' %}" type='image/x-icon'">
+      <script src="https://kit.fontawesome.com/92ed4f50f3.js" crossorigin="anonymous"></script>
     {% endblock stylesheets %}
 
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   </head>
 
   <body>
