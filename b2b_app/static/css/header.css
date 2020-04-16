@@ -4,6 +4,8 @@
     left: 0;
     right: 0;
     top: 0;
+    box-sizing: none;
+    color: white;
 }
 
 .title_bar h1{
@@ -25,7 +27,7 @@
     margin-bottom: 5px;
 }
 
-.nav{
+.navigation{
     padding-top: 20px;
     float: right;
 }

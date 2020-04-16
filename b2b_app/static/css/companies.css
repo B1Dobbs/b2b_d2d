@@ -1,5 +1,6 @@
 body {
     background-color: #f7f6f6;
+    box-sizing: none;
 }
 
 
@@ -27,6 +28,28 @@ body {
     padding-bottom: 5px;
     padding-top: 12px;
     font-weight: bold;
+}
+
+.title_bar a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 20px;
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+    padding-bottom: 5px;
+    padding-top: 12px;
+    font-weight: bold;
+}
+
+.title_bar a:hover{
+    text-decoration: none;
+    color: rgb(218, 218, 218);
+
+}
+
+.active_page{
+    border-bottom: 2px solid #ef320a!important;
 }
 
 .navy-headers {

@@ -1,0 +1,81 @@
+{% extends 'form_background.html' %}
+
+{%load static%}
+
+{% block content %} 
+    {% include "_modal.html" %}           
+
+
+    <div class="title_bar"> 
+        <img src="{% static 'Images/d2d-logo.png' %}">
+        <span class="navigation">
+            <a href="{% url 'company_list' %}" class="active_page">Profiles</a>
+            <a href="">Reporting</a>
+            <i class="fas fa-user-circle user-circle"></i>             
+        </span>      
+    </div>
+
+
+    <div class='details'>
+
+        <div class="title">Company Profiles
+            <button class="create-company btn btn-primary" type="button" name="button">
+                <span class="fa fa-plus mr-2"></span>ADD COMPANY
+            </button>
+        </div>            
+
+        {% if company_list %}
+
+        <div class="company_list">
+            <table>
+                <tr>
+                    <th>Company Name</th>
+                    <th class="center">Contact Number</th>
+                    <th class="center">View Report</th>
+                </tr>
+
+                {% for company in company_list %}
+                <tr>
+                    <td><strong>{{company.name}}</strong></td>
+                    <td class="center">{{company.contactNumber}}</td>
+                    <td class="center">Report</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+            <div class="pages">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1" class="prev">&laquo; First</a>
+                    <a href="?page={{ page_obj.previous_page_number}}" class="prev">Prev</a>
+                {% endif %}
+
+
+                <span class="current">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                </span>
+
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}" class="next">Next</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}" class="next">Last &raquo;</a>
+
+                {% endif %}
+            </div>
+
+        </div>
+        {% else %}
+            <p>No companies available at this time</p>
+        {% endif %}
+    </div>
+
+{% endblock content %}
+
+{% block extrascripts %}
+<script type="text/javascript">
+    $(function () {
+
+        // Create user button
+        $(".create-company").modalForm({formURL: "{% url 'create_company' %}", modalID: "#create-modal"});
+
+    });
+    </script>
+{% endblock extrascripts %}

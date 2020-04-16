@@ -1,0 +1,27 @@
+.modal-title{
+    color: #1B255A;
+}
+
+.modal-header{
+    text-align: center;
+}
+
+.btn-primary{
+    color: white;
+    background-color: #ef320a;
+    border-color: #ef320a;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 11px;
+    padding: 12px;
+}
+
+
+.btn-primary:hover{
+    background-color: #1B255A;
+    border-color: #1B255A;
+}
+
+.btn-primary:active{
+    background-color: #1B255A;
+    border-color: #1B255A;
+}
