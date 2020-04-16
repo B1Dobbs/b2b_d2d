@@ -1,5 +1,5 @@
 body {
-    background-color: #F5F5F5!important;
+    /* background-color: #F5F5F5!important; */ /*Use this to make background gray*/
     position: absolute;
     top: 20px; /* Header Height */
     bottom: 20px; /* Footer Height */
@@ -62,7 +62,7 @@ hr {
     display: block;
     align-items: center;
     justify-content: center;
-    max-width: 800px;
+    max-width: 1000px;
     background-color: white;
 }
 
