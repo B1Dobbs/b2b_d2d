@@ -36,7 +36,7 @@
 
                 {% for company in company_list %}
                 <tr>
-                    <td><strong>{{company.name}}</strong></td>
+                    <td><a href="/company/{{company.pk}}"><strong>{{company.name}}</strong></a></td>
                     <td class="center">{{company.contactNumber}}</td>
                     <td class="center">Report</td>
                 </tr>

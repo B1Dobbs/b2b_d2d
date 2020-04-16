@@ -1,5 +1,8 @@
 .modal-title{
     color: #1B255A;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold
 }
 
 .modal-header{

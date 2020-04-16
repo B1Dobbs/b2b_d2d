@@ -145,13 +145,19 @@ body {
 .company_list th{
     background-color: none;
     text-align: left;
+}
 
+.company_list a{
+    text-decoration: none;
+    color: #1c2559;
+}
+
+.company_list a:hover{
+    text-decoration: none;
+    color: #1c2559;
+    border-bottom: 2px solid #ef320a!important;
 }
 
 .headers{
     color: gray;
 }
-
-
-
-
