@@ -1,17 +1,16 @@
 {% load widget_tweaks %}
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/popups.css' %}">
 
-<div class="popup"></div>
-<form method="post" action="" class="popup-center">
+<form method="post" action="">
   {% csrf_token %}
 
   <div class="modal-header">
-    <div class="header-bar"></div>
+    <div class="header-bar">
     <h3 class="modal-title popup-title">Edit User</h3>
   </div>
+  </div>
 
-  <div class="modal-body">
+  <div class="popup">
+  <div class="modal-body popup-center">
 
     <div class="{% if form.non_field_errors %}invalid{% endif %} mb-2">
       {% for error in form.non_field_errors %}
@@ -20,9 +19,9 @@
     </div>
 
     <div class="form-group">
-      <label class="labels left" for="your_name">Name</label>
+      <label class="popup-label left" for="your_name">Name</label>
       <input class="details user" id="your_name" type="text" name="your_name" value="{{user.name}}">
-      <label class="labels left" for="your_name">Email Address</label>
+      <label class="popup-label left" for="your_name">Email Address</label>
       <input class="details user" id="your_name" type="text" name="your_name" value="{{user.email}}">
     </div>
     <!--
@@ -39,10 +38,14 @@
     {% endfor %}
   </div>
 -->
-  <div class="modal-footer">
-    <button type="submit" class="delete-btn btn popup-button popup-save">SAVE</button>
-    <button type="button" class="close delete-btn btn popup-button" data-dismiss="modal" aria-label="Cancel">
+</div>
+<div class="popup">
+  <div class="modal-footer popup-center">
+    <button type="submit" class="popup-button popup-save">SAVE</button>
+    <button type="button" class="popup-button" data-dismiss="modal" aria-label="Cancel">
     CANCEL</button>
   </div>
+</div>
 
 </form>
+

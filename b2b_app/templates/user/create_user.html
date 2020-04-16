@@ -1,57 +1,42 @@
 {% load widget_tweaks %}
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/popups.css' %}">
 
-<div class="popup">
-  <form method="post" action="" class="popup-center">
-    {% csrf_token %}
+<form method="post" action="">
+  {% csrf_token %}
 
-    <div class="modal-header">
-      <div class="header-bar"></div>
-      <h3 class="modal-title popup-title">Add User</h3>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
+  <div class="modal-header">
+    <div class="header-bar">
+    <h3 class="modal-title popup-title">Add User</h3>
+  </div>
+  </div>
 
-    <div class="modal-body">
+  <div class="popup">
+  <div class="modal-body popup-center">
 
-      <div class="{% if form.non_field_errors %}invalid{% endif %} mb-2">
-        {% for error in form.non_field_errors %}
-          {{ error }}
-        {% endfor %}
-      </div>
-
-      <div class="form-group">
-        <label class="labels left" for="your_name">First Name</label>
-        <input class="details user" id="your_name" type="text" name="your_name" value="First Name">
-        <label class="labels left" for="your_name">Last Name</label>
-        <input class="details user" id="your_name" type="text" name="your_name" value="Last Name">
-        <label class="labels left" for="your_name">Email Address</label>
-        <input class="details user" id="your_name" type="text" name="your_name" value="Email Address">
-        <label class="labels left" for="your_name">Password*</label>
-        <input class="details user" id="your_name" type="text" name="your_name" value="Password">
-        <label class="popup-text">*Users will be required to enter a new password when they login for the first time</label>
-      </div>
-      <!--{% for field in form %}
-        <div class="form-group">
-          <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-          {% render_field field class="form-control" placeholder=field.label %}
-          <div class="{% if field.errors %} invalid{% endif %}">
-            {% for error in field.errors %}
-              <p class="help-block">{{ error }}</p>
-            {% endfor %}
-          </div>
-        </div>
+    <div class="{% if form.non_field_errors %}invalid{% endif %} mb-2">
+      {% for error in form.non_field_errors %}
+        {{ error }}
       {% endfor %}
-    </div> -->
+    </div>
+    
+      <div class="form-group">
+        <label class="popup-label left" for="your_name">Name</label>
+        <input class="details user" id="your_name" type="text" name="your_name" placeholder="Name">
+        <label class="popup-label left" for="your_name">Email Address</label>
+        <input class="details user" id="your_name" type="text" name="your_name" placeholder="Email Address">
+        <label class="popup-label left" for="your_name">Password*</label>
+        <input class="details user" id="your_name" type="text" name="your_name" placeholder="Password">
+      </div>
     <input type='hidden' name="company" value="{{ company }}" />
-
-    <div class="modal-footer">
-      <button type="submit" class="delete-btn btn popup-button popup-save">SAVE</button>
-      <button type="button" class="close delete-btn btn popup-button" data-dismiss="modal" aria-label="Cancel">
+  </div>
+  <br>
+  <label class="popup-text password">*Users will be required to enter a new password when they login for the first time</label>
+    <div class="popup">
+    <div class="modal-footer popup-center">
+      <button type="submit" class="popup-button popup-save">SAVE</button>
+      <button type="button" class="popup-button" data-dismiss="modal" aria-label="Cancel">
       CANCEL</button>
     </div>
+  </div>
 
   </form>
 </div>
