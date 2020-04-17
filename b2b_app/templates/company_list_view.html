@@ -1,7 +1,7 @@
 <h1>Companies</h1>
 <ul>
 {% for company in company_list %}
-    <li><a href="/company-list/{{ company.id }}/">{{ company.name }}</a> {{ company.contactNumber }}</li>
+    <li><a href="/company-list/{{ company.id }}/">{{ company.name }}</a> {{ company.contact_number }} <a href="/company-list/report/{{ company.id }}/"> report</a></li>
 {% empty %}
     <li>No companies yet.</li>
 {% endfor %}

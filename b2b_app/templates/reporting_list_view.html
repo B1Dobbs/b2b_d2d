@@ -1,0 +1,54 @@
+<h1>{{company.name}}</h1>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 5px;
+}
+th {
+  text-align: left;
+}
+</style>
+<select name="first_month">
+    {% for month in month_list %}
+        <option value = "{{ month }}">{{ month }}</option>
+    {% endfor %}
+</select>
+<select name="first_year">
+    {% for year in year_list %}
+        <option value = "{{ year }}">{{ year }}</option>
+    {% endfor %}
+</select>
+
+<select name="second_month">
+    {% for month in month_list %}
+        <option value = "{{ month }}">{{ month }}</option>
+    {% endfor %}
+</select>
+<select name="second_year">
+    {% for year in year_list %}
+        <option value = "{{ year }}">{{ year }}</option>
+    {% endfor %}
+</select>
+
+<ul>
+    
+<table style="width:35%">
+    <tr>
+        <th>User</th>
+        <th>Query Count</th>
+        <th>Percentage</th>
+      </tr>
+{% for user, query_num in user_dict.items %}
+    <tr>
+        <td>{{ user }}</td>
+        <td>{{ query_num.0 }}</td>
+        <td>{{ query_num.1 }}%</td>
+    </tr>
+{% empty %}
+    <li>No users for this company yet.</li>
+{% endfor %}
+
+</table>
+</ul>
