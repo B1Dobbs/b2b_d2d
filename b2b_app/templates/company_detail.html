@@ -1,11 +1,16 @@
 {% extends 'form_background.html' %}
 {% block content %}
+<!-- Comment out to make bar width of content -->
+<div class="title_bar">
+    <!-- <img src="d2d-logo.png">-->
+    <p style="color: white">D2D</p>
+</div>
     {% include "_modal.html" %}
     <div class="content">
-        <div class="title_bar">
-            <!-- <img src="d2d-logo.png">-->
+        <!-- Uncomment to make title bar width of the content -->
+        <!-- <div class="title_bar">
             <p style="color: white">D2D</p>
-        </div>
+        </div> -->
         <div>
         <div class="link">
             <button><a href="/../company" class = "labels"> &#x2190 Profiles</a></button>
