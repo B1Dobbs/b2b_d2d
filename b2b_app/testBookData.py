@@ -1,5 +1,5 @@
-from checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo, Audiobooks
-from book_data import BookData, Format, ParseStatus
+from checkmate_tool.checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo, Audiobooks
+from checkmate_tool.book_data import BookData, Format, ParseStatus
 import sys
 
 def testBookstore():

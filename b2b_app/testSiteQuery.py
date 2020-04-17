@@ -1,11 +1,11 @@
-from book_data import BookData
+from checkmate_tool.book_data import BookData
 import sys
-from checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo
+from checkmate_tool.checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo
 
     
 def testSiteQuery(book_site):
     book_data = BookData()
-    book_data.authors = ["vergara"]
+    book_data.authors = ["scribd"]
     book_site.find_book_matches(book_data)
     
 

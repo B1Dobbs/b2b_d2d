@@ -15,9 +15,9 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.core.paginator import Paginator
 import json
-from book_data import BookData
+from checkmate_tool.book_data import BookData
 import sys
-from checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo
+from checkmate_tool.checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo
 # Create your views here.
 
 class SearchCheckmateView():
