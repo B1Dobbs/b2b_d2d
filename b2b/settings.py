@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'allauth', 
     'allauth.account', 
     'b2b_app',
+    'bootstrap_modal_forms',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
