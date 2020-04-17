@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .models import Company, User, Query
-from django.template import loader
 from django.shortcuts import get_object_or_404
 from django.views.generic import DetailView, ListView, ListView, TemplateView
 from django import forms
@@ -59,7 +58,7 @@ class SearchCheckmateView():
 
 class CompanyListView(ListView):
     model = Company
-    template_name = "company_list_view.html"
+    template_name = "company_list_page.html"
     company_list = Company.objects.all()
     paginate_by = 5
 
