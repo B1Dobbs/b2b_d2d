@@ -9,11 +9,4 @@ from .models import CustomUser
 from .models import Company
 
 admin.site.register(Company)
-
-class CustomUserAdmin(UserAdmin):
-    add_form = CustomUserCreationForm
-    form = CustomUserChangeForm
-    model = CustomUser
-    list_display = ['email', 'username','company']
-
-admin.site.register(CustomUser, CustomUserAdmin)
+admin.site.register(CustomUser)

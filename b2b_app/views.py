@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .models import Company, User, Query
-from django.template import loader
 from django.shortcuts import get_object_or_404
 from django.views.generic import DetailView, ListView, ListView, TemplateView
 from django import forms
@@ -17,6 +16,9 @@ from django.core.paginator import Paginator
 import json
 from checkmate_tool.book_data import BookData
 import sys
+from django.http import HttpResponse
+from django.template import loader
+'''from checkmate_tool.book_data import BookData
 from checkmate_tool.checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo
 # Create your views here.
 
@@ -56,11 +58,11 @@ class SearchCheckmateView():
             }
 
         return context
-
+'''
 
 class CompanyListView(ListView):
     model = Company
-    template_name = "company_list_view.html"
+    template_name = "company_list_page.html"
     company_list = Company.objects.all()
     paginate_by = 5
 
@@ -131,7 +133,7 @@ class UserDeleteView(BSModalDeleteView):
         self.success_url = reverse('company_detail', kwargs={'pk':self.kwargs['company_id']})
         return super(UserDeleteView, self).post(request, **kwargs)
 
-'''For printing post requests if needed. '''
+'''For printing post requests if needed.'''
 def pretty_request(request):
     headers = ''
     for header, value in request.META.items():
@@ -185,6 +187,7 @@ def profile_page(request):
 
     site_list = [ "Google Books", "Scribd", "Kobo"]
     bookFormat_list = ["EBook", "Print"]
+    search = True
 
 
 
@@ -195,6 +198,7 @@ def profile_page(request):
         'user_list' : user_list,
         'site_list' : site_list,
         'bookFormat_list' : bookFormat_list,
+        'search' : search,
     }
     return HttpResponse(template.render(context, request))
 
@@ -203,21 +207,46 @@ def search_page(request):
     company_name = "Helping Authors Inc."
     company_contact = "Catherine Gates"
     company_number = "409-550-5500"
-    user_list = [
-        {   "name": "Catherine Gates",
-            "email": "catherine.gates@email.com",
+    site_list = [ 
+        {"name": "Google Books",
+         "slug": "GB",
         },
-        {   "name": "Brooke Dobbins",
-            "email": "brooke.dobbins@email.com",
+        {"name": "Scribd",
+         "slug": "SD",
         },
-        {   "name": "Nathan Schrader",
-            "email": "nathan.schrader@email.com",
+        {"name": "Kobo",
+         "slug": "KB",
+        }]
+    book_list = [
+        {   "title": "Adventures of Sherlock Holmes GB1",
+            "author": "Sir Arthur Conan Doyle",
+            "format": "EBook",
+            "match": "90%",
+            "slug" : "GB",
         },
-        {   "name": "Trevor Bailey",
-            "email": "trevor.bailey@email.com",
+        {   "title": "Adventures of Sherlock Holmes KB1",
+            "author": "Sir Arthur Conan Doyle",
+            "format": "EBook",
+            "match": "90%",
+            "slug" : "KB",
         },
-        {   "name": "Tyler Matthews",
-            "email": "tyler.matthews@email.com",
+        {   "title": "Adventures of Sherlock Holmes SD",
+            "author": "Sir Arthur Conan Doyle",
+            "format": "EBook",
+            "match": "90%",
+            "slug" : "SD",
+        },
+        {   "title": "Adventures of Sherlock Holmes GB2",
+            "author": "Sir Arthur Conan Doyle",
+            "format": "EBook",
+            "match": "90%",
+            "slug" : "GB",
+        },
+        {   "title": "Adventures of Sherlock Holmes KB2",
+            "author": "Sir Arthur Conan Doyle",
+            "format": "EBook",
+            "match": "90%",
+            "slug" : "KB",
         },
     ]
 
@@ -226,7 +255,8 @@ def search_page(request):
         'company_name': company_name,
         'company_contact': company_contact,
         'company_number': company_number,
-        'user_list' : user_list,
+        'site_list' : site_list,
+        'book_list' : book_list,
     }
     return HttpResponse(template.render(context, request))
 
