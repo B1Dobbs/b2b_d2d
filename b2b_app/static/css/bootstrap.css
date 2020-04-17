@@ -5516,9 +5516,9 @@ button.close {
 }
 
 .modal-footer {
-  display: -webkit-box;
+  /* display: -webkit-box; */
   display: -ms-flexbox;
-  display: flex;
+  /* display: flex; */
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -5547,7 +5547,7 @@ button.close {
 
 @media (min-width: 576px) {
   .modal-dialog {
-    max-width: 500px;
+    max-width: 600px;
     margin: 1.75rem auto;
   }
   .modal-dialog-centered {
