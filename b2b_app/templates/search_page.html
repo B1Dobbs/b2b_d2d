@@ -28,51 +28,120 @@
     </div>
 
     <div class = "search-block">
-        <div class = "grid-x grid-padding-x">
+        <div class = "grid-x grid-padding-x searching">
             <div class = "large-6 medium-6 small-12 cell">
                 <span class = "title title-small">Search by Title, Author, and/or ISBN</span>
                 <div class="search-fields">
-                    <p class = "navy-headers">Title</p>
-                    <input class="search-box" name ="q" type="text" placeholder="Book Title...">
-                    <p class = "navy-headers">Author</p>
-                    <input class="search-box" name ="q" type="text" placeholder="First Author, Second Author...">
-                    <p class = "navy-headers">ISBN</p>
-                    <input class="search-box" name ="q" type="text" placeholder="ISBN number...">
-                    <button type="submit" class="button_css search-button"><i class="fas fa-search magGlass"></i>SEARCH</button>
+                    <form action="/search/" method="post">
+                        <label class = "navy-headers">Title</label>
+                        <input id="title" type="text" name="book_title" value="{{ title }}" class="search-box" placeholder="Book Title...">
+                        <label class = "navy-headers">Author</label>
+                        <input  id="author" type="text" name="book_author" value="{{ author }}"  class="search-box"placeholder="First Author, Second Author...">
+                        <label class = "navy-headers">ISBN</label>
+                        <input  id="isbn" type="text" name="book_isbn" value="{{ isbn }}"  class="search-box" placeholder="ISBN number...">
+                        <input type="submit" class="button_css search-button" value="SEARCH"></input>
+                    </form>
                 </div>
             </div>
             <div class = "large-6 medium-6 small-12 cell">
-                <span class = "title title-small">Search by JSON</span>
-                <textarea class="json-field" rows="6" cols="50">JSON BLOB STUFF</textarea>
-                <button type="submit" class="button_css search-button"><i class="fas fa-search magGlass"></i>SEARCH</button>
+                <form action="/search/" method="post">
+                    <label class = "title title-small">Search by JSON</label>
+                    <textarea id="json" name="json" value="{{ isbn }}" class="json-field" rows="10" cols="50" placeholder="JSON BLOB STUFF"></textarea>
+                    <input type="submit" class="button_css search-button" value="SEARCH"></input>
+                </form>
             </div>
         </div>
-        
-        <div style="text-align: center; margin-top: 60px;">
-        <div class="search-tab-block">
-            <div class="left tab-block">
-                {%for site in site_list%}
-                <button class="title title-small site_tabs">{{site}}</button>
-                {%endfor%}
-            </div>
-            <div class = "grid-x grid-padding-x search-results">
-                {% for book in book_list %}
-                <div class = "large-6 medium-6 small-12 cell">
-                    <p class = "details bolded">{{book.title}}</p>
-                    <p class = "details">{{book.author}}</p>
-                    <div class="left">
-                        <span class = " labels">Format </span>
-                        <span class = " details">{{book.format}}</span>
-                        <br>
-                        <span class = " labels">Search Match</span>
-                        <span class = " details">{{book.match}}</span>
+
+        <div class="tab">
+            {%for site in site_list%}
+            <button class="tablinks title" onclick="openResults(event, '{{site.slug}}')">{{site.name}}</button>
+            {% endfor %}
+          </div>
+
+          {% if search %}
+
+          <div id="GB" class="tabcontent">
+                <div class="search-tab-block">
+                    <div class = "grid-x grid-padding-x search-results">
+                        {% for book in book_list %}
+                            {% if book.slug == "GB"%}
+                                {% include 'includes/tabs.html' %}
+                            {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
-                {% endfor %}
-            </div>
-        </div>
-        </div>
-            
+          </div>
+          
+          <div id="KB" class="tabcontent">
+                <div class="search-tab-block">
+                    <div class = "grid-x grid-padding-x search-results">
+                        {% for book in book_list %}
+                            {% if book.slug == "KB"%}
+                                {% include 'includes/tabs.html' %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+          </div>
+          
+          <div id="SD" class="tabcontent">
+                <div class="search-tab-block">
+                    <div class = "grid-x grid-padding-x search-results">
+                        {% for book in book_list %}
+                            {% if book.slug == "SD"%}
+                                {% include 'includes/tabs.html' %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+          </div>
+
+          <div id="LC" class="tabcontent">
+                <div class="search-tab-block">
+                    <div class = "grid-x grid-padding-x search-results">
+                        {% for book in book_list %}
+                            {% if book.slug == "LC"%}
+                                {% include 'includes/tabs.html' %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+          </div>
+
+          <div id="TB" class="tabcontent">
+                <div class="search-tab-block">
+                    <div class = "grid-x grid-padding-x search-results">
+                        {% for book in book_list %}
+                            {% if book.slug == "TB"%}
+                                {% include 'includes/tabs.html' %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+          </div>
+
+          <div id="AB" class="tabcontent">
+                <div class="search-tab-block">
+                    <div class = "grid-x grid-padding-x search-results">
+                        {% for book in book_list %}
+                            {% if book.slug == "AB"%}
+                                {% include 'includes/tabs.html' %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+          </div>
+
+          {% else %}
+          <div id="NoResults">
+                <div class="search-tab-block">
+                    <div class = "grid-x grid-padding-x search-results">
+                            <p class="details">No Results</p>
+                    </div>
+                </div>
+          </div>
+        {% endif %}
+    
 
             <div class="pages">
                 {% if users_list.has_previous %}
@@ -98,4 +167,20 @@
 
     {% endblock %}
 </body>
+
+<script>
+    function openResults(evt, site) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(site).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    </script>
 </html>

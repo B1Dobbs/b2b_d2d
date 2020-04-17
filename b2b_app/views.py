@@ -182,6 +182,7 @@ def profile_page(request):
 
     site_list = [ "Google Books", "Scribd", "Kobo"]
     bookFormat_list = ["EBook", "Print"]
+    search = True
 
 
 
@@ -192,6 +193,7 @@ def profile_page(request):
         'user_list' : user_list,
         'site_list' : site_list,
         'bookFormat_list' : bookFormat_list,
+        'search' : search,
     }
     return HttpResponse(template.render(context, request))
 
@@ -200,32 +202,46 @@ def search_page(request):
     company_name = "Helping Authors Inc."
     company_contact = "Catherine Gates"
     company_number = "409-550-5500"
-    site_list = [ "Google Books", "Scribd", "Kobo"]
+    site_list = [ 
+        {"name": "Google Books",
+         "slug": "GB",
+        },
+        {"name": "Scribd",
+         "slug": "SD",
+        },
+        {"name": "Kobo",
+         "slug": "KB",
+        }]
     book_list = [
-        {   "title": "Adventures of Sherlock Holmes",
+        {   "title": "Adventures of Sherlock Holmes GB1",
             "author": "Sir Arthur Conan Doyle",
             "format": "EBook",
             "match": "90%",
+            "slug" : "GB",
         },
-        {   "title": "Adventures of Sherlock Holmes",
+        {   "title": "Adventures of Sherlock Holmes KB1",
             "author": "Sir Arthur Conan Doyle",
             "format": "EBook",
             "match": "90%",
+            "slug" : "KB",
         },
-        {   "title": "Adventures of Sherlock Holmes",
+        {   "title": "Adventures of Sherlock Holmes SD",
             "author": "Sir Arthur Conan Doyle",
             "format": "EBook",
             "match": "90%",
+            "slug" : "SD",
         },
-        {   "title": "Adventures of Sherlock Holmes",
+        {   "title": "Adventures of Sherlock Holmes GB2",
             "author": "Sir Arthur Conan Doyle",
             "format": "EBook",
             "match": "90%",
+            "slug" : "GB",
         },
-        {   "title": "Adventures of Sherlock Holmes",
+        {   "title": "Adventures of Sherlock Holmes KB2",
             "author": "Sir Arthur Conan Doyle",
             "format": "EBook",
             "match": "90%",
+            "slug" : "KB",
         },
     ]
 
