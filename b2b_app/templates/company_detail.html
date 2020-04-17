@@ -2,15 +2,6 @@
 {%load static%}
 {% block content %}
 
-<!-- Comment out to make bar width of content -->
-<div class="title_bar"> 
-    <img src="{% static 'Images/d2d-logo.png' %}">
-    <span class="navigation">
-        <a href="{% url 'company_list' %}" class="active_page">Profiles</a>
-        <a href="">Reporting</a>
-        <i class="fas fa-user-circle user-circle"></i>             
-    </span>      
-</div>
     {% include "_modal.html" %}
     <div class="content">
         <!-- Uncomment to make title bar width of the content -->
