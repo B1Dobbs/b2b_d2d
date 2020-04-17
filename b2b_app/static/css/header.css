@@ -1,0 +1,33 @@
+.title_bar{
+    overflow: hidden;
+    background-color: #1B255A;
+    left: 0;
+    right: 0;
+    top: 0;
+    box-sizing: none;
+    color: white;
+}
+
+.title_bar h1{
+    display: inline;
+    color: white;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+
+.title_bar i{
+    color:#ef320a;
+    font-size:45px;
+    margin-right: 25px;
+    float: right;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+
+.navigation{
+    padding-top: 20px;
+    float: right;
+}

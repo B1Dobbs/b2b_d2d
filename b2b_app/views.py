@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from .models import Company, User, Query
+from django.http import HttpResponse
 from django.template import loader
+from django.core.paginator import *
+from .models import Company, User, Query
 from django.shortcuts import get_object_or_404
 from django.views.generic import DetailView, ListView, ListView, TemplateView
 from django import forms
@@ -15,11 +17,14 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.core.paginator import Paginator
 
+
+
+
 # Create your views here.
 
 class CompanyListView(ListView):
     model = Company
-    template_name = "company_list_view.html"
+    template_name = "company_list_page.html"
     company_list = Company.objects.all()
     paginate_by = 5
 

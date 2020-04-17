@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html> 
+    <head>
+        {% block title %}<title>B2B Site</title>{% endblock %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto|Roboto+Condensed&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css'%}">
+
+    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<body>
+    {% block content %}
+    <div class="title_bar">
+       <!-- <img src="d2d-logo.png">-->
+       <h1>{{company_name}}</h1>
+    </div>
+    <div class = "search-block">
+        <div class = "grid-x grid-padding-x">
+            <div class = "large-6 medium-6 small-12 cell">
+                <span class = "title title-small">Search by Title, Author, and/or ISBN</span>
+                <div class="search-fields">
+                    <p class = "navy-headers">Title</p>
+                    <input class="search-box" name ="q" type="text" placeholder="Book Title...">
+                    <p class = "navy-headers">Author</p>
+                    <input class="search-box" name ="q" type="text" placeholder="First Author, Second Author...">
+                    <p class = "navy-headers">ISBN</p>
+                    <input class="search-box" name ="q" type="text" placeholder="ISBN number...">
+                    <button type="submit" class="button_css search-button"><i class="fas fa-search magGlass"></i>SEARCH</button>
+                </div>
+            </div>
+            <div class = "large-6 medium-6 small-12 cell">
+                <span class = "title title-small">Search by JSON</span>
+                <textarea class="json-field" rows="6" cols="50">JSON BLOB STUFF</textarea>
+                <button type="submit" class="button_css search-button"><i class="fas fa-search magGlass"></i>SEARCH</button>
+            </div>
+        </div>
+            <div class = "grid-x grid-padding-x user-title">
+                <div class = "large-8 medium-8 small-6 cell">
+                    <span class = "title">Users</span>
+                </div>
+                <div class = "small-6 medium-4 large-4 cell button_padding">
+                    <button class="button_css" type="submit">ADD USER</button>
+                </div>
+            </div>
+            
+            {% if user_list %}
+
+            <div class="users_list">
+                <table>
+                    <tr class="headers">
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                    {% for user in user_list %}
+                    <tr class="details">    
+                        <td>{{user.name}}</td>
+                        <td>{{user.email}}</td>
+                        <td>
+                            <i class='fas fa-pen icons'></i><span>Edit</span>
+                            <br>
+                            <i class='fas fa-trash icons'></i><span>Delete</span>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </table>
+            </div>
+
+            <div class="pages">
+                {% if users_list.has_previous %}
+                    <a href="?page=1" class="prev">First</a>
+                    <a href="?page={{ users_list.previous_page_number}}" class="prev">Prev</a>
+                {% endif %}
+                
+                {% for num in users_list.paginator.page_range %}
+                    {% if users_list.number == num %}
+                        <span class="cur_page">{{num}}</span>
+                    {% elif num > users_list.number|add:'-2' and num < users_list.number|add:'2' %}
+                        <span class="page_num">{{num}}</span>
+                    {% endif %}
+    
+                {% endfor %}
+
+                {% if users_list.has_next %}
+                    <a href="?page={{ users_list.next_page_number }}" class="next">Next</a>
+                    <a href="?page={{ users_list.paginator.num_pages }}" class="next">Last</a>
+
+                {% endif %}
+            </div>
+
+            {% endif %}
+    {% endblock %}
+</body>
+</html>
