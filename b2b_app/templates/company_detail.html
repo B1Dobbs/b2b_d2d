@@ -18,7 +18,7 @@
         <div class = "details-block">
         <span id = "title" class = "title"> <strong>{{ company.name }} </strong></span>
         <button class="update-company" type="button" name="button" data-id="{% url 'update_company' company.pk %}"><span><i class='fas fa-pen icons'></i></span></button>
-        <i class='fas fa-trash icons'></i>
+        <button class="delete-company" type="button" name="button" data-id="{% url 'update_company' company.pk %}"><span><i class='fas fa-trash icons'></i></span></button>
         <div class="indent">
             <span class = "labels">Contact Person </span>
             <span class = "details" id = "contact">{{ company.contactPerson }}</span>

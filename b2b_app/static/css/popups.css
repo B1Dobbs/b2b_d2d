@@ -52,13 +52,11 @@
 
 .popup-button {
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 7px;
-    font-weight: bold;
-    margin: 10px;
+    font-size: 12px;
+    padding: 8px;
     background-color: gray;
     color: white;
-    width: 40px;
-    height: 25px;
+    height: 32px;
 
 }
 

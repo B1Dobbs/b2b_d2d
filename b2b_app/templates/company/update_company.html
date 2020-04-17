@@ -17,18 +17,17 @@
       {% endfor %}
     </div>
 
-    {% for field in form %}
       <div class="form-group">
-        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-        {% render_field field class="form-control" placeholder=field.label %}
-        <div class="{% if field.errors %} invalid{% endif %}">
-          {% for error in field.errors %}
-            <p class="help-block">{{ error }}</p>
-          {% endfor %}
-        </div>
+        <label class="popup-label left" for="name">Name</label>
+        <input class="details user" id="name" type="text" name="name" value="{{company.name}}">
+        <label class="popup-label left" for="contactPerson">Contact Person</label>
+        <input class="details user" id="contactPerson" type="text" name="contactPerson" value="{{company.contactPerson}}">
+        <label class="popup-label left" for="contactNumber">Contact Number</label>
+        <input class="details user" id="contactNumber" type="text" name="contactNumber" value="{{company.contactNumber}}">
+        <label class="popup-label left" for="searchSites">Searchable Websites</label>
+        <input id="searchSites_{{ forloop.counter0 }}" name="{{ searchSites }}" type="checkbox" value="{{ value }}"{% if value in checked_providers %} checked="checked"{% endif %}>
+        <label class="popup-label left" for="your_name">Book Formats</label>
       </div>
-    {% endfor %}
-  </div>
 
   <div class="modal-footer">
     <button type="button" class="submit-btn btn btn-primary">SAVE</button>
