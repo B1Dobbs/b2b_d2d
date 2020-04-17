@@ -29,3 +29,12 @@
     padding-top: 20px;
     float: right;
 }
+
+.nav2 {
+    padding-top: 20px;
+    float: left;
+}
+
+.nav2 h1 {
+    font-size: 25px;
+}

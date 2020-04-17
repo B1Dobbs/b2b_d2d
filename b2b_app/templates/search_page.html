@@ -15,16 +15,14 @@
 <body>
     {% block content %}
     <div class="title_bar">
-        <div class = "grid-x grid-padding-x">
-            <div class = "large-6 medium-6 small-12 cell">
-                <span class='company'>{{company_name}}</span>
-            </div>
-            <div class = "large-6 medium-6 small-12 cell header-tab-wrapper">
-                <span class="header-tabs">Search</span>
-                <span class="header-tabs">Reporting</span>
-                <i class="fas fa-user-circle profile-icon"></i>
-            </div>
-        </div>
+        <span class="nav2">
+            <h1 class='company'>{{company_name}}</h1>
+        </span>
+        <span class="nav">
+            <h1>Search</h1>
+            <h1>Reporting</h1>
+            <i class="fas fa-user-circle user-circle"></i>             
+        </span>   
     </div>
 
     <div class = "search-block">

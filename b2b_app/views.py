@@ -14,6 +14,8 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.core.paginator import Paginator
 import json
+from django.http import HttpResponse
+from django.template import loader
 '''from checkmate_tool.book_data import BookData
 from checkmate_tool.checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo
 # Create your views here.
@@ -151,10 +153,6 @@ def pretty_request(request):
         headers=headers,
         body=request.body,
     )
-
-
-from django.http import HttpResponse
-from django.template import loader
 
 def profile_page(request):
     template = loader.get_template('profile_page.html')
