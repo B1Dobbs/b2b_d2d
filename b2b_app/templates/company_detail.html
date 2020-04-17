@@ -27,21 +27,21 @@
         <i class='fas fa-trash icons'></i>
         <div class="indent">
             <span class = "labels">Contact Person </span>
-            <span class = "details" id = "contact">{{ company.contactPerson }}</span>
+            <span class = "details" id = "contact">{{ company.contact_person }}</span>
             <br>
             <span class = "labels">Company Number </span>
-            <span class = "details" id = "number"> {{ company.contactNumber }}</span>
+            <span class = "details" id = "number"> {{ company.contact_number }}</span>
         </div>
         <div class = "grid-x grid-padding-x profile-custom">
             <div class = "large-6 medium-6 small-12 cell">
                 <span class = "labels">Searchable Websites</span>
-                    {% for site in company.searchSites %}
+                    {% for site in company.search_sites %}
                         <p class="details bolded">{{site}}</p>
                     {% endfor %}
             </div>
             <div class = "small-12 medium-6 large-6 cell">
                     <span class = "labels">Book Formats </span>
-                    {% for bookFormat in company.bookFormats %}
+                    {% for bookFormat in company.book_formats %}
                         <p class="details bolded">{{bookFormat}}</p>
                     {% endfor %}
             </div>

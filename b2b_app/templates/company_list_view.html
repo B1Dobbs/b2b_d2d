@@ -14,7 +14,7 @@
 </div>
 <ul>
 {% for company in company_list %}
-    <li><a href="{% url 'company_detail' company.pk %}">{{ company.name }}</a> {{ company.contactNumber }}</li>
+    <li><a href="{% url 'company_detail' company.pk %}">{{ company.name }}</a> {{ company.contact_number }}</li>
 {% empty %}
     <li>No companies yet.</li>
 {% endfor %}
