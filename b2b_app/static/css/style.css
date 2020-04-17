@@ -1,8 +1,6 @@
 body {
     /* background-color: #F5F5F5!important; */ /*Use this to make background gray*/
     position: absolute;
-    top: 20px; /* Header Height */
-    bottom: 20px; /* Footer Height */
     width: 100%;
 }
 
@@ -57,7 +55,7 @@ hr {
 .content {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0;
+    margin-top: 7%;
     height: 100%;
     display: block;
     align-items: center;
