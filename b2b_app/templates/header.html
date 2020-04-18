@@ -1,10 +1,31 @@
 {%load static%}
-          
     <div class="title_bar"> 
-        <img src="{% static 'Images/d2d-logo.png' %}">
-        <span class="navigation">
+            <img src="{% static 'Images/d2d-logo.png' %}">
+            <span class="navigation">
             <a href="{% url 'company_list' %}" class="active_page">Profiles</a>
             <a href="">Reporting</a>
-            <i class="fas fa-user-circle user-circle"></i>             
-        </span>      
+            <div class="dropdown-exit" onmouseout="normalImg(this)"></div>
+            <div class="dropdown" id="dropdown">
+                    <i  class="fas fa-user-circle user-circle" id="dropdown" onmouseover="bigImg(this)"></i>
+            <div>
+                <div class="dropdown-content" id="dropdown-div" onmouseover="bigImg(this)">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            </div>
+        </span>  
     </div>
+<script type="text/javascript">
+
+    function bigImg(x) {
+        document.getElementById("dropdown-div").style.visibility = "visible";  
+    }
+
+    function normalImg(x) {
+        document.getElementById("dropdown-div").style.visibility = "hidden";
+    }
+</script>
+ 
+    
