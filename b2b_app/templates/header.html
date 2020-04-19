@@ -1,0 +1,33 @@
+{%load static%}
+    <div class="title_bar"> 
+            <img src="{% static 'Images/d2d-logo.png' %}">
+            <span class="navigation">
+            <a href="{% url 'company_list' %}" class="active_page">Profiles</a>
+            <a href="">Reporting</a>
+            <div class="dropdown-exit" onmouseout="normalImg(this)"></div>
+            <div class="dropdown" id="dropdown">
+                    <i  class="fas fa-user-circle user-circle" id="dropdown" onmouseover="bigImg(this)"></i>
+                <div class="dropdown-content" id="dropdown-div" onmouseover="bigImg(this)">
+                    <div class="arrow-div">
+                        <div class="arrow-up"></div>
+                    </div>
+                    <a href="#">Profile</a>
+                    <a href="#">Reset Password</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+            </div>
+        </span>  
+    </div>
+<script type="text/javascript">
+
+    function bigImg(x) {
+        document.getElementById("dropdown-div").style.visibility = "visible";  
+    }
+
+    function normalImg(x) {
+        document.getElementById("dropdown-div").style.visibility = "hidden";
+    }
+</script>
+ 
+    

@@ -1,100 +1,71 @@
-<!DOCTYPE html>
-{% load static %}
+{% extends 'form_background.html' %}
 
-<html> 
-    <head>
-        {% block title %}<title>B2B Site</title>{% endblock %}
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto|Roboto+Condensed&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/companies.css'%}">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/pages.css'%}">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/header.css'%}">
-        <link rel="shortcut icon" href="{%static 'images/d2d-icon.ico' %}" type='image/x-icon'">
-        <script src="https://kit.fontawesome.com/92ed4f50f3.js" crossorigin="anonymous"></script>
+{%load static%}
 
-    </head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <body>
-    {% block content %}            
-    
-
-        <div class="title_bar">        
-            <img src="{% static 'images/d2d-logo.png' %}" class="logo">
-            <span class="nav">
-                <h1>Profiles</h1>
-                <h1>Reporting</h1>
-                <i class="fas fa-user-circle user-circle"></i>             
-            </span>      
-        </div>
+{% block content %} 
+    {% include "_modal.html" %}           
 
 
-        <div class='details'>
+    <div class='detailz'>
 
-            <div class="title">Company Profiles
-                <button class="button_css" type="submit">ADD COMPANY</button>
-            </div>            
+        <div class="title">Company Profiles
+            <button class="create-company btn btn-primary" type="button" name="button">
+                <span class="fa fa-plus mr-2"></span>ADD COMPANY
+            </button>
+        </div>            
 
-            {% if company_list %}
+        {% if company_list %}
 
-            <div class="company_list">
-                <table>
-                    <tr>
-                        <th>Company Name</th>
-                        <th class="center">Contact Number</th>
-                        <th class="center">View Report</th>
-                    </tr>
+        <div class="company_list">
+            <table>
+                <tr>
+                    <th>Company Name</th>
+                    <th class="center">Contact Number</th>
+                    <th class="center">View Report</th>
+                </tr>
 
-                    {% for company in company_list %}
-                    <tr>
-                        <td><strong>{{company.name}}</strong></td>
-                        <td class="center">{{company.contactNumber}}</td>
-                        <td class="center">Report</td>
-                    </tr>
-                    {% endfor %}
-                </table>
+                {% for company in company_list %}
+                <tr>
+                    <td><a href="/company/{{company.pk}}"><strong>{{company.name}}</strong></a></td>
+                    <td class="center">{{company.contact_number}}</td>
+                    <td class="center">Report</td>
+                </tr>
+                {% endfor %}
+            </table>
 
-                <div class="pages">
-                    {% if page_obj.has_previous %}
-                        <a href="?page=1" class="prev">&laquo; First</a>
-                        <a href="?page={{ page_obj.previous_page_number}}" class="prev">Prev</a>
-                    {% endif %}
+            <div class="pages">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1" class="prev">&laquo; First</a>
+                    <a href="?page={{ page_obj.previous_page_number}}" class="prev">Prev</a>
+                {% endif %}
 
 
-                    <span class="current">
-                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
-                    </span>
+                <span class="current">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                </span>
 
-                    {% if page_obj.has_next %}
-                        <a href="?page={{ page_obj.next_page_number }}" class="next">Next</a>
-                        <a href="?page={{ page_obj.paginator.num_pages }}" class="next">Last &raquo;</a>
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}" class="next">Next</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}" class="next">Last &raquo;</a>
 
-                    {% endif %}
-                </div>
-
+                {% endif %}
             </div>
-            {% else %}
-                <p>No companies available at this time</p>
-            {% endif %}
+
         </div>
+        {% else %}
+            <p>No companies available at this time</p>
+        {% endif %}
+    </div>
 
-    {% endblock %}
+{% endblock content %}
 
-    {% block extrascripts %}
-    <script type="text/javascript">
-        $(function () {
-    
-          // Create user button
-          $(".create-company").modalForm({formURL: "{% url 'create_company' %}", modalID: "#create-modal"});
-    
-        });
-      </script>
-    {% endblock extrascripts %}
-    
+{% block extrascripts %}
+<script type="text/javascript">
+    $(function () {
 
+        // Create user button
+        $(".create-company").modalForm({formURL: "{% url 'create_company' %}", modalID: "#create-modal"});
 
-
-    </body>
-
-</html>
+    });
+    </script>
+{% endblock extrascripts %}

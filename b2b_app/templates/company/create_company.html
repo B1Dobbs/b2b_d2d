@@ -3,14 +3,15 @@
 <form method="post" action="">
   {% csrf_token %}
 
-  <div class="modal-header">
-    <h3 class="modal-title">Add Company</h3>
+  <div class="modal-header justify-content-center">
+    <h3 class="modal-title popup-title">Add Company</h3>
     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
 
-  <div class="modal-body">
+  <div class="popup">
+    <div class="modal-body popup-center">
 
     <div class="{% if form.non_field_errors %}invalid{% endif %} mb-2">
       {% for error in form.non_field_errors %}
@@ -20,7 +21,7 @@
 
     {% for field in form %}
       <div class="form-group">
-        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+        <label class="popup-label add-company-left" for="{{ field.id_for_label }}">{{ field.label }}</label>
         {% render_field field class="form-control" placeholder=field.label %}
         <div class="{% if field.errors %} invalid{% endif %}">
           {% for error in field.errors %}
@@ -31,8 +32,9 @@
     {% endfor %}
   </div>
 
-  <div class="modal-footer">
-    <input type="submit" value="Submit" class="submit btn btn-primary">
+  <div class="modal-footer center">
+    <input type="submit" value="ADD COMPANY" class="submit btn btn-primary add-company">
   </div>
 
 </form>
+</div>

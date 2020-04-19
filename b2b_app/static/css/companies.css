@@ -1,32 +1,10 @@
 body {
     background-color: #f7f6f6;
+    box-sizing: none;
 }
 
-
-
-.title_bar {
-    overflow: hidden;
-    background-color: #1B255A;
-    left: 0;
-    right: 0;
-    top: 0;
-    position: absolute;
-}
-
-.title_bar img{
-    padding-left: 30px;
-}
-
-.title_bar h1{
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    margin-left: 20px;
-    width: 100%;
-    font-family: 'Playfair Display', serif;
-    padding-bottom: 5px;
-    padding-top: 12px;
-    font-weight: bold;
+.active_page{
+    border-bottom: 2px solid #ef320a!important;
 }
 
 .navy-headers {
@@ -37,7 +15,7 @@ body {
     margin-bottom: 10px;
 }
 
-.details {
+.detailz {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     color: #1c2559;
@@ -122,13 +100,19 @@ body {
 .company_list th{
     background-color: none;
     text-align: left;
+}
 
+.company_list a{
+    text-decoration: none;
+    color: #1c2559;
+}
+
+.company_list a:hover{
+    text-decoration: none;
+    color: #1c2559;
+    border-bottom: 2px solid #ef320a!important;
 }
 
 .headers{
     color: gray;
 }
-
-
-
-
