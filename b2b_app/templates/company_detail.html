@@ -1,9 +1,15 @@
 {% extends 'form_background.html' %}
+{%load static%}
 {% block content %}
+
 <!-- Comment out to make bar width of content -->
-<div class="title_bar">
-    <!-- <img src="d2d-logo.png">-->
-    <p style="color: white">D2D</p>
+<div class="title_bar"> 
+    <img src="{% static 'Images/d2d-logo.png' %}">
+    <span class="navigation">
+        <a href="{% url 'company_list' %}" class="active_page">Profiles</a>
+        <a href="">Reporting</a>
+        <i class="fas fa-user-circle user-circle"></i>             
+    </span>      
 </div>
     {% include "_modal.html" %}
     <div class="content">

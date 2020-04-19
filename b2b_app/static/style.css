@@ -1,14 +1,14 @@
 body {
-    /* background-color: #F5F5F5!important; */ /*Use this to make background gray*/
-    position: absolute;
-    width: 100%;
+    background-color: #f7f6f6;
 }
 
 .title_bar {
     overflow: hidden;
     background-color: #1B255A;
+    left: 0;
+    right: 0;
     top: 0;
-    width: 100%;
+    position: absolute;
 }
 
 .title_bar h1{
@@ -44,31 +44,20 @@ hr {
 .details-block {
     width: 80%;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 25px;
     padding: 10px;
     display: block;
     align-items: center;
     justify-content: center;
-    display: inline-block;
-}
-
-.content {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 7%;
-    height: 100%;
-    display: block;
-    align-items: center;
-    justify-content: center;
-    max-width: 1000px;
-    background-color: white;
 }
 
 .link {
-    padding: 10px;
-    background-color: white !important;
-    display: inline-block;
-    vertical-align: top;
+    width: 80%;
+    margin: auto;
+    margin-top: 75px;
+    display: block;
+    align-items: center;
+    justify-content: center;
 }
 
 span .more-text {
@@ -80,7 +69,7 @@ span .more-text {
 }
 
 .labels {
-    font-size: 15px;
+    font-size: 12px;
     font-family: 'Roboto Condensed', sans-serif;
     color: #929292;
     padding-right: 10px;
@@ -89,7 +78,7 @@ span .more-text {
 .title {
     font-family: 'Playfair Display', serif;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 22px;
     color: #1c2559;
 }
 
@@ -100,7 +89,7 @@ span .more-text {
 
 .details {
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+    font-size: 12px;
     color: #1c2559;
     text-align: left;
 }
@@ -179,11 +168,6 @@ button:hover {
     font-size: 24px;
 }
 
-.create-user {
-    margin-top: 20px;
-    float: right;
-}
-
 .description {
     width: 100%;
     display: block;
@@ -222,7 +206,7 @@ button:hover {
 
 .button_css{
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 12px;
+    font-size: 9px;
     padding: 8px;
     width: auto;
     font-weight: normal;
@@ -238,18 +222,17 @@ button:hover {
 
 .user-title {
     margin-top: 50px;
-    display: inline-block;
 }
 
 .users_list{
-    margin: auto;
+    margin-left: 40px;
     margin-top: 20px;
     width: 100%;
 }
 
 .users_list table{
     border-collapse: collapse;
-    width: 100%;
+    width: auto;
     background-color: #f7f6f6;
 }
 
@@ -379,48 +362,3 @@ button:hover {
     margin-top: 5px;
     margin-bottom: 5px;
 }
-
-.search-results {
-    margin: 25px;
-}
-
-.search-tab-block {
-    display: inline-block;
-    margin: 10px;
-    width: 80%;
-    background-color: white;
-}
-
-.left {
-    text-align: left;
-}
-
-.tab-block {
-    padding: 11.5px;
-    background-color: #f7f6f6;
-}
-
-.site_tabs {
-    background-color: #1c2559;
-    padding: 15px;
-    color: white;
-}
-
-.profile-icon {
-    color: #ef320a;
-    font-size: 36px;
-    text-align: center;
-}
-
-.person {
-    width: 250px;
-}
-
-.number {
-    width: 100px;
-}
-
-.company {
-    width: 300px;
-}
-
