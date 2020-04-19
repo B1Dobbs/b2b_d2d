@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Company, User, Query
 from django.shortcuts import get_object_or_404
-from django.views.generic import DetailView, ListView, ListView, TemplateView
+from django.views.generic import DetailView, ListView, ListView, TemplateView, View
 from django import forms
 from bootstrap_modal_forms.generic import (BSModalLoginView,
                                            BSModalCreateView,
@@ -14,51 +14,110 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.core.paginator import Paginator
 import json
-from checkmate_tool.book_data import BookData
 import sys
+from checkmate_tool.book_data import BookData
 from django.http import HttpResponse
 from django.template import loader
 '''from checkmate_tool.book_data import BookData
-from checkmate_tool.checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo
+from checkmate_tool.checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo '''
 # Create your views here.
 
-class SearchCheckmateView():
+class SearchCheckmateView(View):
     
+    def get(self, request, **kwargs):
+        company_name = "Helping Authors Inc."
+        company_contact = "Catherine Gates"
+        company_number = "409-550-5500"
+        site_list = [ 
+            {"name": "Google Books",
+            "slug": "GB",
+            },
+            {"name": "Scribd",
+            "slug": "SD",
+            },
+            {"name": "Kobo",
+            "slug": "KB",
+            }]
+        book_list = [
+            {   "title": "Adventures of Sherlock Holmes GB1",
+                "author": "Sir Arthur Conan Doyle",
+                "format": "EBook",
+                "match": "90%",
+                "slug" : "GB",
+            },
+            {   "title": "Adventures of Sherlock Holmes KB1",
+                "author": "Sir Arthur Conan Doyle",
+                "format": "EBook",
+                "match": "90%",
+                "slug" : "KB",
+            },
+            {   "title": "Adventures of Sherlock Holmes SD",
+                "author": "Sir Arthur Conan Doyle",
+                "format": "EBook",
+                "match": "90%",
+                "slug" : "SD",
+            },
+            {   "title": "Adventures of Sherlock Holmes GB2",
+                "author": "Sir Arthur Conan Doyle",
+                "format": "EBook",
+                "match": "90%",
+                "slug" : "GB",
+            },
+            {   "title": "Adventures of Sherlock Holmes KB2",
+                "author": "Sir Arthur Conan Doyle",
+                "format": "EBook",
+                "match": "90%",
+                "slug" : "KB",
+            },
+        ]
+
+        context = {
+            'company_name': company_name,
+            'company_contact': company_contact,
+            'company_number': company_number,
+            'site_list' : site_list,
+            'book_list' : book_list,
+        }
+        return render(request, 'search_page.html', context)
+
     def post(self, request, **kwargs):
 
         if 'searchJSON' in request.POST:
             searchJSON = request.POST['searchJSON']
             book_data = json.loads(searchJSON)
+            print("Book Data:" + str(book_data))
 
             result_data = []
-            for site in Company.searchSites.choices:
-                result_data[site] = get_book_site(site).find_book_matches(book_data)
+            #for site in Company.searchSites.choices:
+                #result_data[site] = get_book_site(site).find_book_matches(book_data)
                 
             context = {
                 'searchResults': result_data
             }
-            return context
+            
 
         elif ('searchTitle' in request.POST) or ('searchAuthor' in request.POST) or ('searchISBN' in request.POST):
-            book_data = BookData()
+            #book_data = BookData()
+            book_data = {}
             if 'searchTitle' in request.POST:
-                book_data.title = request.POST['searchTitle']
+                book_data['title'] = request.POST['searchTitle']
             if 'searchAuthor' in request.POST:
-                book_data.author = request.POST['searchAuthor']
+                book_data['author'] = request.POST['searchAuthor']
             if 'searchISBN' in request.POST:
-                book_data.ISBN = request.POST['searchISBN']
+                book_data['ISBN'] = request.POST['searchISBN']
 
+            print("Book Data" + str(book_data))
             result_data = []
 
-            for site in Company.searchSites.choices:
-                result_data[site] = get_book_site(site).find_book_matches(book_data)
+            #for site in Company.searchSites.choices:
+                #result_data[site] = get_book_site(site).find_book_matches(book_data)
             
             context = {
                 'searchResults': result_data
             }
 
-        return context
-'''
+        return render(request, 'search_page.html', context)
+
 
 class CompanyListView(ListView):
     model = Company

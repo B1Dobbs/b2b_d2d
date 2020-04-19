@@ -11,7 +11,7 @@ urlpatterns = [
     path('company/<int:company_id>user/update/<int:pk>', views.UserUpdateView.as_view(), name='update_user'),
     path('company/<int:company_id>/user/delete/<int:pk>', views.UserDeleteView.as_view(), name='delete_user'),
     path('profile', views.profile_page, name='profile_page'),
-    path('search', views.search_page, name='search_page'),
+    path('search', views.SearchCheckmateView.as_view(), name='search_page'),
     path('', HomePageView.as_view(), name='home'),
     
 ]

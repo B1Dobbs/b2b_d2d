@@ -30,21 +30,21 @@
             <div class = "large-6 medium-6 small-12 cell">
                 <span class = "title title-small">Search by Title, Author, and/or ISBN</span>
                 <div class="search-fields">
-                    <form action="/search/" method="post">
+                    <form action="/search" method="post"> {% csrf_token %}
                         <label class = "navy-headers">Title</label>
-                        <input id="title" type="text" name="book_title" value="{{ title }}" class="search-box" placeholder="Book Title...">
+                        <input id="title" type="text" name="searchTitle" value="{{ title }}" class="search-box" placeholder="Book Title...">
                         <label class = "navy-headers">Author</label>
-                        <input  id="author" type="text" name="book_author" value="{{ author }}"  class="search-box"placeholder="First Author, Second Author...">
+                        <input  id="author" type="text" name="searchAuthor" value="{{ author }}"  class="search-box"placeholder="First Author, Second Author...">
                         <label class = "navy-headers">ISBN</label>
-                        <input  id="isbn" type="text" name="book_isbn" value="{{ isbn }}"  class="search-box" placeholder="ISBN number...">
+                        <input  id="isbn" type="text" name="searchISBN" value="{{ isbn }}"  class="search-box" placeholder="ISBN number...">
                         <input type="submit" class="button_css search-button" value="SEARCH"></input>
                     </form>
                 </div>
             </div>
             <div class = "large-6 medium-6 small-12 cell">
-                <form action="/search/" method="post">
+                <form action="/search" method="post"> {% csrf_token %}
                     <label class = "title title-small">Search by JSON</label>
-                    <textarea id="json" name="json" value="{{ isbn }}" class="json-field" rows="10" cols="50" placeholder="JSON BLOB STUFF"></textarea>
+                    <textarea id="json" name="searchJSON" value="{{ isbn }}" class="json-field" rows="10" cols="50" placeholder="JSON BLOB STUFF"></textarea>
                     <input type="submit" class="button_css search-button" value="SEARCH"></input>
                 </form>
             </div>
