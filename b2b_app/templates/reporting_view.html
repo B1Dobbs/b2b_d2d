@@ -10,7 +10,7 @@ th {
   text-align: left;
 }
 </style>
-<form method="POST" action="{% url 'report-list' pk %}">
+<form method="POST" action="{% url 'report-view' pk %}">
 {% csrf_token %}
 <select name="first_month">
     {% for month in month_list %}
@@ -37,25 +37,38 @@ th {
 </form>
 <ul>
 
-{% if user_dict %}
-    {% with ''|center:total_months as range %}
-        {% for _ in range %}
-            <table style="width:35%">
-                <h1>{{ month }}</h1>
-                    <tr>
-                        <th>User</th>
-                        <th>Query Count</th>
-                        <th>Percentage</th>
-                    </tr>
-        {% for user, query_num in user_dict.items %}
-            <tr>
-                <td>{{ user }}</td>
-                <td>{{ query_num.0 }}</td>
-                <td>{{ query_num.1 }}%</td>
-            </tr>
-        {% endfor %}
-        </table>
-        {% endfor %}
-    {% endwith %}
+{% if user_split %}
+<table style="width:35%">
+<h1>All Months</h1>
+    <tr>
+      <th>User</th>
+      <th>Query Count</th>
+      <th>Percentage</th>
+    </tr>
+{% for user, query_num in total_user_queries.items %}
+    <tr>
+      <td>{{ user }}</td>
+      <td>{{ query_num.0 }}</td>
+      <td>{{ query_num.1 }}%</td>
+    </tr>
+{% endfor %}
+</table>
+{% for month, users in user_split.items %}    
+<table style="width:35%">
+    <h1>{{ month }}</h1>
+    <tr>
+        <th>User</th>
+        <th>Query Count</th>
+        <th>Percentage</th>
+      </tr>
+{% for user, query_num in users.items %}
+    <tr>
+        <td>{{ user }}</td>
+        <td>{{ query_num.0 }}</td>
+        <td>{{ query_num.1 }}%</td>
+    </tr>
+{% endfor %}
+</table>
+{% endfor %}
 {% endif %}
 </ul>
