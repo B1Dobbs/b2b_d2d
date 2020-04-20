@@ -9,7 +9,7 @@ urlpatterns = [
     path('company/<int:company_id>/user/create', views.UserCreateView.as_view(), name='create_user'),
     path('company/<int:company_id>user/update/<int:pk>', views.UserUpdateView.as_view(), name='update_user'),
     path('company/<int:company_id>/user/delete/<int:pk>', views.UserDeleteView.as_view(), name='delete_user'),
-    path('search', views.SearchCheckmateView.as_view(), name='search_page'),
+    path('search', views.SearchCheckmateView.as_view(), name='search'),
     path('login', views.LoginView.as_view(), name='login'),
     
 ]

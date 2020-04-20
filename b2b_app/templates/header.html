@@ -2,8 +2,9 @@
     <div class="title_bar"> 
             <img src="{% static 'Images/d2d-logo.png' %}">
             <span class="navigation">
+            <a href="{% url 'search' %}">Search</a>
             <a href="{% url 'company_list' %}" class="active_page">Profiles</a>
-            <a href="">Reporting</a>
+            <!-- <a href="">Reporting</a> -->
             <div class="dropdown-exit" onmouseout="normalImg(this)"></div>
             <div class="dropdown" id="dropdown">
                     <i  class="fas fa-user-circle user-circle" id="dropdown" onmouseover="bigImg(this)"></i>
@@ -11,7 +12,8 @@
                     <div class="arrow-div">
                         <div class="arrow-up"></div>
                     </div>
-                    <a href="#">Profile</a>
+                    <!-- Uncomment and change 1 to company.pk-->
+                    <!-- <a href="{% url 'company_detail' 1 %}">Profile</a> -->
                     <a class="reset" data-toggle="modal" data-target="#reset-password" href="#">Reset Password</a>
                     <a class="logout" data-toggle="modal" data-target="#logout">Logout</a>
                 </div>

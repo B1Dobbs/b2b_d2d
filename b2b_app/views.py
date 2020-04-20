@@ -54,16 +54,17 @@ def slugToSite(site):
     elif site =="SD":
         return "Scribd"
 
-class SearchCheckmateView(LoginRequiredMixin, View):
-    login_url = 'login'
+class SearchCheckmateView(View): #LoginRequiredMixin
+    # login_url = 'login'
     
     def get(self, request, **kwargs):
+        company = request.user.getCompany()
         search = False
-        company_name = "Helping Authors Inc."
-        company_contact = "Catherine Gates"
-        company_number = "409-550-5500"
+        # company_name = "Helping Authors Inc."
+        # company_contact = "Catherine Gates"
+        # company_number = "409-550-5500"
         site_list = []
-        site_name_list = str(request.user.getCompany().search_sites).split(",")
+        site_name_list = str(company.search_sites).split(",")
         print(site_name_list)
         for site_name in site_name_list:
             Site = {"name": site_name, "slug": siteToSlug(site_name)}
@@ -72,14 +73,13 @@ class SearchCheckmateView(LoginRequiredMixin, View):
         print(site_list)
 
         context = {
-            'company_name': company_name,
-            'company_contact': company_contact,
-            'company_number': company_number,
+            'company' : company, 
             'site_list' : site_list,
         }
         return render(request, 'search_page.html', context)
 
     def post(self, request, **kwargs):
+        company = request.user.getCompany()
 
         if 'searchJSON' in request.POST:
             search = True
@@ -107,7 +107,8 @@ class SearchCheckmateView(LoginRequiredMixin, View):
             if 'searchISBN' in request.POST:
                 book_data.ISBN = request.POST['searchISBN']
             
-            site_name_list = str(request.user.getCompany().search_sites).split(",")
+
+            site_name_list = str(company.search_sites).split(",")
             site_slug_list = []
             site_list = []
             for site_name in site_name_list:
@@ -125,6 +126,7 @@ class SearchCheckmateView(LoginRequiredMixin, View):
             print(result_data)
 
             context = {
+                'company': company,
                 'searchResults': result_data,
                 'site_list': site_list,
                 'search' : search,
