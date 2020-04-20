@@ -18,6 +18,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.core.paginator import Paginator
 from .models import CustomUser
+from django.contrib.auth.decorators import login_required
 
 def profile_page(request):
     template = loader.get_template('profile_page.html')
@@ -121,11 +122,11 @@ class CompanyUpdateView(BSModalUpdateView):
     def post(self, request, **kwargs):
         self.success_url = reverse('company_detail', kwargs={'pk':self.kwargs['pk']})
         return super(CompanyUpdateView, self).post(request, **kwargs)
-        
+
+
 class CompanyDetailView(DetailView):
     model = Company
     template = loader.get_template('company_detail.html')
-    
     def get(self, request, *args, **kwargs):
         company = get_object_or_404(Company, pk=kwargs['pk'])
         users = CustomUser.objects.filter(company = kwargs['pk'])

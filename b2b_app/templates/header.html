@@ -2,10 +2,9 @@
     <div class="title_bar"> 
             <img src="{% static 'Images/d2d-logo.png' %}">
             <span class="navigation">
-            {% if user.is_superuser %}   
+            {% if not user.is_superuser %}   
             <a href="{% url 'company_list' %}" class="active_page">Profiles</a>
             
-            {% else %}
             <a href="">Reporting</a>
             {% endif %}
             <div class="dropdown-exit" onmouseout="normalImg(this)"></div>
