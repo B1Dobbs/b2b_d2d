@@ -2,15 +2,6 @@
 {%load static%}
 {% block content %}
 
-<!-- Comment out to make bar width of content -->
-<div class="title_bar"> 
-    <img src="{% static 'Images/d2d-logo.png' %}">
-    <span class="navigation">
-        <a href="{% url 'company_list' %}" class="active_page">Profiles</a>
-        <a href="">Reporting</a>
-        <i class="fas fa-user-circle user-circle"></i>             
-    </span>      
-</div>
     {% include "_modal.html" %}
     <div class="content">
         <!-- Uncomment to make title bar width of the content -->
@@ -24,24 +15,23 @@
         <div class = "details-block">
         <span id = "title" class = "title"> <strong>{{ company.name }} </strong></span>
         <button class="update-company" type="button" name="button" data-id="{% url 'update_company' company.pk %}"><span><i class='fas fa-pen icons'></i></span></button>
-        <i class='fas fa-trash icons'></i>
         <div class="indent">
             <span class = "labels">Contact Person </span>
-            <span class = "details" id = "contact">{{ company.contactPerson }}</span>
+            <span class = "details" id = "contact">{{ company.contact_person }}</span>
             <br>
             <span class = "labels">Company Number </span>
-            <span class = "details" id = "number"> {{ company.contactNumber }}</span>
+            <span class = "details" id = "number"> {{ company.contact_number }}</span>
         </div>
         <div class = "grid-x grid-padding-x profile-custom">
             <div class = "large-6 medium-6 small-12 cell">
                 <span class = "labels">Searchable Websites</span>
-                    {% for site in company.searchSites %}
+                    {% for site in company.search_sites %}
                         <p class="details bolded">{{site}}</p>
                     {% endfor %}
             </div>
             <div class = "small-12 medium-6 large-6 cell">
                     <span class = "labels">Book Formats </span>
-                    {% for bookFormat in company.bookFormats %}
+                    {% for bookFormat in company.book_formats %}
                         <p class="details bolded">{{bookFormat}}</p>
                     {% endfor %}
             </div>
@@ -82,7 +72,7 @@
         {% endfor %}
         </table>
     {% else %}
-        <p class="no-books text-primary">No users added yet.</p>
+        <p class="labels">No users added yet.</p>
     {% endif %}
     </div>
     </div>

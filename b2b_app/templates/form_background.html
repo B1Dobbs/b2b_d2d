@@ -15,14 +15,14 @@
     {% block stylesheets %}
       <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-      <link rel="stylesheet" href="{% static 'css/popups.css' %}">
       <link rel="stylesheet" type="text/css" href="{% static 'css/companies.css'%}">
       <link rel="stylesheet" type="text/css" href="{% static 'css/pages.css'%}">
       <link rel="stylesheet" type="text/css" href="{% static 'css/header.css'%}">
-      <link rel="shortcut icon" href="{%static 'images/d2d-icon.ico' %}" type='image/x-icon'">
+      <link rel="shortcut icon" href="{%static 'images/d2d-icon.ico' %}" type='image/x-icon'>
       <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
       <script src="https://kit.fontawesome.com/92ed4f50f3.js" crossorigin="anonymous"></script>
-      <link rel="stylesheet" type="text/css" href="{%static 'css/add-company.css' %}" 
+      <link rel="stylesheet" type="text/css" href="{%static 'css/add-company.css' %}">
+      <link rel="stylesheet" type="text/css" href="{%static 'css/popups.css' %}">
 
     {% endblock stylesheets %}
 
@@ -31,6 +31,7 @@
 
   <body>
 
+    {% include "header.html" %}
 
     {% block content %}{% endblock content %}
 
