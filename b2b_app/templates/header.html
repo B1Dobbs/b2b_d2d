@@ -12,12 +12,54 @@
                         <div class="arrow-up"></div>
                     </div>
                     <a href="#">Profile</a>
-                    <a href="#">Reset Password</a>
-                    <a href="#">Logout</a>
+                    <a class="reset" data-toggle="modal" data-target="#reset-password" href="#">Reset Password</a>
+                    <a class="logout" data-toggle="modal" data-target="#logout">Logout</a>
                 </div>
             </div>
             </div>
-        </span>  
+        </span> 
+        <!-- LOGOUT MODAL -->
+        <div class="modal fade" id="logout" role="dialog">
+            <div class="modal-dialog">
+            
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                <h4 class="modal-title">Logout</h4>
+                </div>
+                <div class="modal-body">
+                <p>You will be returned to the login screen.</p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default">Logout</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+        
+        <!-- RESET PASSWORD MODAL -->
+        <div class="modal fade" id="reset-password" role="dialog">
+            <div class="modal-dialog">
+            
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                <h4 class="modal-title">Reset Password</h4>
+                </div>
+                <div class="modal-body">
+                <p id="confirm-reset">Are you sure you want to reset your password?</p>    
+                <p id="send-email" style="display: none;">A link to reset your password has been sent to your email.</p>
+                </div>
+                <div class="modal-footer">
+                <button onclick="sendEmail()" id="reset-btn" type="button" class="btn btn-default">Reset</button>
+                <button onclick="resetPasswordPopup()" id="reset-cancel" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+            
+            </div>
+        </div>
     </div>
 <script type="text/javascript">
 
@@ -28,6 +70,21 @@
     function normalImg(x) {
         document.getElementById("dropdown-div").style.visibility = "hidden";
     }
+
+    function sendEmail() {
+        document.getElementById("send-email").style.display = "block";
+        document.getElementById("confirm-reset").style.display = "none";
+        document.getElementById("reset-btn").style.display = "none";
+        document.getElementById("reset-cancel").innerHTML = "Close";
+    }
+
+    function resetPasswordPopup() {
+        document.getElementById("send-email").style.display = "none";
+        document.getElementById("confirm-reset").style.display = "block";
+        document.getElementById("reset-btn").style.display = "block";
+        document.getElementById("reset-cancel").innerHTML = "Cancel";
+    }
+
 </script>
  
     
