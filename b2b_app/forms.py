@@ -14,7 +14,7 @@ class CompanyForm(BSModalForm):
 
     class Meta:
         model = Company
-        fields = ['name', 'contact_person', 'contact_number', 'search_sites', 'book_formats']
+        fields = ['name', 'contactPerson', 'contactNumber', 'searchSites', 'bookFormats']
 
 
 class UserForm(BSModalForm):
