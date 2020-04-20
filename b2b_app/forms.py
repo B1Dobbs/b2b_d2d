@@ -7,16 +7,21 @@ from bootstrap_modal_forms.forms import BSModalForm
 from .models import Company
 from django.http import HttpResponseRedirect
 class CustomUserCreationForm(UserCreationForm):
-
+    def __init__(self, *args, **kwargs):
+        self.request = kwargs.pop('request', None)
+        super(CustomUserCreationForm, self).__init__(*args, **kwargs)
     class Meta:
         model = CustomUser
-        fields = ('username', 'email', 'company', 'active')
+        fields = ('first_name', 'email')
+
 
 class CustomUserChangeForm(UserChangeForm):
-
+    def __init__(self, *args, **kwargs):
+        self.request = kwargs.pop('request', None)
+        super(CustomUserCreationForm, self).__init__(*args, **kwargs)
     class Meta:
         model = CustomUser
-        fields = ('username', 'email', 'company', 'active')
+        fields = ('first_name', 'email')
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UserChangeForm
 
 

@@ -13,7 +13,7 @@ from bootstrap_modal_forms.generic import (BSModalLoginView,
                                            BSModalReadView,
                                            BSModalDeleteView)
 from django.urls import reverse_lazy
-from .forms import CompanyForm, UserForm, UserChangeForm
+from .forms import CompanyForm, UserForm, UserChangeForm, CustomUserCreationForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.core.paginator import Paginator
@@ -133,7 +133,7 @@ class CompanyDetailView(DetailView):
         return render(request, 'company_detail.html', context)
 
 class UserCreateView(BSModalCreateView):
-    form_class = UserForm
+    form_class = CustomUserCreationForm
     template_name = 'user/create_user.html'
     success_message = 'Success: User was created.'
 
@@ -141,11 +141,14 @@ class UserCreateView(BSModalCreateView):
         company_id = self.kwargs['company_id']
         self.success_url = reverse('company_detail', kwargs={'pk':company_id})
         self.company = Company.objects.get(pk=company_id)
+        print(self)
         return super(UserCreateView, self).post(request, **kwargs)
 
     def form_valid(self, form):
         form.instance.company = self.company
         return super().form_valid(form)
+    def get(self, request, **kwargs):
+        return super(UserCreateView, self).get(self, **kwargs)
 
 class UserUpdateView(BSModalUpdateView):
     model = CustomUser
