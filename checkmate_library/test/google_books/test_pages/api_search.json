@@ -1,0 +1,3004 @@
+{
+  "kind": "books#volumes",
+  "totalItems": 2934,
+  "items": [
+    {
+      "kind": "books#volume",
+      "id": "vMYVAAAAYAAJ",
+      "etag": "x32lYNlR1Ac",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/vMYVAAAAYAAJ",
+      "volumeInfo": {
+        "title": "The Readings of Mr. Charles Dickens, as Condensed by Himself",
+        "authors": [
+          "Charles Dickens"
+        ],
+        "publishedDate": "1868",
+        "industryIdentifiers": [
+          {
+            "type": "OTHER",
+            "identifier": "HARVARD:HN6IHU"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 348,
+        "printType": "BOOK",
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.2.0.full.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=vMYVAAAAYAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=vMYVAAAAYAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=vMYVAAAAYAAJ&printsec=frontcover&dq=charles+dickens&hl=&cd=1&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=vMYVAAAAYAAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=vMYVAAAAYAAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FREE",
+        "isEbook": true,
+        "buyLink": "https://play.google.com/store/books/details?id=vMYVAAAAYAAJ&rdid=book-vMYVAAAAYAAJ&rdot=1&source=gbs_api"
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "ALL_PAGES",
+        "embeddable": true,
+        "publicDomain": true,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false,
+          "downloadLink": "http://books.google.com/books/download/The_Readings_of_Mr_Charles_Dickens_as_Co.epub?id=vMYVAAAAYAAJ&hl=&output=epub&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "downloadLink": "http://books.google.com/books/download/The_Readings_of_Mr_Charles_Dickens_as_Co.pdf?id=vMYVAAAAYAAJ&hl=&output=pdf&sig=ACfU3U128n7qo99aDGNfqv0HwvjJxttHnA&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=vMYVAAAAYAAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "FULL_PUBLIC_DOMAIN",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "JHVwuAAACAAJ",
+      "etag": "TjZGMSyAD+k",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/JHVwuAAACAAJ",
+      "volumeInfo": {
+        "title": "Charles Dickens",
+        "subtitle": "A Life",
+        "authors": [
+          "Claire Tomalin"
+        ],
+        "publisher": "Penguin Books",
+        "publishedDate": "2012-10-30",
+        "description": "Chronicles the life of the nineteenth-century literary master from the challenges he faced as the imprisoned son of a profligate father, his rise to one of England's foremost novelists, and the personal demons that challenged his relationships.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0143122053"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780143122050"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 576,
+        "printType": "BOOK",
+        "categories": [
+          "Biography & Autobiography"
+        ],
+        "averageRating": 4,
+        "ratingsCount": 19,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=JHVwuAAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=JHVwuAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=JHVwuAAACAAJ&dq=charles+dickens&hl=&cd=2&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=JHVwuAAACAAJ&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Charles_Dickens.html?hl=&id=JHVwuAAACAAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=JHVwuAAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Chronicles the life of the nineteenth-century literary master from the challenges he faced as the imprisoned son of a profligate father, his rise to one of England&#39;s foremost novelists, and the personal demons that challenged his ..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "0pprAwAAQBAJ",
+      "etag": "P8FgDq3e9bw",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/0pprAwAAQBAJ",
+      "volumeInfo": {
+        "title": "Who Was Charles Dickens?",
+        "authors": [
+          "Pam Pollack",
+          "Meg Belviso",
+          "Who HQ"
+        ],
+        "publisher": "Penguin",
+        "publishedDate": "2014-12-26",
+        "description": "As a child, Charles Dickens worked in a shoe polish factory where his gritty surroundings inspired some of the most memorable characters and settings in literary history. Known for his masterful storytelling in books like Oliver Twist, Great Expectations, and A Christmas Carol, Dickens toured the globe as one of the most famous people of his era. Widely considered the greatest writer of the Victorian age, Dickens’s literary masterpieces continue to amuse and inspire writers and readers alike.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780698187313"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0698187318"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "pageCount": 112,
+        "printType": "BOOK",
+        "categories": [
+          "Juvenile Nonfiction"
+        ],
+        "averageRating": 1,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.5.4.0.preview.2",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=0pprAwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=0pprAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=0pprAwAAQBAJ&printsec=frontcover&dq=charles+dickens&hl=&cd=3&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=0pprAwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=0pprAwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 5.99,
+          "currencyCode": "USD"
+        },
+        "retailPrice": {
+          "amount": 5.99,
+          "currencyCode": "USD"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=0pprAwAAQBAJ&rdid=book-0pprAwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 5990000,
+              "currencyCode": "USD"
+            },
+            "retailPrice": {
+              "amountInMicros": 5990000,
+              "currencyCode": "USD"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Who_Was_Charles_Dickens-sample-epub.acsm?id=0pprAwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=0pprAwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "As a child, Charles Dickens worked in a shoe polish factory where his gritty surroundings inspired some of the most memorable characters and settings in literary history."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "uilZDwAAQBAJ",
+      "etag": "qrXV9VCpzd4",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/uilZDwAAQBAJ",
+      "volumeInfo": {
+        "title": "Charles Dickens",
+        "subtitle": "Four Novels",
+        "authors": [
+          "Charles Dickens"
+        ],
+        "publisher": "Simon and Schuster",
+        "publishedDate": "2012-11-15",
+        "description": "No library's complete without the classics! This new edition collects the greatest works of Charles Dickens, one of the most popular novelists of all time. Oliver Twist. Pip. The ghosts of Christmas past, present, and future. The characters of Charles Dickens live on in our imaginations long after we've read his renowned works of social commentary and vivid storytelling. And though these novels were written more than one hundred years ago, no home library today would be complete without them. This Canterbury Classics edition of Charles Dickens collects some of his most famous and beloved works--The Adventures of Oliver Twist, A Christmas Carol, A Tale of Two Cities, and Great Expectations--into a single volume. For those who've never read Dickens, it's the perfect opportunity to experience his unique and compelling writing. And for those who are already Dickens devotees, an introduction by a renowned scholar will provide additional context and food for thought.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781607108726"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1607108720"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "pageCount": 899,
+        "printType": "BOOK",
+        "categories": [
+          "Fiction"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.0.1.0.preview.2",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=uilZDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=uilZDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=uilZDwAAQBAJ&printsec=frontcover&dq=charles+dickens&hl=&cd=4&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=uilZDwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=uilZDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 7.99,
+          "currencyCode": "USD"
+        },
+        "retailPrice": {
+          "amount": 7.99,
+          "currencyCode": "USD"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=uilZDwAAQBAJ&rdid=book-uilZDwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 7990000,
+              "currencyCode": "USD"
+            },
+            "retailPrice": {
+              "amountInMicros": 7990000,
+              "currencyCode": "USD"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Charles_Dickens-sample-epub.acsm?id=uilZDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=uilZDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "No library&#39;s complete without the classics! This new edition collects the greatest works of Charles Dickens, one of the most popular novelists of all time. Oliver Twist. Pip. The ghosts of Christmas past, present, and future."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "bT5WAAAAcAAJ",
+      "etag": "EScd5yNQ3+M",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/bT5WAAAAcAAJ",
+      "volumeInfo": {
+        "title": "Speeches literary and social by Charles Dickens. Now first collected. With chapters on “Charles Dickens as a Letter Writer, Poet, and Public Reader.” [Edited by R. H. Shepherd. With a bibliography.]",
+        "authors": [
+          "Charles Dickens"
+        ],
+        "publishedDate": "1870",
+        "industryIdentifiers": [
+          {
+            "type": "OTHER",
+            "identifier": "BL:A0017460821"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 372,
+        "printType": "BOOK",
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.0.1.0.full.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=bT5WAAAAcAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=bT5WAAAAcAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=bT5WAAAAcAAJ&printsec=frontcover&dq=charles+dickens&hl=&cd=5&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=bT5WAAAAcAAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=bT5WAAAAcAAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FREE",
+        "isEbook": true,
+        "buyLink": "https://play.google.com/store/books/details?id=bT5WAAAAcAAJ&rdid=book-bT5WAAAAcAAJ&rdot=1&source=gbs_api"
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "ALL_PAGES",
+        "embeddable": true,
+        "publicDomain": true,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "downloadLink": "http://books.google.com/books/download/Speeches_literary_and_social_by_Charles.pdf?id=bT5WAAAAcAAJ&hl=&output=pdf&sig=ACfU3U04N6emXoqj8KQwK2x9rmJQOiUGOQ&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=bT5WAAAAcAAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "FULL_PUBLIC_DOMAIN",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "D0zFr3xc4bMC",
+      "etag": "nZLDYULaGIQ",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/D0zFr3xc4bMC",
+      "volumeInfo": {
+        "title": "A Christmas Carol",
+        "authors": [
+          "Charles Dickens"
+        ],
+        "publishedDate": "2010-09-01",
+        "description": "This Graphic Novel Series features classic tales retold with attractive color illustrations. Educatiors using the Dale-Chall vocabulary system adapted each title. Each 70 page, softcover book retains key phrases and quotations from the original classics. Introduce literature to reluctant readers and motivate struggling readers. Students build confidence through reading practice. Motivation makes all the difference. What's more motivation then the expectation of success?",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "1603035052"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9781603035057"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 64,
+        "printType": "BOOK",
+        "categories": [
+          "Juvenile Fiction"
+        ],
+        "averageRating": 4,
+        "ratingsCount": 236,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.0.1.0.preview.3",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=D0zFr3xc4bMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=D0zFr3xc4bMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=D0zFr3xc4bMC&printsec=frontcover&dq=charles+dickens&hl=&cd=6&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=D0zFr3xc4bMC&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/A_Christmas_Carol.html?hl=&id=D0zFr3xc4bMC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "ALL_PAGES",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/A_Christmas_Carol-sample-epub.acsm?id=D0zFr3xc4bMC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/A_Christmas_Carol-sample-pdf.acsm?id=D0zFr3xc4bMC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=D0zFr3xc4bMC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This Graphic Novel Series features classic tales retold with attractive color illustrations."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "RJ_yAAAAMAAJ",
+      "etag": "sVrD32ATTKg",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/RJ_yAAAAMAAJ",
+      "volumeInfo": {
+        "title": "Charles Dickens",
+        "authors": [
+          "Neil Champion"
+        ],
+        "publisher": "Heinemann/Raintree",
+        "publishedDate": "2002",
+        "description": "Presents the life and accomplishments of the popular Victorian novelist whose books combined sentiment, humor, and social realism.",
+        "industryIdentifiers": [
+          {
+            "type": "OTHER",
+            "identifier": "IND:30000082175211"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 64,
+        "printType": "BOOK",
+        "categories": [
+          "Juvenile Nonfiction"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=RJ_yAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=RJ_yAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=RJ_yAAAAMAAJ&q=charles+dickens&dq=charles+dickens&hl=&cd=7&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=RJ_yAAAAMAAJ&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Charles_Dickens.html?hl=&id=RJ_yAAAAMAAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=RJ_yAAAAMAAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Presents the life and accomplishments of the popular Victorian novelist whose books combined sentiment, humor, and social realism."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "a71KDwAAQBAJ",
+      "etag": "160VKgvVhfg",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/a71KDwAAQBAJ",
+      "volumeInfo": {
+        "title": "Charles Dickens",
+        "subtitle": "The Essential Collection",
+        "authors": [
+          "Charles Dickens"
+        ],
+        "publisher": "Race Point Publishing",
+        "publishedDate": "2018-03-13",
+        "description": "This superb collection of classic Victorian literature features the most notable works of Charles Dickens, including Oliver Twist (1839), A Christmas Carol (1843), A Tale of Two Cities (1859), and Great Expectations (1861). Considered the greatest novelist of the Victorian era, Dickens was especially known for his unusual characters, incisive social commentary, and carefully constructed plots. Over the last two centuries, his popular fiction has continued to inspire adaptations in nearly artistic genre, and now it is available--complete and unabridged--in this gorgeous slipcase edition. The stylish clothbound hardcover also features a ribbon marker, historical timeline, and comprehensive introduction, enlightening the reader on the author’s life and works.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781631065019"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1631065017"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 1088,
+        "printType": "BOOK",
+        "categories": [
+          "Fiction"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.0.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=a71KDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=a71KDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=a71KDwAAQBAJ&printsec=frontcover&dq=charles+dickens&hl=&cd=8&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=a71KDwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=a71KDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 35,
+          "currencyCode": "USD"
+        },
+        "retailPrice": {
+          "amount": 19.25,
+          "currencyCode": "USD"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=a71KDwAAQBAJ&rdid=book-a71KDwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 35000000,
+              "currencyCode": "USD"
+            },
+            "retailPrice": {
+              "amountInMicros": 19250000,
+              "currencyCode": "USD"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Charles_Dickens-sample-pdf.acsm?id=a71KDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=a71KDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This superb collection of classic Victorian literature features the most notable works of Charles Dickens, including Oliver Twist (1839), A Christmas Carol (1843), A Tale of Two Cities (1859), and Great Expectations (1861)."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "e6dlAAAAMAAJ",
+      "etag": "1F6NiVTYdvQ",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/e6dlAAAAMAAJ",
+      "volumeInfo": {
+        "title": "Charles Dickens",
+        "authors": [
+          "Donald Hawes"
+        ],
+        "publisher": "Bloomsbury Academic",
+        "publishedDate": "2007-05-13",
+        "description": "Charles Dickens is without doubt a literary giant. The most widely read author of his own generation, his works remain incredibly popular and important today. Often seen as the quintessential Victorian novelist, his texts convey perhaps better than any others the drive for wealth and progress and the social contrasts that characterised the Victorian era. His works are widely studied throughout the world both as literary masterpieces and as classic examples of the nineteenth century novel. Combining a biographical approach with close reading of the novels, Donald Hawes offers an illuminating portrait of Dickens as a writer and insight into his life and times. This book will provide a short, lively but sophisticated introduction to Dickens's work and the personal and social context in which it was written.",
+        "industryIdentifiers": [
+          {
+            "type": "OTHER",
+            "identifier": "UOM:39015069298860"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 176,
+        "printType": "BOOK",
+        "categories": [
+          "Biography & Autobiography"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=e6dlAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=e6dlAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=e6dlAAAAMAAJ&q=charles+dickens&dq=charles+dickens&hl=&cd=9&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=e6dlAAAAMAAJ&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Charles_Dickens.html?hl=&id=e6dlAAAAMAAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=e6dlAAAAMAAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This book will provide a short, lively but sophisticated introduction to Dickens&#39;s work and the personal and social context in which it was written."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "j5c9GqZ_7BMC",
+      "etag": "5XE4m+4T8E0",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/j5c9GqZ_7BMC",
+      "volumeInfo": {
+        "title": "Charles Dickens in Context",
+        "authors": [
+          "Sally Ledger",
+          "Holly Furneaux"
+        ],
+        "publisher": "Cambridge University Press",
+        "publishedDate": "2011-06-02",
+        "description": "Charles Dickens, a man so representative of his age as to have become considered synonymous with it, demands to be read in context. This book illuminates the worlds - social, political, economic and artistic - in which Dickens worked. Dickens's professional life encompassed work as a novelist, journalist, editor, public reader and passionate advocate of social reform. This volume offers a detailed treatment of Dickens in each of these roles, exploring the central features of Dickens's age, work and legacy, and uncovering sometimes surprising faces of the man and of the range of Dickens industries. Through 45 digestible short chapters written by a leading expert on each topic, a rounded picture emerges of Dickens's engagement with his time, the influence of his works and the ways he has been read, adapted and re-imagined from the nineteenth century to the present.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780521887007"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0521887003"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 405,
+        "printType": "BOOK",
+        "categories": [
+          "Literary Criticism"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=j5c9GqZ_7BMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=j5c9GqZ_7BMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=j5c9GqZ_7BMC&printsec=frontcover&dq=charles+dickens&hl=&cd=10&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=j5c9GqZ_7BMC&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Charles_Dickens_in_Context.html?hl=&id=j5c9GqZ_7BMC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=j5c9GqZ_7BMC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Charles Dickens, a man so representative of his age as to have become considered synonymous with it, demands to be read in context. This book illuminates the worlds - social, political, economic and artistic - in which Dickens worked."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "5ERSPN-ytEoC",
+      "etag": "94rzA9xUwiU",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/5ERSPN-ytEoC",
+      "volumeInfo": {
+        "title": "Charles Dickens",
+        "authors": [
+          "G. K. Chesterton"
+        ],
+        "publisher": "Wordsworth Editions",
+        "publishedDate": "2007",
+        "description": "This Is A New Release Of The Original 1907 Edition.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "1840225629"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9781840225624"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 154,
+        "printType": "BOOK",
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.0.2.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=5ERSPN-ytEoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=5ERSPN-ytEoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=5ERSPN-ytEoC&printsec=frontcover&dq=charles+dickens&hl=&cd=11&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=5ERSPN-ytEoC&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Charles_Dickens.html?hl=&id=5ERSPN-ytEoC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=5ERSPN-ytEoC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This Is A New Release Of The Original 1907 Edition."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "jYp91-w4HmIC",
+      "etag": "gTPr83oSYpA",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/jYp91-w4HmIC",
+      "volumeInfo": {
+        "title": "The Complete Works of Charles Dickens",
+        "subtitle": "Oliver Twist",
+        "authors": [
+          "Charles Dickens"
+        ],
+        "publisher": "Cosimo, Inc.",
+        "publishedDate": "2009-01-01",
+        "description": "It is impossible to overstate the importance of British novelist CHARLES DICKENS (1812-1870) not only to literature in the English language, but to Western civilization on the whole. He is arguably the first fiction writer to have become an international celebrity. He popularized episodic fiction and the cliffhanger, which had a profound influence on the development of film and television. He is entirely responsible for the popular image of Victorian London that still lingers today, and his characters-from Oliver Twist to Ebenezer Scrooge, from Miss Havisham to Uriah Heep-have become not merely iconic, but mythic. But it was his stirring portraits of ordinary people-not the upper classes or the aristocracy-and his fervent cries for social, moral, and legal justice for the working poor, and in particular for poor children, in the grim early decades of the Industrial Revolution that powerfully impacted social concerns well into the 20th century. Without Charles Dickens, we may never have seen the likes of Sherlock Holmes, Upton Sinclair, or even Bob Dylan. Here, in 30 beautiful volumes-complete with all the original illustrations-is every published word written by one of the most important writers ever. The essential collector's set will delight anyone who cherishes English literature...and who takes pleasure in constantly rediscovering its joys. This volume contains Oliver Twist, Dickens's second novel, which was serialized in Bentley's Miscellany from February 1837 to April 1839. A stunning example of the social novel-and the first novel ever to focus on a child character-it is one of Dickens's most compelling works.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781605209890"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1605209899"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 452,
+        "printType": "BOOK",
+        "categories": [
+          "Reference"
+        ],
+        "averageRating": 4,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "2.1.0.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=jYp91-w4HmIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=jYp91-w4HmIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=jYp91-w4HmIC&printsec=frontcover&dq=charles+dickens&hl=&cd=12&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=jYp91-w4HmIC&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=jYp91-w4HmIC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 4.99,
+          "currencyCode": "USD"
+        },
+        "retailPrice": {
+          "amount": 4.99,
+          "currencyCode": "USD"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=jYp91-w4HmIC&rdid=book-jYp91-w4HmIC&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 4990000,
+              "currencyCode": "USD"
+            },
+            "retailPrice": {
+              "amountInMicros": 4990000,
+              "currencyCode": "USD"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/The_Complete_Works_of_Charles_Dickens-sample-pdf.acsm?id=jYp91-w4HmIC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=jYp91-w4HmIC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This volume contains Oliver Twist, Dickens&#39;s second novel, which was serialized in Bentley&#39;s Miscellany from February 1837 to April 1839."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "AzYnFAaFb48C",
+      "etag": "BrtwuKLlUj0",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/AzYnFAaFb48C",
+      "volumeInfo": {
+        "title": "Best of Times",
+        "subtitle": "The Story of Charles Dickens",
+        "authors": [
+          "Peggy Caravantes"
+        ],
+        "publisher": "Morgan Reynolds Pub",
+        "publishedDate": "2005-01-01",
+        "description": "Details the life of Charles Dickens and discusses how his upbringing and surroundings led him to write novels depicting the working class, often involving child laborers, in nineteenth-century England.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "1931798680"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9781931798686"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 160,
+        "printType": "BOOK",
+        "categories": [
+          "Juvenile Nonfiction"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.3.0.0.preview.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=AzYnFAaFb48C&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=AzYnFAaFb48C&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=AzYnFAaFb48C&q=charles+dickens&dq=charles+dickens&hl=&cd=13&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=AzYnFAaFb48C&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Best_of_Times.html?hl=&id=AzYnFAaFb48C"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=AzYnFAaFb48C&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Details the life of Charles Dickens and discusses how his upbringing and surroundings led him to write novels depicting the working class, often involving child laborers, in nineteenth-century England."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "cTEfjV_1tscC",
+      "etag": "MsQlfkXH/oM",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/cTEfjV_1tscC",
+      "volumeInfo": {
+        "title": "Charles Dickens",
+        "subtitle": "The Man Who Had Great Expectations",
+        "authors": [
+          "Diane Stanley",
+          "Peter Vennema"
+        ],
+        "publisher": "Harper Collins",
+        "publishedDate": "1993-08-16",
+        "description": "Charles Dickens is one of the world's greatest and best loved writers. To read Great Expectations, A Christmas Carol, or Nicholas Nickleby is to be drawn into a society that still seems fresh and real today: nineteenth-century London with its extraordinary extremes of wealth, progress, poverty, and despair. Dickens captures it all in plots that are by turns wildly comical, wonderfully melodramatic, and tragic to the point of tears. In his writing and later, in his dramatic readings, Charles Dickens was a master showman, mesmerizing the whole world. His novels are stuffed to bursting with unforgettable characters like Mr. Micawber, Ebineezer Scrooge, and Little Nell. Most affecting are his portraits of children abused and abandoned by the Industrial Age. David Copperfield, Oliver Twist, and Tiny Tim are mirrors that reflect the twisted values of their time. The twists of Dickens's own life encompassed childhood suffering as well as international acclaim. When he was twelve, his father was consigned to debtors' prison and Charles to working in a blacking factory. Not twelve years later The Pickwick Papers would propel him toward literary stardom. In their lovingly researched, incisively written biography, illustrated with a lushness and attention to period detail of which Dickens would have approved, Diane Stanley and Peter Vennema illuminate his inspirations, his impact on nations of readers, and his gleaming genius that has only brightened with time. A handsome book on the beloved novelist. Dickens's troubled, well-documented life has plenty to interest children....Lucid, accessible....A lively, entertaining story for children who enjoy A Christmas Carol in its various guises....A must.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780688091101"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0688091105"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 48,
+        "printType": "BOOK",
+        "categories": [
+          "Juvenile Nonfiction"
+        ],
+        "averageRating": 3,
+        "ratingsCount": 2,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=cTEfjV_1tscC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=cTEfjV_1tscC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=cTEfjV_1tscC&printsec=frontcover&dq=charles+dickens&hl=&cd=14&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=cTEfjV_1tscC&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Charles_Dickens.html?hl=&id=cTEfjV_1tscC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=cTEfjV_1tscC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Charles Dickens is one of the world&#39;s greatest and best loved writers."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "m0QoSPuRTaEC",
+      "etag": "0zZM1o6FMRw",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/m0QoSPuRTaEC",
+      "volumeInfo": {
+        "title": "The Imagined World of Charles Dickens",
+        "authors": [
+          "Mildred Newcomb"
+        ],
+        "publisher": "Ohio State University Press",
+        "publishedDate": "1989-01-01",
+        "description": "Examines the themes and images Dickens used in his novels, discusses their allegorical meanings, and describes what they reveal about Dickens himself",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780814204825"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0814204821"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 243,
+        "printType": "BOOK",
+        "categories": [
+          "Imagination in literature."
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.1.0.preview.3",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=m0QoSPuRTaEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=m0QoSPuRTaEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=m0QoSPuRTaEC&printsec=frontcover&dq=charles+dickens&hl=&cd=15&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=m0QoSPuRTaEC&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Imagined_World_of_Charles_Dickens.html?hl=&id=m0QoSPuRTaEC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/The_Imagined_World_of_Charles_Dickens-sample-epub.acsm?id=m0QoSPuRTaEC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=m0QoSPuRTaEC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Examines the themes and images Dickens used in his novels, discusses their allegorical meanings, and describes what they reveal about Dickens himself"
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "7tcpAeDEx1AC",
+      "etag": "0+G2R0tOD2k",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/7tcpAeDEx1AC",
+      "volumeInfo": {
+        "title": "Charles Dickens",
+        "subtitle": "The Apostle of the People",
+        "authors": [
+          "Edwin Pugh"
+        ],
+        "publisher": "Ardent Media",
+        "publishedDate": "1908",
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 316,
+        "printType": "BOOK",
+        "categories": [
+          "Novelists, English"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.0.1.0.preview.1",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=7tcpAeDEx1AC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=7tcpAeDEx1AC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=7tcpAeDEx1AC&printsec=frontcover&dq=charles+dickens&hl=&cd=16&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=7tcpAeDEx1AC&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Charles_Dickens.html?hl=&id=7tcpAeDEx1AC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=7tcpAeDEx1AC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "OagmAQAAMAAJ",
+      "etag": "UWqtmQUm/3I",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/OagmAQAAMAAJ",
+      "volumeInfo": {
+        "title": "Readings on Charles Dickens",
+        "authors": [
+          "Clarice Swisher"
+        ],
+        "publisher": "Greenhaven Press, Incorporated",
+        "publishedDate": "1998",
+        "description": "Critical essays discuss Dickens and his works",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "1565105893"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9781565105898"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 191,
+        "printType": "BOOK",
+        "categories": [
+          "Juvenile Nonfiction"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=OagmAQAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=OagmAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=OagmAQAAMAAJ&q=charles+dickens&dq=charles+dickens&hl=&cd=17&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=OagmAQAAMAAJ&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Readings_on_Charles_Dickens.html?hl=&id=OagmAQAAMAAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=OagmAQAAMAAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Critical essays discuss Dickens and his works"
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "jzUfAQAAIAAJ",
+      "etag": "HNkMcL+SFsQ",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/jzUfAQAAIAAJ",
+      "volumeInfo": {
+        "title": "Charles Dickens",
+        "subtitle": "Life, Work, and Criticism",
+        "authors": [
+          "Robert H. Sirabian"
+        ],
+        "publishedDate": "2002-01-01",
+        "description": "Provides a critical view of the works of Charles Dickens.",
+        "industryIdentifiers": [
+          {
+            "type": "OTHER",
+            "identifier": "STANFORD:36105111589326"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 63,
+        "printType": "BOOK",
+        "categories": [
+          "Literary Collections"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=jzUfAQAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=jzUfAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=jzUfAQAAIAAJ&q=charles+dickens&dq=charles+dickens&hl=&cd=18&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=jzUfAQAAIAAJ&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Charles_Dickens.html?hl=&id=jzUfAQAAIAAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=jzUfAQAAIAAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Provides a critical view of the works of Charles Dickens."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "JaEjtYQG_lwC",
+      "etag": "5WnMka1pcw0",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/JaEjtYQG_lwC",
+      "volumeInfo": {
+        "title": "The Life of Charles Dickens",
+        "authors": [
+          "John Forster"
+        ],
+        "publisher": "Cambridge University Press",
+        "publishedDate": "2011-12-15",
+        "description": "A three-volume biography of Dickens, published in 1872-4 by one of his closest friends and advisors.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781108039376"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1108039375"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 576,
+        "printType": "BOOK",
+        "categories": [
+          "Biography & Autobiography"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=JaEjtYQG_lwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=JaEjtYQG_lwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=JaEjtYQG_lwC&printsec=frontcover&dq=charles+dickens&hl=&cd=19&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=JaEjtYQG_lwC&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Life_of_Charles_Dickens.html?hl=&id=JaEjtYQG_lwC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=JaEjtYQG_lwC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "A three-volume biography of Dickens, published in 1872-4 by one of his closest friends and advisors."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "GUZvDwAAQBAJ",
+      "etag": "hfqMMbrkavY",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/GUZvDwAAQBAJ",
+      "volumeInfo": {
+        "title": "Charles Dickens",
+        "authors": [
+          "Rod Mengham"
+        ],
+        "publisher": "Writers and Their Work (Paperb",
+        "publishedDate": "2001",
+        "description": "A comprehensive survey of Dickens's work by a leading Cambridge scholar who accessibly analyses the systematic complexity of his writing. Organized thematically, the study reflects the progress of Dickens's development throughout all his major fiction.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780746308011"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0746308019"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 134,
+        "printType": "BOOK",
+        "categories": [
+          "Biography & Autobiography"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=GUZvDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=GUZvDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=GUZvDwAAQBAJ&printsec=frontcover&dq=charles+dickens&hl=&cd=20&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=GUZvDwAAQBAJ&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Charles_Dickens.html?hl=&id=GUZvDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=GUZvDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "A comprehensive survey of Dickens&#39;s work by a leading Cambridge scholar who accessibly analyses the systematic complexity of his writing."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "GjIlriah_2EC",
+      "etag": "RCd/zFax3sI",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/GjIlriah_2EC",
+      "volumeInfo": {
+        "title": "Charles Dickens, Updated Edition",
+        "authors": [
+          "Harold Bloom"
+        ],
+        "publisher": "Infobase Publishing",
+        "publishedDate": "2009-01-01",
+        "description": "Presents a collection of critical essays on Dickens and his works.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781438112824"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1438112823"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 284,
+        "printType": "BOOK",
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.0.1.0.preview.3",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=GjIlriah_2EC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=GjIlriah_2EC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=GjIlriah_2EC&printsec=frontcover&dq=charles+dickens&hl=&cd=21&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=GjIlriah_2EC&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Charles_Dickens_Updated_Edition.html?hl=&id=GjIlriah_2EC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Charles_Dickens_Updated_Edition-sample-epub.acsm?id=GjIlriah_2EC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Charles_Dickens_Updated_Edition-sample-pdf.acsm?id=GjIlriah_2EC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=GjIlriah_2EC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Presents a collection of critical essays on Dickens and his works."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "u_ApAQAAMAAJ",
+      "etag": "ClqMXALeRJ0",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/u_ApAQAAMAAJ",
+      "volumeInfo": {
+        "title": "Charles Dickens: the inimitable Boz",
+        "authors": [
+          "Katharine Elliott Wilkie"
+        ],
+        "publisher": "HarperCollins Publishers",
+        "publishedDate": "1970",
+        "description": "A biography of the English author whose novels served to arouse public opinion against the social injustices they depicted.",
+        "industryIdentifiers": [
+          {
+            "type": "OTHER",
+            "identifier": "UOM:39076002230139"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 188,
+        "printType": "BOOK",
+        "categories": [
+          "Biography & Autobiography"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=u_ApAQAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=u_ApAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=u_ApAQAAMAAJ&q=charles+dickens&dq=charles+dickens&hl=&cd=22&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=u_ApAQAAMAAJ&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Charles_Dickens_the_inimitable_Boz.html?hl=&id=u_ApAQAAMAAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=u_ApAQAAMAAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "A biography of the English author whose novels served to arouse public opinion against the social injustices they depicted."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "yYBaAAAAMAAJ",
+      "etag": "xEYuWOeimO8",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/yYBaAAAAMAAJ",
+      "volumeInfo": {
+        "title": "Charles Dickens",
+        "subtitle": "His Life, Writings, and Personality",
+        "authors": [
+          "Frederic George Kitton"
+        ],
+        "publishedDate": "1902",
+        "industryIdentifiers": [
+          {
+            "type": "OTHER",
+            "identifier": "UOM:39015011815969"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 504,
+        "printType": "BOOK",
+        "categories": [
+          "Novelists, English"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.1.1.0.full.1",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=yYBaAAAAMAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=yYBaAAAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=yYBaAAAAMAAJ&printsec=frontcover&dq=charles+dickens&hl=&cd=23&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=yYBaAAAAMAAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=yYBaAAAAMAAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FREE",
+        "isEbook": true,
+        "buyLink": "https://play.google.com/store/books/details?id=yYBaAAAAMAAJ&rdid=book-yYBaAAAAMAAJ&rdot=1&source=gbs_api"
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "ALL_PAGES",
+        "embeddable": true,
+        "publicDomain": true,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false,
+          "downloadLink": "http://books.google.com/books/download/Charles_Dickens.epub?id=yYBaAAAAMAAJ&hl=&output=epub&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "downloadLink": "http://books.google.com/books/download/Charles_Dickens.pdf?id=yYBaAAAAMAAJ&hl=&output=pdf&sig=ACfU3U2mih9Uo8Ukx0qZDLtJ4yytYW3XVg&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=yYBaAAAAMAAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "FULL_PUBLIC_DOMAIN",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "zBIYAAAAYAAJ",
+      "etag": "2b+Me+RxBUo",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/zBIYAAAAYAAJ",
+      "volumeInfo": {
+        "title": "Charles Dickens' Works: Christmas books. Tale of two cities",
+        "authors": [
+          "Charles Dickens"
+        ],
+        "publishedDate": "1885",
+        "industryIdentifiers": [
+          {
+            "type": "OTHER",
+            "identifier": "HARVARD:HN1W9Y"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "printType": "BOOK",
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.2.2.0.full.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=zBIYAAAAYAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=zBIYAAAAYAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=zBIYAAAAYAAJ&printsec=frontcover&dq=charles+dickens&hl=&cd=24&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=zBIYAAAAYAAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=zBIYAAAAYAAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FREE",
+        "isEbook": true,
+        "buyLink": "https://play.google.com/store/books/details?id=zBIYAAAAYAAJ&rdid=book-zBIYAAAAYAAJ&rdot=1&source=gbs_api"
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "ALL_PAGES",
+        "embeddable": true,
+        "publicDomain": true,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false,
+          "downloadLink": "http://books.google.com/books/download/Charles_Dickens_Works_Christmas_books_Ta.epub?id=zBIYAAAAYAAJ&hl=&output=epub&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "downloadLink": "http://books.google.com/books/download/Charles_Dickens_Works_Christmas_books_Ta.pdf?id=zBIYAAAAYAAJ&hl=&output=pdf&sig=ACfU3U04PmMmJ3a_9WSfgSQYM054GniMoQ&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=zBIYAAAAYAAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "FULL_PUBLIC_DOMAIN",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "SSAVAgAAQBAJ",
+      "etag": "WXe3UkKjZZE",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/SSAVAgAAQBAJ",
+      "volumeInfo": {
+        "title": "Charles Dickens",
+        "subtitle": "The Complete Novels in One Sitting",
+        "authors": [
+          "Joelle Herr"
+        ],
+        "publisher": "Running Press",
+        "publishedDate": "2013-08-13",
+        "description": "Celebrate the bicentennial birthday of Charles Dickens with this Miniature Edition packed with witty summaries of the novels of one of history's most beloved storytellers. All fans of great literature can enjoy these perfectly portable renditions of Oliver Twist, A Christmas Carol, Great Expectations, A Tale of Two Cities, and all the Dickensian classics. Featuring synopses, character profiles, and illustrations, this mini book brings to life twenty classic tales and the iconic characters that populate the world of Dickens.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780762453238"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0762453230"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 248,
+        "printType": "BOOK",
+        "categories": [
+          "Humor"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.2.2.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=SSAVAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=SSAVAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=SSAVAgAAQBAJ&printsec=frontcover&dq=charles+dickens&hl=&cd=25&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=SSAVAgAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=SSAVAgAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 5.99,
+          "currencyCode": "USD"
+        },
+        "retailPrice": {
+          "amount": 5.99,
+          "currencyCode": "USD"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=SSAVAgAAQBAJ&rdid=book-SSAVAgAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 5990000,
+              "currencyCode": "USD"
+            },
+            "retailPrice": {
+              "amountInMicros": 5990000,
+              "currencyCode": "USD"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Charles_Dickens-sample-epub.acsm?id=SSAVAgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Charles_Dickens-sample-pdf.acsm?id=SSAVAgAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=SSAVAgAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Celebrate the bicentennial birthday of Charles Dickens with this Miniature Edition packed with witty summaries of the novels of one of history&#39;s most beloved storytellers."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "JtyxDgAAQBAJ",
+      "etag": "sSVcEG2qNWw",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/JtyxDgAAQBAJ",
+      "volumeInfo": {
+        "title": "Scenes of London Life",
+        "subtitle": "From 'Sketches by Boz'",
+        "authors": [
+          "Charles Dickens"
+        ],
+        "publisher": "Pan Macmillan",
+        "publishedDate": "2018-02-08",
+        "description": "Designed to appeal to the booklover, the Macmillan Collector's Library is a series of beautiful gift editions of much loved classic titles. Macmillan Collector's Library are books to love and treasure. Chosen and introduced by the playwright J. B. Priestley, these twelve marvellous sketches are accompanied by George Cruikshank’s evocative illustrations. Charles Dickens was one of the great chroniclers of London life. From the colourful chaos of dances and gin-shops to the sparse destitution of the pawnshop and the penitentiary, he captured the grime and the glory of the English capital with singular brilliance. Orphans and beggars, lord mayors and murderers, actors, criminals, cab drivers and prostitutes; all rub shoulders in this wonderful selection from Sketches by Boz.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781509869381"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1509869387"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "printType": "BOOK",
+        "categories": [
+          "Fiction"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.4.5.0.preview.2",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=JtyxDgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=JtyxDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=JtyxDgAAQBAJ&printsec=frontcover&dq=charles+dickens&hl=&cd=26&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=JtyxDgAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=JtyxDgAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 0.99,
+          "currencyCode": "USD"
+        },
+        "retailPrice": {
+          "amount": 0.99,
+          "currencyCode": "USD"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=JtyxDgAAQBAJ&rdid=book-JtyxDgAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 990000,
+              "currencyCode": "USD"
+            },
+            "retailPrice": {
+              "amountInMicros": 990000,
+              "currencyCode": "USD"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Scenes_of_London_Life-sample-epub.acsm?id=JtyxDgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=JtyxDgAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Chosen and introduced by the playwright J. B. Priestley, these twelve marvellous sketches are accompanied by George Cruikshank’s evocative illustrations. Charles Dickens was one of the great chroniclers of London life."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "nCpaAAAAYAAJ",
+      "etag": "RwbJThfbEwQ",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/nCpaAAAAYAAJ",
+      "volumeInfo": {
+        "title": "Charles Dickens and Friends",
+        "authors": [
+          "Charles Dickens"
+        ],
+        "publisher": "Candlewick Press (MA)",
+        "publishedDate": "2002",
+        "description": "Five tales by Charles Dickens--Oliver Twist, Great Expectations, A Tale of Two Cities, David Copperfield, and A Christmas Carol are retold with liveliness and wit in the form of comic strips.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0763619051"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780763619053"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 44,
+        "printType": "BOOK",
+        "categories": [
+          "Juvenile Fiction"
+        ],
+        "averageRating": 5,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=nCpaAAAAYAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=nCpaAAAAYAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=nCpaAAAAYAAJ&q=charles+dickens&dq=charles+dickens&hl=&cd=27&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=nCpaAAAAYAAJ&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Charles_Dickens_and_Friends.html?hl=&id=nCpaAAAAYAAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=nCpaAAAAYAAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Five tales by Charles Dickens--Oliver Twist, Great Expectations, A Tale of Two Cities, David Copperfield, and A Christmas Carol are retold with liveliness and wit in the form of comic strips."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "ZjR8AzhkmYwC",
+      "etag": "CJKpn1+N0oM",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/ZjR8AzhkmYwC",
+      "volumeInfo": {
+        "title": "Nicholas Nickleby",
+        "authors": [
+          "Charles Dickens"
+        ],
+        "publisher": "Collector's Library",
+        "publishedDate": "2004",
+        "description": "When his father suddenly dies, Nicholas Nickleby is sent by his uncle to Dotheboys Hall to work as a teacher, but when Nicholas discovers that the headmaster, Wackford Squeers, maliciously bullies the students, he must decide whether to stay, or leave and allow his uncle to cut off support for his family.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "1904633080"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9781904633082"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 1224,
+        "printType": "BOOK",
+        "categories": [
+          "Fiction"
+        ],
+        "averageRating": 4,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=ZjR8AzhkmYwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=ZjR8AzhkmYwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=ZjR8AzhkmYwC&printsec=frontcover&dq=charles+dickens&hl=&cd=28&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=ZjR8AzhkmYwC&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Nicholas_Nickleby.html?hl=&id=ZjR8AzhkmYwC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Nicholas_Nickleby-sample-epub.acsm?id=ZjR8AzhkmYwC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=ZjR8AzhkmYwC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "When his father suddenly dies, Nicholas Nickleby is sent by his uncle to Dotheboys Hall to work as a teacher, but when Nicholas discovers that the headmaster, Wackford Squeers, maliciously bullies the students, he must decide whether to ..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "3EwhvBWjxGUC",
+      "etag": "lnG6s44xLEM",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/3EwhvBWjxGUC",
+      "volumeInfo": {
+        "title": "Charles Dickens",
+        "subtitle": "The World of His Novels",
+        "authors": [
+          "Joseph Hillis Miller"
+        ],
+        "publisher": "Harvard University Press",
+        "publishedDate": "1958",
+        "description": "A review of Dickens' works stressing the transformation of the real world of Dickens' experience into an imaginary one",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0674110005"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780674110007"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 346,
+        "printType": "BOOK",
+        "categories": [
+          "Literary Criticism"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.0.2.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=3EwhvBWjxGUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=3EwhvBWjxGUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=3EwhvBWjxGUC&printsec=frontcover&dq=charles+dickens&hl=&cd=29&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=3EwhvBWjxGUC&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Charles_Dickens.html?hl=&id=3EwhvBWjxGUC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Charles_Dickens-sample-epub.acsm?id=3EwhvBWjxGUC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=3EwhvBWjxGUC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "A review of Dickens&#39; works stressing the transformation of the real world of Dickens&#39; experience into an imaginary one"
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "rHuYLR-XKAAC",
+      "etag": "dV2z+uJ4D2c",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/rHuYLR-XKAAC",
+      "volumeInfo": {
+        "title": "The Complete Works of Charles Dickens (in 30 Volumes, Illustrated)",
+        "subtitle": "Little Dorrit",
+        "authors": [
+          "Charles Dickens"
+        ],
+        "publisher": "Cosimo, Inc.",
+        "publishedDate": "2009-01-01",
+        "description": "i Full Title 9781616400224_INTF ii Copyright 9781616400224_INTF iii Quote 9781616400224_INTF iv Frontispiece Scan v - x Original Front Matter Scan - All 1 - 446 Text and Illustrations Scan - All, including 10 un-numbered pages 447 - 448 Text 9781616400224_INTM 449 Cosimo Ad 9781616400224_INTB 450 - 452 Blank(s) 9781616400224_INTB",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781616400224"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1616400226"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 470,
+        "printType": "BOOK",
+        "categories": [
+          "Reference"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.0.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=rHuYLR-XKAAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=rHuYLR-XKAAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=rHuYLR-XKAAC&printsec=frontcover&dq=charles+dickens&hl=&cd=30&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=rHuYLR-XKAAC&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=rHuYLR-XKAAC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 29.99,
+          "currencyCode": "USD"
+        },
+        "retailPrice": {
+          "amount": 16.19,
+          "currencyCode": "USD"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=rHuYLR-XKAAC&rdid=book-rHuYLR-XKAAC&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 29990000,
+              "currencyCode": "USD"
+            },
+            "retailPrice": {
+              "amountInMicros": 16190000,
+              "currencyCode": "USD"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/The_Complete_Works_of_Charles_Dickens_in-sample-pdf.acsm?id=rHuYLR-XKAAC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=rHuYLR-XKAAC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "i Full Title 9781616400224_INTF ii Copyright 9781616400224_INTF iii Quote 9781616400224_INTF iv Frontispiece Scan v - x Original Front Matter Scan - All 1 - 446 Text and Illustrations Scan - All, including 10 un-numbered pages 447 - 448 ..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "gAL0vp6y7hoC",
+      "etag": "Hu66VQPAgL0",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/gAL0vp6y7hoC",
+      "volumeInfo": {
+        "title": "The Letters of Charles Dickens",
+        "authors": [
+          "Charles Dickens"
+        ],
+        "publisher": "Library of Alexandria",
+        "publishedDate": "1852",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781465530219"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1465530215"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "printType": "BOOK",
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.3.3.0.preview.2",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=gAL0vp6y7hoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=gAL0vp6y7hoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=gAL0vp6y7hoC&printsec=frontcover&dq=charles+dickens&hl=&cd=31&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=gAL0vp6y7hoC&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=gAL0vp6y7hoC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 3.99,
+          "currencyCode": "USD"
+        },
+        "retailPrice": {
+          "amount": 3.99,
+          "currencyCode": "USD"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=gAL0vp6y7hoC&rdid=book-gAL0vp6y7hoC&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 3990000,
+              "currencyCode": "USD"
+            },
+            "retailPrice": {
+              "amountInMicros": 3990000,
+              "currencyCode": "USD"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/The_Letters_of_Charles_Dickens-sample-epub.acsm?id=gAL0vp6y7hoC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=gAL0vp6y7hoC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "kzIfAQAAIAAJ",
+      "etag": "TZ0VDemqkxA",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/kzIfAQAAIAAJ",
+      "volumeInfo": {
+        "title": "Charles Dickens' Book of Memoranda",
+        "subtitle": "A Photographic and Typographic Facsimile of the Notebook Begun in January 1855",
+        "authors": [
+          "Charles Dickens"
+        ],
+        "publisher": "New York Public Library",
+        "publishedDate": "1981",
+        "industryIdentifiers": [
+          {
+            "type": "OTHER",
+            "identifier": "STANFORD:36105039245092"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 107,
+        "printType": "BOOK",
+        "categories": [
+          "Fiction"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=kzIfAQAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=kzIfAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=kzIfAQAAIAAJ&q=charles+dickens&dq=charles+dickens&hl=&cd=32&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=kzIfAQAAIAAJ&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Charles_Dickens_Book_of_Memoranda.html?hl=&id=kzIfAQAAIAAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=kzIfAQAAIAAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "XRX7No8ers4C",
+      "etag": "fC4iJmXA/fg",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/XRX7No8ers4C",
+      "volumeInfo": {
+        "title": "David Copperfield",
+        "authors": [
+          "Charles Dickens"
+        ],
+        "publisher": "Cosimo, Inc.",
+        "publishedDate": "2009-01-01",
+        "description": "It is impossible to overstate the importance of British novelist CHARLES DICKENS (1812-1870) not only to literature in the English language, but to Western civilization on the whole. He is arguably the first fiction writer to have become an international celebrity. He popularized episodic fiction and the cliffhanger, which had a profound influence on the development of film and television. He is entirely responsible for the popular image of Victorian London that still lingers today, and his characters-from Oliver Twist to Ebenezer Scrooge, from Miss Havisham to Uriah Heep-have become not merely iconic, but mythic. But it was his stirring portraits of ordinary people-not the upper classes or the aristocracy-and his fervent cries for social, moral, and legal justice for the working poor, and in particular for poor children, in the grim early decades of the Industrial Revolution that powerfully impacted social concerns well into the 20th century. Without Charles Dickens, we may never have seen the likes of Sherlock Holmes, Upton Sinclair, or even Bob Dylan. Here, in 30 beautiful volumes-complete with all the original illustrations-is every published word written by one of the most important writers ever. The essential collector's set will delight anyone who cherishes English literature...and who takes pleasure in constantly rediscovering its joys. This volume contains Part II of David Copperfield, which was originally serialized in standalone installments in 1849. Dickens drew on his own life story for this tale of the life of the title character, and it is considered the most autobiographical of his works. It was Dickens's own favorite, and the work considered the best by many literary observers, including Tolstoy.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781616400163"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1616400161"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 466,
+        "printType": "BOOK",
+        "categories": [
+          "Reference"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "2.1.0.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=XRX7No8ers4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=XRX7No8ers4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=XRX7No8ers4C&printsec=frontcover&dq=charles+dickens&hl=&cd=33&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=XRX7No8ers4C&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=XRX7No8ers4C"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 29.99,
+          "currencyCode": "USD"
+        },
+        "retailPrice": {
+          "amount": 16.19,
+          "currencyCode": "USD"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=XRX7No8ers4C&rdid=book-XRX7No8ers4C&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 29990000,
+              "currencyCode": "USD"
+            },
+            "retailPrice": {
+              "amountInMicros": 16190000,
+              "currencyCode": "USD"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/David_Copperfield-sample-pdf.acsm?id=XRX7No8ers4C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=XRX7No8ers4C&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This volume contains Part II of David Copperfield, which was originally serialized in standalone installments in 1849."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "p7wvLUBMt1wC",
+      "etag": "+a+mT9XLbhg",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/p7wvLUBMt1wC",
+      "volumeInfo": {
+        "title": "Charles Dickens",
+        "subtitle": "The Uses of Time",
+        "authors": [
+          "James E. Marlow"
+        ],
+        "publisher": "Susquehanna University Press",
+        "publishedDate": "1994",
+        "description": "\"Charles Dickens: The Uses of Time clarifies the antinomies that appear in Dickens's attitudes toward the past, present, and future. To do this, author James E. Marlow follows Dickens's personal and literary development through all his novels and many of his letters and journalistic pieces. For example, toward the past Dickens reveals diametrically opposing attitudes. A part of his own childhood was so painful a memory to him that he could not bring himself to tell his wife about it after twenty years of marriage. In his novels he developed a number of ways of dealing with the awful pasts, both personal and national. From denial to anger to acceptance, Dickens tried one method after another. As each failed to relieve his anguish, and even failed to rescue human feelings, he formulated another. This is what Marlow calls Dickens's \"dialectic of the past.\"\" \"Yet Dickens was also nostalgic about much of the past. He emphasized its softening quality even while trying to disarm its dehumanizing quality. With his characters Dickens discovered the necessity of an engagement with the past that entails accepting the pain as well as the joy. This is its use. The past is abused when the pain or joy is disentangled from the whole and held up as meaning in itself. This act orphans the feelings, petrifying the soul.\" \"What is true of the past is true of the present and future as well. Just as one chapter of the book is devoted to the abuse of the past and another to its uses, a further chapter shows the way Dickens worked through the terrors of the present, dominated by an ideology that the author calls \"English cannibalism.\" Another chapter shows the threat of moral sclerosis through dealing with the future as merely \"great expectations.\" These chapters are paired with chapters that show the joys of the present and future. With each time period there is a dialectical process: Dickens had to work through a stance, discover its deficiencies, and then move on to another stance that promised to provide more human gain, both social and personal, from the past, present, and future. Ultimately, the very existence of three dimensions of time is the solace of man, because while the past, for example, can be used for relief of the present, the present can modify and soften the past. All is fluid, and nothing is ever finished in the process between mind and human events.\" \"In the last chapter Marlow established the kind of material world that Dickens's dialectic of time presupposed. It is a world with moral foundations, and Dickens, like many other Victorians, discovered a plausible, scientific explanation for such a world in Charles Babbage's Ninth Bridgewater Treatise, a book that seeks to harmonize scientific knowledge with moral imperatives. This satisfies Dickens's own project perfectly, for Dickens wished to demonstrate the possibilities of engagements with each dimension of time, within the requirements of social life, that do not annihilate the moral properties necessary for the soul to harmonize with God's universe itself.\"--BOOK JACKET.Title Summary field provided by Blackwell North America, Inc. All Rights Reserved",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0945636482"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780945636489"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 266,
+        "printType": "BOOK",
+        "categories": [
+          "Literary Criticism"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.1.2.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=p7wvLUBMt1wC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=p7wvLUBMt1wC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=p7wvLUBMt1wC&printsec=frontcover&dq=charles+dickens&hl=&cd=34&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=p7wvLUBMt1wC&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Charles_Dickens.html?hl=&id=p7wvLUBMt1wC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Charles_Dickens-sample-pdf.acsm?id=p7wvLUBMt1wC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=p7wvLUBMt1wC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "From denial to anger to acceptance, Dickens tried one method after another. As each failed to relieve his anguish, and even failed to rescue human feelings, he formulated another. This is what Marlow calls Dickens&#39;s &quot;dialectic of the past."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "CjEKT_LFVUUC",
+      "etag": "+gETXaPF4sc",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/CjEKT_LFVUUC",
+      "volumeInfo": {
+        "title": "Plays, Poems, and Miscellanies",
+        "authors": [
+          "Charles Dickens"
+        ],
+        "publisher": "Wildside Press LLC",
+        "publishedDate": "2008-04",
+        "description": "Plays, poems, and miscellanies by Charles Dickens. The plays include \"The Strange Gentleman,\" \"The Village Coquettes,\" and \"Is She His Wife? Or, Something Singular!\"",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "1434467775"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9781434467775"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 604,
+        "printType": "BOOK",
+        "categories": [
+          "Drama"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.2.2.0.preview.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=CjEKT_LFVUUC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=CjEKT_LFVUUC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=CjEKT_LFVUUC&dq=charles+dickens&hl=&cd=35&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=CjEKT_LFVUUC&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Plays_Poems_and_Miscellanies.html?hl=&id=CjEKT_LFVUUC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=CjEKT_LFVUUC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Plays, poems, and miscellanies by Charles Dickens. The plays include &quot;The Strange Gentleman,&quot; &quot;The Village Coquettes,&quot; and &quot;Is She His Wife? Or, Something Singular!&quot;"
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "0TNFAQAAMAAJ",
+      "etag": "UXLxbKPub1U",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/0TNFAQAAMAAJ",
+      "volumeInfo": {
+        "title": "Best Thoughts of Charles Dickens",
+        "subtitle": "Arranged in Alphabetical Order, with an Index; Designed as a Ready Reference to His Entire Works",
+        "authors": [
+          "Charles Dickens"
+        ],
+        "publishedDate": "1896",
+        "industryIdentifiers": [
+          {
+            "type": "OTHER",
+            "identifier": "UCAL:B5563658"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 564,
+        "printType": "BOOK",
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.0.2.0.full.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=0TNFAQAAMAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=0TNFAQAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=0TNFAQAAMAAJ&printsec=frontcover&dq=charles+dickens&hl=&cd=36&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=0TNFAQAAMAAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=0TNFAQAAMAAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FREE",
+        "isEbook": true,
+        "buyLink": "https://play.google.com/store/books/details?id=0TNFAQAAMAAJ&rdid=book-0TNFAQAAMAAJ&rdot=1&source=gbs_api"
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "ALL_PAGES",
+        "embeddable": true,
+        "publicDomain": true,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=0TNFAQAAMAAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "FULL_PUBLIC_DOMAIN",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "79JLBmzw_bQC",
+      "etag": "ERozmCHnXqc",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/79JLBmzw_bQC",
+      "volumeInfo": {
+        "title": "A Reader's Guide to Charles Dickens",
+        "authors": [
+          "Philip Hobsbaum"
+        ],
+        "publisher": "Syracuse University Press",
+        "publishedDate": "1998",
+        "description": "Beginning with a brief discussion of Charles Dickens's political reportage and his pamphleteering for prison reform, this study goes on to describe the earliest works. The novels - early, middle and late - are treated in detail.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0815604750"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780815604754"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 318,
+        "printType": "BOOK",
+        "categories": [
+          "Literary Criticism"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.0.2.0.preview.3",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=79JLBmzw_bQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=79JLBmzw_bQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=79JLBmzw_bQC&printsec=frontcover&dq=charles+dickens&hl=&cd=37&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=79JLBmzw_bQC&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/A_Reader_s_Guide_to_Charles_Dickens.html?hl=&id=79JLBmzw_bQC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/A_Reader_s_Guide_to_Charles_Dickens-sample-epub.acsm?id=79JLBmzw_bQC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=79JLBmzw_bQC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Little Dorrit, which many consider Dickens&#39;s finest creation, is a highlight of Hobsbaum&#39;s study. In dealing with the last works, he includes a unique perspective to the unfinished The Mystery of Edwin Drood."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "3AccI2M2EAgC",
+      "etag": "se4VzbeMcrE",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/3AccI2M2EAgC",
+      "volumeInfo": {
+        "title": "A Christmas Carol Book and Charm",
+        "authors": [
+          "Charles Dickens"
+        ],
+        "publisher": "Harper Collins",
+        "publishedDate": "2002-10",
+        "description": "A miser learns the true meaning of Christmas when three ghostly visitors review his past and foretell his future.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780694015832"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0694015830"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 160,
+        "printType": "BOOK",
+        "categories": [
+          "Juvenile Fiction"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.0.0.preview.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=3AccI2M2EAgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=3AccI2M2EAgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=3AccI2M2EAgC&printsec=frontcover&dq=charles+dickens&hl=&cd=38&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=3AccI2M2EAgC&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/A_Christmas_Carol_Book_and_Charm.html?hl=&id=3AccI2M2EAgC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=3AccI2M2EAgC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "A miser learns the true meaning of Christmas when three ghostly visitors review his past and foretell his future."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "fhUXAAAAYAAJ",
+      "etag": "OkTRERdsMA4",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/fhUXAAAAYAAJ",
+      "volumeInfo": {
+        "title": "Great Expectations",
+        "authors": [
+          "Charles Dickens"
+        ],
+        "publishedDate": "1881",
+        "description": "One of the finest novels by iconic British author Charles Dickens, this Victorian tale follows the good-natured orphan Pip as he makes his way through life. As a boy, Pip crosses paths with a convict named Magwitch, a man who will heavily influence Pip’s adulthood. Meanwhile, the earnest young man falls for the beautiful Estella, the adoptive daughter of the affluent and eccentric Miss Havisham. Widely considered to be Dickens's last great book, the story is steeped in romance and features the writer's familiar themes of crime, punishment, and societal struggle.",
+        "industryIdentifiers": [
+          {
+            "type": "OTHER",
+            "identifier": "HARVARD:HN1GMG"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "printType": "BOOK",
+        "averageRating": 4,
+        "ratingsCount": 659,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.3.9.0.full.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=fhUXAAAAYAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=fhUXAAAAYAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=fhUXAAAAYAAJ&pg=PA5&dq=charles+dickens&hl=&cd=39&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=fhUXAAAAYAAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=fhUXAAAAYAAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FREE",
+        "isEbook": true,
+        "buyLink": "https://play.google.com/store/books/details?id=fhUXAAAAYAAJ&rdid=book-fhUXAAAAYAAJ&rdot=1&source=gbs_api"
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "ALL_PAGES",
+        "embeddable": true,
+        "publicDomain": true,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "downloadLink": "http://books.google.com/books/download/Great_Expectations.epub?id=fhUXAAAAYAAJ&hl=&output=epub&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "downloadLink": "http://books.google.com/books/download/Great_Expectations.pdf?id=fhUXAAAAYAAJ&hl=&output=pdf&sig=ACfU3U1HfVS5kWBiloS8ndT1zHmGgKvhOw&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=fhUXAAAAYAAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "FULL_PUBLIC_DOMAIN",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "One of the finest novels by iconic British author Charles Dickens, this Victorian tale follows the good-natured orphan Pip as he makes his way through life."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "vHuc36bMio8C",
+      "etag": "QPgtAbMENT4",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/vHuc36bMio8C",
+      "volumeInfo": {
+        "title": "Charles Dickens",
+        "authors": [
+          "Harold Bloom"
+        ],
+        "publisher": "Infobase Publishing",
+        "publishedDate": "2009-01-01",
+        "description": "A comprehensive research and study guide for several novels by Charles Dickens, including plot summaries, thematic analyses, lists of characters, and critical views.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781438115948"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1438115946"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 120,
+        "printType": "BOOK",
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.0.1.0.preview.3",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=vHuc36bMio8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=vHuc36bMio8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=vHuc36bMio8C&printsec=frontcover&dq=charles+dickens&hl=&cd=40&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=vHuc36bMio8C&dq=charles+dickens&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Charles_Dickens.html?hl=&id=vHuc36bMio8C"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Charles_Dickens-sample-epub.acsm?id=vHuc36bMio8C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Charles_Dickens-sample-pdf.acsm?id=vHuc36bMio8C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=vHuc36bMio8C&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Charles Dickens stands as one of the first great popular novelists. Study his classic works, including David Copperfield and Great Expectations."
+      }
+    }
+  ]
+}
