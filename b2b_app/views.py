@@ -1,11 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.template import loader
-from django.views.generic import TemplateView
-from django.core.paginator import *
-from .models import Company, Query
 from django.shortcuts import get_object_or_404
-from django.views.generic import DetailView, ListView, ListView, TemplateView
+from django.views.generic import DetailView, ListView, ListView, TemplateView, View
 from django import forms
 from bootstrap_modal_forms.generic import (BSModalLoginView,
                                            BSModalCreateView,
@@ -13,89 +8,133 @@ from bootstrap_modal_forms.generic import (BSModalLoginView,
                                            BSModalReadView,
                                            BSModalDeleteView)
 from django.urls import reverse_lazy
-from .forms import CompanyForm, UserForm, UserChangeForm, CustomUserCreationForm
+from .forms import CompanyForm, UserForm, UserChangeForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.core.paginator import Paginator
-from .models import CustomUser
-from django.contrib.auth.decorators import login_required
-
-def profile_page(request):
-    template = loader.get_template('profile_page.html')
-    company_name = "Helping Authors Inc."
-    company_contact = "CatherineGates"
-    company_number = "409-550-5500"
-    user_list = [
-        {   "name": "Catherine Gates",
-            "email": "catherine.gates@email.com",
-        },
-        {   "name": "Brooke Dobbins",
-            "email": "brooke.dobbins@email.com",
-        },
-        {   "name": "Nathan Schrader",
-            "email": "nathan.schrader@email.com",
-        },
-        {   "name": "Trevor Bailey",
-            "email": "trevor.bailey@email.com",
-        },
-        {   "name": "Tyler Matthews",
-            "email": "tyler.matthews@email.com",
-        },
-    ]
-
-    site_list = [ "Google Books", "Scribd", "Kobo"]
-    bookFormat_list = ["EBook", "Print"]
-
-
-
-    context = {
-        'company_name': company_name,
-        'company_contact': company_contact,
-        'company_number': company_number,
-        'user_list' : user_list,
-        'site_list' : site_list,
-        'bookFormat_list' : bookFormat_list,
-    }
-    return HttpResponse(template.render(context, request))
-
-def search_page(request):
-    template = loader.get_template('search_page.html')
-    company_name = "Helping Authors Inc."
-    company_contact = "Catherine Gates"
-    company_number = "409-550-5500"
-    user_list = [
-        {   "name": "Catherine Gates",
-            "email": "catherine.gates@email.com",
-        },
-        {   "name": "Brooke Dobbins",
-            "email": "brooke.dobbins@email.com",
-        },
-        {   "name": "Nathan Schrader",
-            "email": "nathan.schrader@email.com",
-        },
-        {   "name": "Trevor Bailey",
-            "email": "trevor.bailey@email.com",
-        },
-        {   "name": "Tyler Matthews",
-            "email": "tyler.matthews@email.com",
-        },
-    ]
-
-
-    context = {
-        'company_name': company_name,
-        'company_contact': company_contact,
-        'company_number': company_number,
-        'user_list' : user_list,
-    }
-    return HttpResponse(template.render(context, request))
-
-
-
-
+import json
+import sys
+from django.http import HttpResponse
+from django.template import loader
+from .models import Company, User, Query
+import sys
+from checkmate_library.checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo, Audiobooks
+from checkmate_library.book_data import BookData, Format, ParseStatus
+from django.contrib.auth.mixins import LoginRequiredMixin
 # Create your views here.
 
-class CompanyListView(ListView):
+def Sort(tup): #sort 
+    return(sorted(tup, key = lambda x: float(x[0]), reverse = True))
+
+def siteToSlug(site):
+    if "Test Bookstore" in site:
+        return "TB"
+    elif "Google Books" in site:
+        return "GB"
+    elif "Kobo" in site:
+        return "KB"
+    elif "Livraria Cultura" in site:
+        return "LC"
+    elif "Audiobooks" in site:
+        return "AB"
+    elif "Scribd" in site:
+        return "SD"
+
+def slugToSite(site):
+    if site == "TB":
+        return "Test Bookstore"
+    elif site == "GB":
+        return " Google Books"
+    elif site == "KB":
+        return " Kobo"
+    elif site == "LC":
+        return "Livraria Cultura"
+    elif site =="AB":
+        return "Audiobooks"
+    elif site =="SD":
+        return "Scribd"
+
+class SearchCheckmateView(LoginRequiredMixin, View):
+    login_url = 'login'
+    
+    def get(self, request, **kwargs):
+        search = False
+        company_name = "Helping Authors Inc."
+        company_contact = "Catherine Gates"
+        company_number = "409-550-5500"
+        site_list = []
+        site_name_list = str(request.user.getCompany().search_sites).split(",")
+        print(site_name_list)
+        for site_name in site_name_list:
+            Site = {"name": site_name, "slug": siteToSlug(site_name)}
+            site_list.append(Site)
+    
+        print(site_list)
+
+        context = {
+            'company_name': company_name,
+            'company_contact': company_contact,
+            'company_number': company_number,
+            'site_list' : site_list,
+        }
+        return render(request, 'search_page.html', context)
+
+    def post(self, request, **kwargs):
+
+        if 'searchJSON' in request.POST:
+            search = True
+            searchJSON = request.POST['searchJSON']
+            book_data = json.loads(searchJSON)
+            print("Book Data:" + str(book_data))
+
+            result_data = []
+            #for site in Company.search_sites.choices:
+                #result_data[site] = get_book_site(site).find_book_matches(book_data)
+                
+            context = {
+                'searchResults': result_data,
+                'search' : search,
+            }
+            
+
+        elif ('searchTitle' in request.POST) or ('searchAuthor' in request.POST) or ('searchISBN' in request.POST):
+            search = True
+            book_data = BookData()
+            if 'searchTitle' in request.POST:
+                book_data.title = request.POST['searchTitle']
+            if 'searchAuthor' in request.POST:
+                book_data.author = request.POST['searchAuthor']
+            if 'searchISBN' in request.POST:
+                book_data.ISBN = request.POST['searchISBN']
+            
+            site_name_list = str(request.user.getCompany().search_sites).split(",")
+            site_slug_list = []
+            site_list = []
+            for site_name in site_name_list:
+                Site = {"name": site_name, "slug": siteToSlug(site_name)}
+                site_list.append(Site)
+                site_slug_list.append(siteToSlug(site_name))
+    
+            print(site_slug_list)
+
+            result_data = {} 
+
+            for site in site_slug_list:
+                result_data[site] = [i for i in (Sort(get_book_site(site).find_book_matches(book_data))) if i[0] > .20]
+            
+            print(result_data)
+
+            context = {
+                'searchResults': result_data,
+                'site_list': site_list,
+                'search' : search,
+            }
+
+        return render(request, 'search_page.html', context)
+
+
+class CompanyListView(LoginRequiredMixin, ListView):
+    login_url = 'login'
     model = Company
     template_name = "company_list_page.html"
     company_list = Company.objects.all()
@@ -107,13 +146,15 @@ class CompanyListView(ListView):
         }
         return context
 
-class CompanyCreateView(BSModalCreateView):
+class CompanyCreateView(LoginRequiredMixin, BSModalCreateView):
+    login_url = 'login'
     form_class = CompanyForm
     template_name = 'company/create_company.html'
     success_message = 'Success: Company was created.'
     success_url = reverse_lazy('company_list')
 
-class CompanyUpdateView(BSModalUpdateView):
+class CompanyUpdateView(LoginRequiredMixin, BSModalUpdateView):
+    login_url = 'login'
     model = Company
     form_class = CompanyForm
     template_name = 'company/update_company.html'
@@ -122,9 +163,9 @@ class CompanyUpdateView(BSModalUpdateView):
     def post(self, request, **kwargs):
         self.success_url = reverse('company_detail', kwargs={'pk':self.kwargs['pk']})
         return super(CompanyUpdateView, self).post(request, **kwargs)
-
-
-class CompanyDetailView(DetailView):
+        
+class CompanyDetailView(LoginRequiredMixin, DetailView):
+    login_url = 'login'
     model = Company
     template = loader.get_template('company_detail.html')
     def get(self, request, *args, **kwargs):
@@ -133,8 +174,9 @@ class CompanyDetailView(DetailView):
         context = {'company': company, 'users' : users}
         return render(request, 'company_detail.html', context)
 
-class UserCreateView(BSModalCreateView):
-    form_class = CustomUserCreationForm
+class UserCreateView(LoginRequiredMixin, BSModalCreateView):
+    login_url = 'login'
+    form_class = UserForm
     template_name = 'user/create_user.html'
     success_message = 'Success: User was created.'
 
@@ -151,8 +193,9 @@ class UserCreateView(BSModalCreateView):
     def get(self, request, **kwargs):
         return super(UserCreateView, self).get(self, **kwargs)
 
-class UserUpdateView(BSModalUpdateView):
-    model = CustomUser
+class UserUpdateView(LoginRequiredMixin, BSModalUpdateView):
+    login_url = 'login'
+    model = User
     form_class = UserForm
     template_name = 'user/update_user.html'
     success_message = 'Success: User was updated.'
@@ -162,8 +205,9 @@ class UserUpdateView(BSModalUpdateView):
         return super(UserUpdateView, self).post(request, **kwargs)
 
 
-class UserDeleteView(BSModalDeleteView):
-    model = CustomUser
+class UserDeleteView(LoginRequiredMixin, BSModalDeleteView):
+    login_url = 'login'
+    model = User
     template_name = 'user/delete_user.html'
     success_message = 'Success: Book was deleted.'
 
@@ -171,7 +215,7 @@ class UserDeleteView(BSModalDeleteView):
         self.success_url = reverse('company_detail', kwargs={'pk':self.kwargs['company_id']})
         return super(UserDeleteView, self).post(request, **kwargs)
 
-'''For printing post requests if needed. '''
+'''For printing post requests if needed.'''
 def pretty_request(request):
     headers = ''
     for header, value in request.META.items():
@@ -194,5 +238,6 @@ def pretty_request(request):
         body=request.body,
     )
 
-class HomePageView(TemplateView):
-    template_name = 'home.html'
+
+class LoginView(TemplateView):
+    template_name = 'user/login.html'

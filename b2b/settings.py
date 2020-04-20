@@ -38,12 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap_modal_forms',
+    'widget_tweaks',
     'django.contrib.sites',
     'allauth', 
     'allauth.account', 
     'b2b_app',
-    'bootstrap_modal_forms',
-    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

@@ -12,6 +12,7 @@ class Company(models.Model):
         ('KB', 'Kobo'),
         ('LC', 'Livraria Cultura'),
         ('SD', 'Scribd'),
+        ('AB', 'Audiobooks')
     )
     BOOK_FORMATS = (
         ('EBook', 'EBook'),
@@ -28,6 +29,11 @@ class Company(models.Model):
     def __str__(self):
         return self.name
 
+class User(models.Model):
+    name = models.CharField(max_length = 250)
+    email = models.EmailField(max_length = 250)
+    company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    password = models.CharField(max_length = 150)
 
 class CustomUser(AbstractUser):
     # add additional fields in here

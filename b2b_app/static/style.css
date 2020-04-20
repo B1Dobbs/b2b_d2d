@@ -362,3 +362,104 @@ button:hover {
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+.search-results {
+    margin: 25px;
+}
+
+.search-tab-block {
+    display: inline-block;
+    margin: 10px;
+    width: 80%;
+    background-color: white;
+}
+
+.left {
+    text-align: left;
+}
+
+.tab-block {
+    padding: 11.5px;
+    background-color: #f7f6f6;
+}
+
+
+.profile-icon {
+    color: #ef320a;
+    font-size: 36px;
+    text-align: center;
+}
+
+.person {
+    width: 250px;
+}
+
+.number {
+    width: 100px;
+}
+
+.company {
+    font-size: 50px;
+}
+
+.tab {
+    margin-left: 7%;
+    display: inline-block;
+    width: 80%;
+    padding: 11.5px;
+  }
+  
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px;
+    transition: 0.3s;
+    font-size: 17px;
+    background-color: #1c2559;
+    color: white;
+  }
+
+  .tablinks {
+      margin-right: 5px;
+  }
+  
+  .tab button:hover {
+    background-color: white;
+    color: #1c2559;
+  }
+  
+  .tab button.active {
+    background-color: white;
+    padding: 15px;
+    color: #1c2559;
+  }
+  
+  .tabcontent {
+    display: none;
+    text-align: center;
+  }
+
+  .NoResults {
+      margin: 0px;
+  }
+
+  .searching {
+      margin-bottom: 50px;
+  }
+
+  .book_padding {
+      padding-top: 35px;
+  }
+
+  .image-constraints {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  hr {
+    color: #1c2559;
+  }
