@@ -10,7 +10,9 @@
         </div> -->
         <div>
         <div class="link">
+            {% if user.is_superuser %}
             <button><a href="/../company" class = "labels"> &#x2190 Profiles</a></button>
+            {% endif %}
         </div>
         <div class = "details-block">
         <span id = "title" class = "title"> <strong>{{ company.name }} </strong></span>
