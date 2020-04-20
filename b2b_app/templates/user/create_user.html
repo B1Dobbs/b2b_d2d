@@ -1,13 +1,13 @@
 {% load widget_tweaks %}
+{% load static %}
 
 <form method="post" action="">
   {% csrf_token %}
 
   <div class="modal-header">
-    <h3 class="modal-title">Add User</h3>
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
+    <div class="center">
+      <h3 class="modal-title">Add User</h3>
+    </div>
   </div>
 
   <div class="modal-body">
@@ -20,8 +20,10 @@
 
     {% for field in form %}
       <div class="form-group">
-        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-        {% render_field field class="form-control" placeholder=field.label %}
+        <label class="popup-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+        <div class="popup-text">
+        {% render_field field class="form-control" placeholder=field.label%}
+        </div>
         <div class="{% if field.errors %} invalid{% endif %}">
           {% for error in field.errors %}
             <p class="help-block">{{ error }}</p>
@@ -30,10 +32,17 @@
       </div>
     {% endfor %}
   </div>
-  <input type='hidden' name="company" value="{{ company }}" />
+
+
+  <br>
+  <div class="center">
+    <label class="password popup-text "><strong>Reminder: </strong>Users should be advised to reset their password when they login for the first time.</label>
+  </div>
 
   <div class="modal-footer">
-    <input type="submit" value="Submit" class="submit btn btn-primary">
+    <input type="submit" class="submit popup-button popup-save" value="SAVE"></input>
+    <button type="button" class="popup-button" data-dismiss="modal" aria-label="Close">CANCEL
+    </button>
   </div>
 
 </form>
