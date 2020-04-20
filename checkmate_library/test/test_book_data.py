@@ -1,14 +1,6 @@
-''' 
-This is a test file for the Checkmate library identical to test_book_data.py in the checkmate_library module.
-To install checkmate run: pip install -i https://test.pypi.org/simple/ checkmate-library
-To run a test from this script: python checkmate_test.py SD
----SD is just an example but you can use any site slug.
-To import into other files for use: from checkmate_library.checkmate import *
-'''
 import sys
-sys.path.append("..\checkmate_library")
-from checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo, Audiobooks
-from book_data import BookData, Format, ParseStatus
+from checkmate_library.checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo, Audiobooks
+from checkmate_library.book_data import BookData, Format, ParseStatus
 
 def testBookstore():
     book_site = get_book_site("TB")

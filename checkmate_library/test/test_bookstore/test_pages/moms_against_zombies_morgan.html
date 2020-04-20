@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+
+<html> 
+    <head>
+        <title>Test Bookstore</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto|Roboto+Condensed&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/book_detail.css">
+
+    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<body>
+    
+    <div class="title_bar">
+        <h1>Test Bookstore</h1>
+    </div>
+    <div class = "details-block">
+        <button><a href="../../library" class = "labels"> &#x2190 Library</a></button>
+        <div class = "details-block">
+        <p id = "title" class = "title"> <strong>Moms Against Zombies </strong></p>
+            <div>
+                <span class = "labels">By </span>
+                <span class = "details" id = "author"> Alathia Paris Morgan</span>
+            </div>
+            <img src="https://imgprod65.hobbylobby.com/sys-master/migrated/h78/hff/h00/9230814511134/1292382[6].jpg">
+            <div class = "grid-x grid-padding-x">
+                <div class = "large-6 medium-12 small-12 cell">
+                    <div class = "box"> 
+                        <p class = "details">Digital</p>
+                        <span class = "details price" id = "price"> $5.99</span>
+                    </div>
+                </div>
+                <div class = "small-12 medium-12 large-6 cell position-parent">
+                    <div class= "position-bottom">
+                        <span class = "labels">Release Date </span>
+                        <span class = "details" id = "release_date"> June 5, 2018</span>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div>
+                <div class = "grid-x grid-padding-x">
+                    <div class = "small-12 large-8 cell padding">
+                        <span class = "labels">ISBN </span>
+                        <span class = "details" id = "isbn"> 9781386842842</span>
+                    </div>
+                    <div class = "small-12 large-4 cell padding">
+                        <span class = "labels">Availability </span>
+                        
+                        <i class="fa fa-times-circle x-mark"></i>
+                        
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div>
+                <div class = "grid-x grid-padding-x">
+                    <div class = "small-12 large-2 cell padding">
+                        <span class = "labels">Description </span>
+                    </div>
+                    <div class = "small-12 large-10 cell padding">
+                        
+                        <span class = "details description" id = "description">Emma Jackson is an army wife and new mom with all the uncertainties&amp;nbsp;that come with it&amp;hellip;&amp;nbsp;until that fear is pushed in&amp;nbsp;a&amp;nbsp;different direction. Instead of worrying about diapers and feeding schedules, her only objective is to k…</span><span id="dots"></span>
+                    </div>
+                </div>
+                    <button onclick="showMore()" id="showBtn" class = "labels show-more" > Show More <i class="fas fa-angle-down filterArrow"></i></button>
+                        
+            </div> 
+            <hr/>
+            <div>
+                <div class = "grid-x grid-padding-x">
+                    <div class = "small-12 large-5 cell padding">
+                        <span class = "labels">Series </span>
+                        <span class = "details" id = "series"> Against Zombies</span>
+                    </div>
+                    <div class = "small-12 large-3 cell padding">
+                        <span class = "labels">Volume Number </span>
+                        <span class = "details" id = "volume_number"> 1.0</span>
+                    </div>
+                    <div class = "small-12 large-4 cell padding">
+                        <span class = "labels">Book ID </span>
+                        <span class = "details" id = "book_id"> 9781386842842</span>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+        </div>
+    </div>
+
+    <script type = "text/javascript">
+        function showMore() {
+          var dots = document.getElementById("dots");
+          var btnText = document.getElementById("showBtn");
+          var description = document.getElementById("description");
+        
+          if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Show More <i class='fas fa-angle-down filterArrow'>";
+            description.innerHTML = "Emma Jackson is an army wife and new mom with all the uncertainties&amp;nbsp;that come with it&amp;hellip;&amp;nbsp;until that fear is pushed in&amp;nbsp;a&amp;nbsp;different direction. Instead of worrying about diapers and feeding schedules, her only objective is to k…";
+          } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Show Less <i class='fas fa-angle-up filterArrow'>"; 
+            description.innerHTML = "Emma Jackson is an army wife and new mom with all the uncertainties&amp;nbsp;that come with it&amp;hellip;&amp;nbsp;until that fear is pushed in&amp;nbsp;a&amp;nbsp;different direction. Instead of worrying about diapers and feeding schedules, her only objective is to keep her child&amp;nbsp;alive after&amp;nbsp;being chased by a man who looks entirely too dead.&amp;nbsp;Trish Walsh thought&amp;nbsp;her day was bad when she had to drag all four of her children on an errand, but she rethinks the meaning after what she&amp;nbsp;can only hope was someone dressed up like a zombie&amp;nbsp;beats on her car&amp;nbsp;door.&amp;nbsp;Yet,&amp;nbsp;the&amp;nbsp;bloody mess&amp;nbsp;left behind is anything but reassuring.Cooper&amp;nbsp;Walsh&#x27;s job is top secret. When criminals&amp;nbsp;break in to steal his company&#x27;s secrets, he overhears the&amp;nbsp;conspiracy devised to create&amp;nbsp;chaos as a cover-up.&amp;nbsp;Knowing&amp;nbsp;he must do everything in his power to&amp;nbsp;right the wrong, he sets out on a mission.Surviving long enough to reunite with their families is all that matters. That&amp;hellip; and stopping the zombie apocalypse before it destroys&amp;nbsp;them.";
+          }
+        }
+    </script>
+    
+</body>
+</html>
