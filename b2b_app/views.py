@@ -20,6 +20,7 @@ from .models import Company, User, Query
 import sys
 from checkmate_library.checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo, Audiobooks
 from checkmate_library.book_data import BookData, Format, ParseStatus
+from django.contrib.auth.mixins import LoginRequiredMixin
 # Create your views here.
 
 def Sort(tup): #sort 
@@ -53,9 +54,8 @@ def slugToSite(site):
     elif site =="SD":
         return "Scribd"
 
-
-
-class SearchCheckmateView(View):
+class SearchCheckmateView(LoginRequiredMixin, View):
+    login_url = 'login'
     
     def get(self, request, **kwargs):
         search = False
@@ -133,7 +133,8 @@ class SearchCheckmateView(View):
         return render(request, 'search_page.html', context)
 
 
-class CompanyListView(ListView):
+class CompanyListView(LoginRequiredMixin, ListView):
+    login_url = 'login'
     model = Company
     template_name = "company_list_page.html"
     company_list = Company.objects.all()
@@ -145,13 +146,15 @@ class CompanyListView(ListView):
         }
         return context
 
-class CompanyCreateView(BSModalCreateView):
+class CompanyCreateView(LoginRequiredMixin, BSModalCreateView):
+    login_url = 'login'
     form_class = CompanyForm
     template_name = 'company/create_company.html'
     success_message = 'Success: Company was created.'
     success_url = reverse_lazy('company_list')
 
-class CompanyUpdateView(BSModalUpdateView):
+class CompanyUpdateView(LoginRequiredMixin, BSModalUpdateView):
+    login_url = 'login'
     model = Company
     form_class = CompanyForm
     template_name = 'company/update_company.html'
@@ -161,7 +164,8 @@ class CompanyUpdateView(BSModalUpdateView):
         self.success_url = reverse('company_detail', kwargs={'pk':self.kwargs['pk']})
         return super(CompanyUpdateView, self).post(request, **kwargs)
         
-class CompanyDetailView(DetailView):
+class CompanyDetailView(LoginRequiredMixin, DetailView):
+    login_url = 'login'
     model = Company
     template = loader.get_template('company_detail.html')
     
@@ -171,7 +175,8 @@ class CompanyDetailView(DetailView):
         context = {'company': company, 'users' : users}
         return render(request, 'company_detail.html', context)
 
-class UserCreateView(BSModalCreateView):
+class UserCreateView(LoginRequiredMixin, BSModalCreateView):
+    login_url = 'login'
     form_class = UserForm
     template_name = 'user/create_user.html'
     success_message = 'Success: User was created.'
@@ -186,7 +191,8 @@ class UserCreateView(BSModalCreateView):
         form.instance.company = self.company
         return super().form_valid(form)
 
-class UserUpdateView(BSModalUpdateView):
+class UserUpdateView(LoginRequiredMixin, BSModalUpdateView):
+    login_url = 'login'
     model = User
     form_class = UserForm
     template_name = 'user/update_user.html'
@@ -197,7 +203,8 @@ class UserUpdateView(BSModalUpdateView):
         return super(UserUpdateView, self).post(request, **kwargs)
 
 
-class UserDeleteView(BSModalDeleteView):
+class UserDeleteView(LoginRequiredMixin, BSModalDeleteView):
+    login_url = 'login'
     model = User
     template_name = 'user/delete_user.html'
     success_message = 'Success: Book was deleted.'
@@ -231,4 +238,4 @@ def pretty_request(request):
 
 
 class LoginView(TemplateView):
-    template_name = 'login.html'
+    template_name = 'user/login.html'
