@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.template import loader
 from django.views.generic import TemplateView
 from django.core.paginator import *
-from .models import Company, User, Query
+from .models import Company, Query
 from django.shortcuts import get_object_or_404
 from django.views.generic import DetailView, ListView, ListView, TemplateView
 from django import forms
@@ -17,6 +17,7 @@ from .forms import CompanyForm, UserForm, UserChangeForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.core.paginator import Paginator
+from .models import CustomUser
 
 def profile_page(request):
     template = loader.get_template('profile_page.html')
@@ -127,7 +128,7 @@ class CompanyDetailView(DetailView):
     
     def get(self, request, *args, **kwargs):
         company = get_object_or_404(Company, pk=kwargs['pk'])
-        users = User.objects.filter(company = kwargs['pk'])
+        users = CustomUser.objects.filter(company = kwargs['pk'])
         context = {'company': company, 'users' : users}
         return render(request, 'company_detail.html', context)
 
@@ -147,7 +148,7 @@ class UserCreateView(BSModalCreateView):
         return super().form_valid(form)
 
 class UserUpdateView(BSModalUpdateView):
-    model = User
+    model = CustomUser
     form_class = UserForm
     template_name = 'user/update_user.html'
     success_message = 'Success: User was updated.'
@@ -158,7 +159,7 @@ class UserUpdateView(BSModalUpdateView):
 
 
 class UserDeleteView(BSModalDeleteView):
-    model = User
+    model = CustomUser
     template_name = 'user/delete_user.html'
     success_message = 'Success: Book was deleted.'
 
