@@ -53,16 +53,21 @@
     
     {% if users %}
     <div class="users_list ">
+        {% if user.is_superuser %}
         <table>
             <tr class="headers">
                 <th>Name</th>
                 <th>Email</th>
+                {% if user.is_superuser %}
                 <th>Actions</th>
+                {% endif %}
             </tr>
             {% for user in users %}
+               
             <tr class="details">    
                 <td>{{user.name}}</td>
                 <td>{{user.email}}</td>
+               
                 <td>
                     <button type="button" class="update-user" data-id="{% url 'update_user' company.pk user.pk %}">
                         <i class='fas fa-pen icons'></i><span>Edit</span>
@@ -71,10 +76,14 @@
                     <button type="button" class="delete-user" data-id="{% url 'delete_user' company.pk user.pk %}">
                         <i class='fas fa-trash icons'></i><span>Delete</span>
                     </button>
+                
                 </td>
+                
             </tr>
+            
         {% endfor %}
         </table>
+        {% endif %}
     {% else %}
         <p class="labels">No users added yet.</p>
     {% endif %}

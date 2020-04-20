@@ -2,8 +2,12 @@
     <div class="title_bar"> 
             <img src="{% static 'Images/d2d-logo.png' %}">
             <span class="navigation">
+            {% if user.is_superuser %}   
             <a href="{% url 'company_list' %}" class="active_page">Profiles</a>
+            
+            {% else %}
             <a href="">Reporting</a>
+            {% endif %}
             <div class="dropdown-exit" onmouseout="normalImg(this)"></div>
             <div class="dropdown" id="dropdown">
                     <i  class="fas fa-user-circle user-circle" id="dropdown" onmouseover="bigImg(this)"></i>
@@ -11,7 +15,9 @@
                     <div class="arrow-div">
                         <div class="arrow-up"></div>
                     </div>
+                    {% if user.is_superuser %}
                     <a href="#">Profile</a>
+                    {% endif %}
                     <a class="reset" data-toggle="modal" data-target="#reset-password" href="#">Reset Password</a>
                     <a class="logout" data-toggle="modal" data-target="#logout">Logout</a>
                 </div>
