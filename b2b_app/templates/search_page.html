@@ -1,29 +1,9 @@
-<!DOCTYPE html>
-{% load static %}
+{% extends 'form_background.html' %}
 
-<html> 
-    <head>
-        {% block title %}<title>B2B Site</title>{% endblock %}
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto|Roboto+Condensed&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="{% static 'style.css'%}">
-        <link rel="stylesheet" type="text/css" href="{% static '/css/header.css'%}">
-    </head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-<body>
-    {% block content %}
-    <div class="title_bar">
-        <span class="nav2">
-            <h1 class='company'>{{company_name}}</h1>
-        </span>
-        <span class="nav">
-            <h1>Search</h1>
-            <h1>Reporting</h1>
-            <i class="fas fa-user-circle user-circle"></i>             
-        </span>   
-    </div>
+{%load static%}
+
+{% block content %} 
+    {% include "_modal.html" %} 
 
     <div class = "search-block">
         <div class = "grid-x grid-padding-x searching">
@@ -44,12 +24,16 @@
             <div class = "large-6 medium-6 small-12 cell">
                 <form action="/search" method="post"> {% csrf_token %}
                     <label class = "title title-small">Search by JSON</label>
-                    <textarea id="json" name="searchJSON" value="{{ isbn }}" class="json-field" rows="10" cols="50" placeholder="JSON BLOB STUFF"></textarea>
+                    <textarea id="json" name="searchJSON" value="{{ isbn }}" class="json-field" rows="10" cols="50" 
+placeholder='{ 
+        "title":"Book Title",
+        "author":"Book Author",
+        "ISBN": ISBN 13 Number 
+}'></textarea>
                     <input type="submit" class="button_css search-button" value="SEARCH"></input>
                 </form>
             </div>
         </div>
-
         <div class="tab">
             {%for site in site_list%}
             <button class="tablinks title" onclick="openResults(event, '{{site.slug}}')">{{site.name}}</button>
@@ -61,9 +45,11 @@
           <div id="GB" class="tabcontent">
                 <div class="search-tab-block">
                     <div class = "grid-x grid-padding-x search-results">
-                        {% for book in book_list %}
-                            {% if book.slug == "GB"%}
+                        {% for key, value in searchResults.items %}
+                            {% if key == "GB"%}
+                                {% for list in value %}
                                 {% include 'includes/tabs.html' %}
+                                {% endfor %}
                             {% endif %}
                         {% endfor %}
                     </div>
@@ -131,7 +117,7 @@
           </div>
 
           {% else %}
-          <div id="NoResults">
+          <div id="NoResults" style="text-align: center;">
                 <div class="search-tab-block">
                     <div class = "grid-x grid-padding-x search-results">
                             <p class="details">No Results</p>
@@ -163,10 +149,9 @@
                 {% endif %}
             </div>
 
-    {% endblock %}
-</body>
-
-<script>
+{% endblock content%}
+{% block extrascripts %}
+<script type="text/javascript">
     function openResults(evt, site) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
@@ -181,4 +166,4 @@
       evt.currentTarget.className += " active";
     }
     </script>
-</html>
+{% endblock extrascripts %}

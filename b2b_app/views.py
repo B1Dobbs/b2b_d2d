@@ -36,6 +36,8 @@ def siteToSlug(site):
         return "LC"
     elif "Audiobooks" in site:
         return "AB"
+    elif "Scribd" in site:
+        return "SD"
 
 def slugToSite(site):
     if site == "TB":
@@ -48,11 +50,15 @@ def slugToSite(site):
         return "Livraria Cultura"
     elif site =="AB":
         return "Audiobooks"
+    elif site =="SD":
+        return "Scribd"
+
 
 
 class SearchCheckmateView(View):
     
     def get(self, request, **kwargs):
+        search = False
         company_name = "Helping Authors Inc."
         company_contact = "Catherine Gates"
         company_number = "409-550-5500"
@@ -76,6 +82,7 @@ class SearchCheckmateView(View):
     def post(self, request, **kwargs):
 
         if 'searchJSON' in request.POST:
+            search = True
             searchJSON = request.POST['searchJSON']
             book_data = json.loads(searchJSON)
             print("Book Data:" + str(book_data))
@@ -85,11 +92,13 @@ class SearchCheckmateView(View):
                 #result_data[site] = get_book_site(site).find_book_matches(book_data)
                 
             context = {
-                'searchResults': result_data
+                'searchResults': result_data,
+                'search' : search,
             }
             
 
         elif ('searchTitle' in request.POST) or ('searchAuthor' in request.POST) or ('searchISBN' in request.POST):
+            search = True
             book_data = BookData()
             if 'searchTitle' in request.POST:
                 book_data.title = request.POST['searchTitle']
@@ -117,7 +126,8 @@ class SearchCheckmateView(View):
 
             context = {
                 'searchResults': result_data,
-                'site_list': site_list
+                'site_list': site_list,
+                'search' : search,
             }
 
         return render(request, 'search_page.html', context)

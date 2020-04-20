@@ -12,6 +12,7 @@ class Company(models.Model):
         ('KB', 'Kobo'),
         ('LC', 'Livraria Cultura'),
         ('SD', 'Scribd'),
+        ('AB', 'Audiobooks')
     )
     BOOK_FORMATS = (
         ('EBook', 'EBook'),

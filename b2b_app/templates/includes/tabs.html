@@ -1,11 +1,19 @@
-<div class = "large-6 medium-6 small-12 cell">
+{% for book in list %}
+    {% if book.title %}
+<div class = "large-6 medium-6 small-12 cell book_padding">
+    <img class="image-constraints" src="{{ book.image_url }}">
     <p class = "details bolded">{{book.title}}</p>
-    <p class = "details">{{book.author}}</p>
+    {% for author in book.authors %}
+    <p class = "details">{{author}}</p>
+    {% endfor %}
     <div class="left">
-        <span class = " labels">Format </span>
-        <span class = " details">{{book.format}}</span>
+        <span class = "labels">Format </span>
+        <span class = "details">{{book.format}}</span>
         <br>
-        <span class = " labels">Search Match</span>
-        <span class = " details">{{book.match}}</span>
+        <span class = "labels">Search Match</span>
+        <span class = "details">{{list.0}}</span>
     </div>
+    <hr>
 </div>
+    {% endif %}
+{% endfor %}

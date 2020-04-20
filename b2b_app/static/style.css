@@ -403,6 +403,7 @@ button:hover {
 }
 
 .tab {
+    margin-left: 7%;
     display: inline-block;
     width: 80%;
     padding: 11.5px;
@@ -438,6 +439,7 @@ button:hover {
   
   .tabcontent {
     display: none;
+    text-align: center;
   }
 
   .NoResults {
@@ -446,4 +448,18 @@ button:hover {
 
   .searching {
       margin-bottom: 50px;
+  }
+
+  .book_padding {
+      padding-top: 35px;
+  }
+
+  .image-constraints {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  hr {
+    color: #1c2559;
   }
