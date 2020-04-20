@@ -29,11 +29,6 @@ class Company(models.Model):
     def __str__(self):
         return self.name
 
-class User(models.Model):
-    name = models.CharField(max_length = 250)
-    email = models.EmailField(max_length = 250)
-    company = models.ForeignKey(Company, on_delete=models.CASCADE)
-    password = models.CharField(max_length = 150)
 
 class CustomUser(AbstractUser):
     # add additional fields in here
@@ -44,11 +39,9 @@ class CustomUser(AbstractUser):
     def getCompany(self):
         return self.company
 
-
-
 class Query(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     date = models.DateField(auto_now_add = True)
 
     def __str__(self):
-        return self.user.name + " (" + str(self.date) + ")"
+        return self.user.first_name + " (" + str(self.date) + ")"

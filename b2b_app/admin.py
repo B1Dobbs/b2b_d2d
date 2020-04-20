@@ -6,7 +6,8 @@ from .forms import CustomUserCreationForm, CustomUserChangeForm
 from .models import CustomUser
 
 # Register your models here.
-from .models import Company
+from .models import Company, CustomUser, Query
 
 admin.site.register(Company)
 admin.site.register(CustomUser)
+admin.site.register(Query)
