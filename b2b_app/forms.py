@@ -7,6 +7,8 @@ from bootstrap_modal_forms.forms import BSModalForm
 from .models import Company, User
 from django.http import HttpResponseRedirect
 
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from .models import CustomUser
 
 class CompanyForm(BSModalForm):
 
@@ -22,7 +24,14 @@ class UserForm(BSModalForm):
         model = User
         fields = ['name', 'email', 'password']
 
+class CustomUserCreationForm(UserCreationForm):
 
-    
+    class Meta:
+        model = CustomUser
+        fields = ('username', 'email', 'company', 'active')
 
+class CustomUserChangeForm(UserChangeForm):
 
+    class Meta:
+        model = CustomUser
+        fields = ('username', 'email', 'company', 'active')

@@ -1,10 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.template import loader
-from django.core.paginator import *
-from .models import Company, User, Query
 from django.shortcuts import get_object_or_404
-from django.views.generic import DetailView, ListView, ListView, TemplateView
+from django.views.generic import DetailView, ListView, ListView, TemplateView, View
 from django import forms
 from bootstrap_modal_forms.generic import (BSModalLoginView,
                                            BSModalCreateView,
@@ -16,11 +12,116 @@ from .forms import CompanyForm, UserForm, UserChangeForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.core.paginator import Paginator
-
-
-
-
+import json
+import sys
+from django.http import HttpResponse
+from django.template import loader
+from .models import Company, User, Query
+import sys
+from checkmate_library.checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo, Audiobooks
+from checkmate_library.book_data import BookData, Format, ParseStatus
 # Create your views here.
+
+def Sort(tup): #sort 
+    return(sorted(tup, key = lambda x: float(x[0]), reverse = True))
+
+def siteToSlug(site):
+    if "Test Bookstore" in site:
+        return "TB"
+    elif "Google Books" in site:
+        return "GB"
+    elif "Kobo" in site:
+        return "KB"
+    elif "Livraria Cultura" in site:
+        return "LC"
+    elif "Audiobooks" in site:
+        return "AB"
+
+def slugToSite(site):
+    if site == "TB":
+        return "Test Bookstore"
+    elif site == "GB":
+        return " Google Books"
+    elif site == "KB":
+        return " Kobo"
+    elif site == "LC":
+        return "Livraria Cultura"
+    elif site =="AB":
+        return "Audiobooks"
+
+
+class SearchCheckmateView(View):
+    
+    def get(self, request, **kwargs):
+        company_name = "Helping Authors Inc."
+        company_contact = "Catherine Gates"
+        company_number = "409-550-5500"
+        site_list = []
+        site_name_list = str(request.user.getCompany().search_sites).split(",")
+        print(site_name_list)
+        for site_name in site_name_list:
+            Site = {"name": site_name, "slug": siteToSlug(site_name)}
+            site_list.append(Site)
+    
+        print(site_list)
+
+        context = {
+            'company_name': company_name,
+            'company_contact': company_contact,
+            'company_number': company_number,
+            'site_list' : site_list,
+        }
+        return render(request, 'search_page.html', context)
+
+    def post(self, request, **kwargs):
+
+        if 'searchJSON' in request.POST:
+            searchJSON = request.POST['searchJSON']
+            book_data = json.loads(searchJSON)
+            print("Book Data:" + str(book_data))
+
+            result_data = []
+            #for site in Company.search_sites.choices:
+                #result_data[site] = get_book_site(site).find_book_matches(book_data)
+                
+            context = {
+                'searchResults': result_data
+            }
+            
+
+        elif ('searchTitle' in request.POST) or ('searchAuthor' in request.POST) or ('searchISBN' in request.POST):
+            book_data = BookData()
+            if 'searchTitle' in request.POST:
+                book_data.title = request.POST['searchTitle']
+            if 'searchAuthor' in request.POST:
+                book_data.author = request.POST['searchAuthor']
+            if 'searchISBN' in request.POST:
+                book_data.ISBN = request.POST['searchISBN']
+            
+            site_name_list = str(request.user.getCompany().search_sites).split(",")
+            site_slug_list = []
+            site_list = []
+            for site_name in site_name_list:
+                Site = {"name": site_name, "slug": siteToSlug(site_name)}
+                site_list.append(Site)
+                site_slug_list.append(siteToSlug(site_name))
+    
+            print(site_slug_list)
+
+            result_data = {} 
+
+            for site in site_slug_list:
+                result_data[site] = [i for i in (Sort(get_book_site(site).find_book_matches(book_data))) if i[0] > .20]
+            
+            print(result_data)
+
+            context = {
+                'searchResults': result_data,
+                'site_list': site_list
+            }
+
+        return render(request, 'search_page.html', context)
+
 
 class CompanyListView(ListView):
     model = Company
@@ -95,7 +196,7 @@ class UserDeleteView(BSModalDeleteView):
         self.success_url = reverse('company_detail', kwargs={'pk':self.kwargs['company_id']})
         return super(UserDeleteView, self).post(request, **kwargs)
 
-'''For printing post requests if needed. '''
+'''For printing post requests if needed.'''
 def pretty_request(request):
     headers = ''
     for header, value in request.META.items():
@@ -118,3 +219,6 @@ def pretty_request(request):
         body=request.body,
     )
 
+
+class LoginView(TemplateView):
+    template_name = 'login.html'
