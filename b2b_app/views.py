@@ -50,6 +50,7 @@ def slugToSite(site):
 class SearchCheckmateView(View):
     
     def get(self, request, **kwargs):
+        search = False
         company_name = "Helping Authors Inc."
         company_contact = "Catherine Gates"
         company_number = "409-550-5500"
@@ -73,6 +74,7 @@ class SearchCheckmateView(View):
     def post(self, request, **kwargs):
 
         if 'searchJSON' in request.POST:
+            search = True
             searchJSON = request.POST['searchJSON']
             book_data = json.loads(searchJSON)
             print("Book Data:" + str(book_data))
@@ -95,6 +97,7 @@ class SearchCheckmateView(View):
             if 'searchISBN' in request.POST:
                 book_data.ISBN = request.POST['searchISBN']
             
+            search = True
             site_name_list = str(request.user.getCompany().searchSites).split(",")
             site_slug_list = []
             site_list = []
@@ -114,7 +117,8 @@ class SearchCheckmateView(View):
 
             context = {
                 'searchResults': result_data,
-                'site_list': site_list
+                'site_list': site_list,
+                'search' : search,
             }
 
         return render(request, 'search_page.html', context)
