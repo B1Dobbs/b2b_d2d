@@ -30,7 +30,7 @@ class CompanyForm(BSModalForm):
 
 
 class UserForm(BSModalForm):
-    company_id = forms.IntegerField(widget=forms.HiddenInput())
+    #company_id = forms.IntegerField(widget=forms.HiddenInput())
 
     class Meta:
         model = CustomUser
