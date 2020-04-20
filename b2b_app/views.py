@@ -16,10 +16,10 @@ import json
 import sys
 from django.http import HttpResponse
 from django.template import loader
-from .models import Company, User, Query
+from .models import Company, CustomUser, Query
 import sys
-from checkmate_library.checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo, Audiobooks
-from checkmate_library.book_data import BookData, Format, ParseStatus
+#from checkmate_library.checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo, Audiobooks
+#from checkmate_library.book_data import BookData, Format, ParseStatus
 from django.contrib.auth.mixins import LoginRequiredMixin
 # Create your views here.
 
@@ -119,8 +119,8 @@ class SearchCheckmateView(LoginRequiredMixin, View):
 
             result_data = {} 
 
-            for site in site_slug_list:
-                result_data[site] = [i for i in (Sort(get_book_site(site).find_book_matches(book_data))) if i[0] > .20]
+            #for site in site_slug_list:
+                #result_data[site] = [i for i in (Sort(get_book_site(site).find_book_matches(book_data))) if i[0] > .20]
             
             print(result_data)
 
@@ -195,7 +195,7 @@ class UserCreateView(LoginRequiredMixin, BSModalCreateView):
 
 class UserUpdateView(LoginRequiredMixin, BSModalUpdateView):
     login_url = 'login'
-    model = User
+    model = CustomUser
     form_class = UserForm
     template_name = 'user/update_user.html'
     success_message = 'Success: User was updated.'
@@ -207,7 +207,7 @@ class UserUpdateView(LoginRequiredMixin, BSModalUpdateView):
 
 class UserDeleteView(LoginRequiredMixin, BSModalDeleteView):
     login_url = 'login'
-    model = User
+    model = CustomUser
     template_name = 'user/delete_user.html'
     success_message = 'Success: Book was deleted.'
 
