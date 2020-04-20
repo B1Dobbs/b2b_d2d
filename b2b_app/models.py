@@ -20,8 +20,9 @@ class Company(models.Model):
     name = models.CharField(max_length=250)
     contact_person = models.CharField(max_length = 250)
     contact_number = models.CharField(max_length = 12)
-    search_sites = MultiSelectField(max_length = 100, choices = SITE_CHOICES)
-    book_formats = MultiSelectField(max_length = 100, choices = BOOK_FORMATS)
+    #Having blank on these two allows to avoid form validation on these fields
+    search_sites = MultiSelectField(max_length = 100, choices = SITE_CHOICES, blank=True)
+    book_formats = MultiSelectField(max_length = 100, choices = BOOK_FORMATS, blank=True)
 
     def __str__(self):
         return self.name
