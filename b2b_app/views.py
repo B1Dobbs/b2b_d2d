@@ -22,6 +22,9 @@ from checkmate_library.checkmate import get_book_site, Scribd, LivrariaCultura, 
 from checkmate_library.book_data import BookData, Format, ParseStatus
 # Create your views here.
 
+def Sort(tup): #sort 
+    return(sorted(tup, key = lambda x: float(x[0]), reverse = True))
+
 def siteToSlug(site):
     if "Test Bookstore" in site:
         return "TB"
@@ -108,7 +111,7 @@ class SearchCheckmateView(View):
             result_data = {} 
 
             for site in site_slug_list:
-                result_data[site] = get_book_site(site).find_book_matches(book_data)
+                result_data[site] = [i for i in (Sort(get_book_site(site).find_book_matches(book_data))) if i[0] > .20]
             
             print(result_data)
 
