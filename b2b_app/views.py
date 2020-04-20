@@ -28,6 +28,7 @@ class SearchCheckmateView(View):
         company_name = "Helping Authors Inc."
         company_contact = "Catherine Gates"
         company_number = "409-550-5500"
+        #site_list = User.getCompany.searchSites
         site_list = [ 
             {"name": "Google Books",
             "slug": "GB",
