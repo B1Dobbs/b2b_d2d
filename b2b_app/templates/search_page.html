@@ -59,9 +59,11 @@ placeholder='{
           <div id="KB" class="tabcontent">
                 <div class="search-tab-block">
                     <div class = "grid-x grid-padding-x search-results">
-                        {% for book in book_list %}
-                            {% if book.slug == "KB"%}
+                        {% for key, value in searchResults.items %}
+                            {% if key == "KB"%}
+                                {% for list in value %}
                                 {% include 'includes/tabs.html' %}
+                                {% endfor %}
                             {% endif %}
                         {% endfor %}
                     </div>
@@ -71,11 +73,13 @@ placeholder='{
           <div id="SD" class="tabcontent">
                 <div class="search-tab-block">
                     <div class = "grid-x grid-padding-x search-results">
-                        {% for book in book_list %}
-                            {% if book.slug == "SD"%}
-                                {% include 'includes/tabs.html' %}
-                            {% endif %}
-                        {% endfor %}
+                        {% for key, value in searchResults.items %}
+                        {% if key == "SD"%}
+                            {% for list in value %}
+                            {% include 'includes/tabs.html' %}
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
                     </div>
                 </div>
           </div>
@@ -83,9 +87,11 @@ placeholder='{
           <div id="LC" class="tabcontent">
                 <div class="search-tab-block">
                     <div class = "grid-x grid-padding-x search-results">
-                        {% for book in book_list %}
-                            {% if book.slug == "LC"%}
+                        {% for key, value in searchResults.items %}
+                            {% if key == "LC"%}
+                                {% for list in value %}
                                 {% include 'includes/tabs.html' %}
+                                {% endfor %}
                             {% endif %}
                         {% endfor %}
                     </div>
@@ -95,11 +101,13 @@ placeholder='{
           <div id="TB" class="tabcontent">
                 <div class="search-tab-block">
                     <div class = "grid-x grid-padding-x search-results">
-                        {% for book in book_list %}
-                            {% if book.slug == "TB"%}
-                                {% include 'includes/tabs.html' %}
-                            {% endif %}
-                        {% endfor %}
+                        {% for key, value in searchResults.items %}
+                        {% if key == "TB"%}
+                            {% for list in value %}
+                            {% include 'includes/tabs.html' %}
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
                     </div>
                 </div>
           </div>
@@ -107,9 +115,11 @@ placeholder='{
           <div id="AB" class="tabcontent">
                 <div class="search-tab-block">
                     <div class = "grid-x grid-padding-x search-results">
-                        {% for book in book_list %}
-                            {% if book.slug == "AB"%}
+                        {% for key, value in searchResults.items %}
+                            {% if key == "AB"%}
+                                {% for list in value %}
                                 {% include 'includes/tabs.html' %}
+                                {% endfor %}
                             {% endif %}
                         {% endfor %}
                     </div>

@@ -124,30 +124,10 @@ class SearchCheckmateView(LoginRequiredMixin, View): #LoginRequiredMixin
             if 'title' in json_book_data:
                 print("There's a title")
                 book_data.title = json_book_data['title']
-            if 'authors' in json_book_data:
-                book_data.author = json_book_data['authors']
+            if 'author' in json_book_data:
+                book_data.authors = [json_book_data['author']]
             if 'ISBN' in json_book_data:
-                book_data.ISBN = json_book_data['ISBN']
-
-            site_name_list = str(company.search_sites).split(",")
-            site_slug_list = []
-            site_list = []
-            for site_name in site_name_list:
-                Site = {"name": site_name, "slug": siteToSlug(site_name)}
-                site_list.append(Site)
-                site_slug_list.append(siteToSlug(site_name))
-
-            result_data = {} 
-
-            for site in site_slug_list:
-                result_data[site] = [i for i in (Sort(get_book_site(site).find_book_matches(book_data))) if i[0] > .20]
-
-            context = {
-                'company': company,
-                'searchResults': result_data,
-                'site_list': site_list,
-                'search' : search,
-            }
+                book_data.isbn_13 = json_book_data['ISBN']
             
 
         elif ('searchTitle' in request.POST) or ('searchAuthor' in request.POST) or ('searchISBN' in request.POST):
@@ -156,32 +136,34 @@ class SearchCheckmateView(LoginRequiredMixin, View): #LoginRequiredMixin
             if 'searchTitle' in request.POST:
                 book_data.title = request.POST['searchTitle']
             if 'searchAuthor' in request.POST:
-                book_data.author = request.POST['searchAuthor']
+                book_data.authors = [request.POST['searchAuthor']]
             if 'searchISBN' in request.POST:
-                book_data.ISBN = request.POST['searchISBN']
+                book_data.isbn_13 = request.POST['searchISBN']
             
+        # print(book_data.print_data())
+        # print(pretty_request(request))
 
-            site_name_list = str(company.search_sites).split(",")
-            site_slug_list = []
-            site_list = []
-            for site_name in site_name_list:
-                Site = {"name": site_name, "slug": siteToSlug(site_name)}
-                site_list.append(Site)
-                site_slug_list.append(siteToSlug(site_name))
+        site_name_list = str(company.search_sites).split(",")
+        site_slug_list = []
+        site_list = []
+        for site_name in site_name_list:
+            Site = {"name": site_name, "slug": siteToSlug(site_name)}
+            site_list.append(Site)
+            site_slug_list.append(siteToSlug(site_name))
 
-            result_data = {} 
+        result_data = {} 
 
-            for site in site_slug_list:
-                result_data[site] = [i for i in (Sort(get_book_site(site).find_book_matches(book_data))) if i[0] > .20]
-            
-            print(result_data)
+        for site in site_slug_list:
+            result_data[site] = [i for i in (Sort(get_book_site(site).find_book_matches(book_data))) if i[0] > .20]
+        
+        print(result_data)
 
-            context = {
-                'company': company,
-                'searchResults': result_data,
-                'site_list': site_list,
-                'search' : search,
-            }
+        context = {
+            'company': company,
+            'searchResults': result_data,
+            'site_list': site_list,
+            'search' : search,
+        }
 
         return render(request, 'search_page.html', context)
 
