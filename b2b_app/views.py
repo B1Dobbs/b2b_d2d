@@ -118,3 +118,9 @@ def pretty_request(request):
         body=request.body,
     )
 
+def login(request):
+    template = loader.get_template('login.html')
+    hello = True
+    context = { 'hello': hello,}
+    return HttpResponse(template.render(context, request))
+
