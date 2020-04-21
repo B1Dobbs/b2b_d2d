@@ -118,7 +118,7 @@ class SearchCheckmateView(LoginRequiredMixin, View): #LoginRequiredMixin
             search = True
             searchJSON = request.POST['searchJSON']
             json_book_data = json.loads(searchJSON)
-            print("Book Data:" + str(json_book_data))
+            # print("Book Data:" + str(json_book_data))
 
             book_data = BookData()
             if 'title' in json_book_data:
@@ -133,15 +133,12 @@ class SearchCheckmateView(LoginRequiredMixin, View): #LoginRequiredMixin
         elif ('searchTitle' in request.POST) or ('searchAuthor' in request.POST) or ('searchISBN' in request.POST):
             search = True
             book_data = BookData()
-            if 'searchTitle' in request.POST:
+            if request.POST['searchTitle'] != "":
                 book_data.title = request.POST['searchTitle']
-            if 'searchAuthor' in request.POST:
+            if request.POST['searchAuthor'] != "":
                 book_data.authors = [request.POST['searchAuthor']]
-            if 'searchISBN' in request.POST:
+            if request.POST['searchISBN'] != "":
                 book_data.isbn_13 = request.POST['searchISBN']
-            
-        # print(book_data.print_data())
-        # print(pretty_request(request))
 
         site_name_list = str(company.search_sites).split(",")
         site_slug_list = []
@@ -155,7 +152,7 @@ class SearchCheckmateView(LoginRequiredMixin, View): #LoginRequiredMixin
 
         for site in site_slug_list:
             result_data[site] = [i for i in (Sort(get_book_site(site).find_book_matches(book_data))) if i[0] > .20]
-        
+            
         print(result_data)
 
         context = {

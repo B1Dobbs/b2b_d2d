@@ -42,90 +42,27 @@ placeholder='{
 
           {% if search %}
 
-          <div id="GB" class="tabcontent">
+          {%for site in site_list%}
+            <div id="{{ site.slug }}" class="tabcontent">
                 <div class="search-tab-block">
                     <div class = "grid-x grid-padding-x search-results">
                         {% for key, value in searchResults.items %}
-                            {% if key == "GB"%}
+                            {% if key == site.slug %}
+                            {% if value %}
                                 {% for list in value %}
                                 {% include 'includes/tabs.html' %}
                                 {% endfor %}
+                            {% else %}
+                            Nothing found for {{ site.name }}.
+                            {% endif %}
                             {% endif %}
                         {% endfor %}
                     </div>
                 </div>
-          </div>
-          
-          <div id="KB" class="tabcontent">
-                <div class="search-tab-block">
-                    <div class = "grid-x grid-padding-x search-results">
-                        {% for key, value in searchResults.items %}
-                            {% if key == "KB"%}
-                                {% for list in value %}
-                                {% include 'includes/tabs.html' %}
-                                {% endfor %}
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                </div>
-          </div>
-          
-          <div id="SD" class="tabcontent">
-                <div class="search-tab-block">
-                    <div class = "grid-x grid-padding-x search-results">
-                        {% for key, value in searchResults.items %}
-                        {% if key == "SD"%}
-                            {% for list in value %}
-                            {% include 'includes/tabs.html' %}
-                            {% endfor %}
-                        {% endif %}
-                    {% endfor %}
-                    </div>
-                </div>
-          </div>
+            </div>
+          {% endfor %}
 
-          <div id="LC" class="tabcontent">
-                <div class="search-tab-block">
-                    <div class = "grid-x grid-padding-x search-results">
-                        {% for key, value in searchResults.items %}
-                            {% if key == "LC"%}
-                                {% for list in value %}
-                                {% include 'includes/tabs.html' %}
-                                {% endfor %}
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                </div>
-          </div>
-
-          <div id="TB" class="tabcontent">
-                <div class="search-tab-block">
-                    <div class = "grid-x grid-padding-x search-results">
-                        {% for key, value in searchResults.items %}
-                        {% if key == "TB"%}
-                            {% for list in value %}
-                            {% include 'includes/tabs.html' %}
-                            {% endfor %}
-                        {% endif %}
-                    {% endfor %}
-                    </div>
-                </div>
-          </div>
-
-          <div id="AB" class="tabcontent">
-                <div class="search-tab-block">
-                    <div class = "grid-x grid-padding-x search-results">
-                        {% for key, value in searchResults.items %}
-                            {% if key == "AB"%}
-                                {% for list in value %}
-                                {% include 'includes/tabs.html' %}
-                                {% endfor %}
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                </div>
-          </div>
-
+        
           {% else %}
           <div id="NoResults" style="text-align: center;">
                 <div class="search-tab-block">
