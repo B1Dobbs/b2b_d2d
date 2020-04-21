@@ -93,9 +93,6 @@ class SearchCheckmateView(LoginRequiredMixin, View): #LoginRequiredMixin
     def get(self, request, **kwargs):
         company = request.user.getCompany()
         search = False
-        # company_name = "Helping Authors Inc."
-        # company_contact = "Catherine Gates"
-        # company_number = "409-550-5500"
         site_list = []
         site_name_list = str(company.search_sites).split(",")
         print(site_name_list)
@@ -207,7 +204,7 @@ class CompanyListView(SuperUserRequiredMixin, ListView):
 
 class ReportingView(TemplateView):
     model = CustomUser
-    template_name = "reporting_view.html"
+    template_name = "company_report.html"
 
     def post(self, request, **kwargs):
         def get_date_list(self, first_m, first_y, second_m, second_y):
