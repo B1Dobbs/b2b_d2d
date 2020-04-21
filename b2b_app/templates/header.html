@@ -36,7 +36,7 @@
                 <p>You will be returned to the login screen.</p>
                 </div>
                 <div class="modal-footer">
-                <a type="button" class="btn btn-default logout" href = {% url 'account_logout' %}>Logout</a>
+                <a type="button" class="btn btn-default logout" href = {% url 'login' %}>Logout</a>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                 </div>
             </div>
@@ -89,10 +89,6 @@
         document.getElementById("reset-btn").style.display = "block";
         document.getElementById("reset-cancel").innerHTML = "Cancel";
     }
-    $(function () {
-    $(".logout").modalForm({formURL: "{% url 'account_logout' %}"});
-
-});
 </script>
  
     

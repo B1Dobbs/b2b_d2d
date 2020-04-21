@@ -32,7 +32,7 @@ class CustomUserCreationForm(UserCreationForm):
 class CustomUserChangeForm(UserChangeForm):
     def __init__(self, *args, **kwargs):
         self.request = kwargs.pop('request', None)
-        super(CustomUserCreationForm, self).__init__(*args, **kwargs)
+        super(CustomUserChangeForm, self).__init__(*args, **kwargs)
     class Meta:
         model = CustomUser
         fields = ('first_name', 'email')
