@@ -8,7 +8,7 @@ from bootstrap_modal_forms.generic import (BSModalLoginView,
                                            BSModalReadView,
                                            BSModalDeleteView)
 from django.urls import reverse_lazy
-from .forms import CompanyForm, UserChangeForm
+from .forms import CompanyForm, CustomUserChangeForm, CustomUserCreationForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.core.paginator import Paginator
@@ -26,8 +26,35 @@ import sys
 # pip install -i https://test.pypi.org/simple/ checkmate-library
 from checkmate_library.checkmate import get_book_site, Scribd, LivrariaCultura, GoogleBooks, TestBookstore, Kobo, Audiobooks
 from checkmate_library.book_data import BookData, Format, ParseStatus
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.views.generic.base import RedirectView
+from django.contrib.auth import logout, login
 # Create your views here.
+
+
+class Redirect(RedirectView):
+    permanent = False
+    query_string = True
+    pattern_name = 'user_redirect'
+
+class SuperUserRequiredMixin(LoginRequiredMixin, UserPassesTestMixin):
+
+    def test_func(self):
+        return self.request.user.is_superuser or self.request.user.is_staff
+
+def user_redirect(request):
+    print(pretty_request(request))
+    if request.user.is_superuser:
+        return HttpResponseRedirect( reverse('company_list'))
+    else: 
+        return HttpResponseRedirect( reverse('search'))
+
+class LogoutView(RedirectView):
+
+    def get(self, request, *args, **kwargs):
+        logout(request)
+        return super(LogoutView, self).get(request, *args, **kwargs)
+
 
 def Sort(tup): #sort 
     return(sorted(tup, key = lambda x: float(x[0]), reverse = True))
@@ -60,8 +87,8 @@ def slugToSite(site):
     elif site =="SD":
         return "Scribd"
 
-class SearchCheckmateView(View): #LoginRequiredMixin
-    # login_url = 'login'
+class SearchCheckmateView(LoginRequiredMixin, View): #LoginRequiredMixin
+    login_url = 'login'
     
     def get(self, request, **kwargs):
         company = request.user.getCompany()
@@ -163,7 +190,7 @@ class SearchCheckmateView(View): #LoginRequiredMixin
 
 
 
-class CompanyListView(LoginRequiredMixin, ListView):
+class CompanyListView(SuperUserRequiredMixin, ListView):
     login_url = 'login'
     model = Company
     template_name = "company_list_page.html"
@@ -369,14 +396,14 @@ class ReportingView(TemplateView):
         return context
 
 
-class CompanyCreateView(LoginRequiredMixin, BSModalCreateView):
+class CompanyCreateView(SuperUserRequiredMixin, BSModalCreateView):
     login_url = 'login'
     form_class = CompanyForm
     template_name = 'company/create_company.html'
     success_message = 'Success: Company was created.'
     success_url = reverse_lazy('company_list')
 
-class CompanyUpdateView(LoginRequiredMixin, BSModalUpdateView):
+class CompanyUpdateView(SuperUserRequiredMixin, BSModalUpdateView):
     login_url = 'login'
     model = Company
     form_class = CompanyForm
@@ -391,16 +418,15 @@ class CompanyDetailView(LoginRequiredMixin, DetailView):
     login_url = 'login'
     model = Company
     template = loader.get_template('company_detail.html')
-    
     def get(self, request, *args, **kwargs):
         company = get_object_or_404(Company, pk=kwargs['pk'])
         users = CustomUser.objects.filter(company = kwargs['pk'])
         context = {'company': company, 'users' : users}
         return render(request, 'company_detail.html', context)
 
-class UserCreateView(LoginRequiredMixin, BSModalCreateView):
+class UserCreateView(SuperUserRequiredMixin, BSModalCreateView):
     login_url = 'login'
-    form_class = CustomUser
+    form_class = CustomUserCreationForm
     template_name = 'user/create_user.html'
     success_message = 'Success: User was created.'
 
@@ -413,11 +439,13 @@ class UserCreateView(LoginRequiredMixin, BSModalCreateView):
     def form_valid(self, form):
         form.instance.company = self.company
         return super().form_valid(form)
+    def get(self, request, **kwargs):
+        return super(UserCreateView, self).get(self, **kwargs)
 
-class UserUpdateView(LoginRequiredMixin, BSModalUpdateView):
+class UserUpdateView(SuperUserRequiredMixin, BSModalUpdateView):
     login_url = 'login'
     model = CustomUser
-    form_class = CustomUser
+    form_class = CustomUserChangeForm
     template_name = 'user/update_user.html'
     success_message = 'Success: User was updated.'
 
@@ -426,7 +454,7 @@ class UserUpdateView(LoginRequiredMixin, BSModalUpdateView):
         return super(UserUpdateView, self).post(request, **kwargs)
 
 
-class UserDeleteView(LoginRequiredMixin, BSModalDeleteView):
+class UserDeleteView(SuperUserRequiredMixin, BSModalDeleteView):
     login_url = 'login'
     model = CustomUser
     template_name = 'user/delete_user.html'
@@ -460,5 +488,3 @@ def pretty_request(request):
     )
 
 
-class LoginView(TemplateView):
-    template_name = 'user/login.html'

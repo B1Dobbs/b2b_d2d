@@ -232,8 +232,7 @@ button:hover {
 
 .users_list table{
     border-collapse: collapse;
-    width: auto;
-    background-color: #f7f6f6;
+    background-color: #1B255A;
 }
 
 .users_list tr{

@@ -10,11 +10,15 @@
         </div> -->
         <div>
         <div class="link">
+            {% if user.is_superuser %}
             <button><a href="/../company" class = "labels"> &#x2190 Profiles</a></button>
+            {% endif %}
         </div>
         <div class = "details-block">
         <span id = "title" class = "title"> <strong>{{ company.name }} </strong></span>
+        {% if user.is_superuser %}
         <button class="update-company" type="button" name="button" data-id="{% url 'update_company' company.pk %}"><span><i class='fas fa-pen icons'></i></span></button>
+        {% endif %}
         <div class="indent">
             <span class = "labels">Contact Person </span>
             <span class = "details" id = "contact">{{ company.contact_person }}</span>
@@ -41,7 +45,9 @@
             <div>
                 <span class = "title user-title">Users</span>
                 <div class = "button_padding create-user">
+                    {% if user.is_superuser %}
                     <button class="create-user button_css" type="button" name="button">ADD USER</button>
+                    {% endif %}
                 </div>
                 
             </div>
@@ -51,14 +57,20 @@
     <div class="users_list ">
         <table>
             <tr class="headers">
+                <th>Username</th>
                 <th>Name</th>
                 <th>Email</th>
+                {% if user.is_superuser %}
                 <th>Actions</th>
+                {% endif %}
             </tr>
-            {% for user in users %}
-            <tr class="details">    
-                <td>{{user.name}}</td>
-                <td>{{user.email}}</td>
+            {% for company_user in users %}
+               
+            <tr class="details">   
+                <td>{{company_user.username}}</td> 
+                <td>{{company_user.first_name}} {{company_user.last_name}}</td>
+                <td>{{company_user.email}}</td>
+                {% if user.is_superuser %}
                 <td>
                     <button type="button" class="update-user" data-id="{% url 'update_user' company.pk user.pk %}">
                         <i class='fas fa-pen icons'></i><span>Edit</span>
@@ -67,8 +79,11 @@
                     <button type="button" class="delete-user" data-id="{% url 'delete_user' company.pk user.pk %}">
                         <i class='fas fa-trash icons'></i><span>Delete</span>
                     </button>
+                
                 </td>
+                {% endif %}
             </tr>
+            
         {% endfor %}
         </table>
     {% else %}
