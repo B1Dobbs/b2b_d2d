@@ -1,14 +1,14 @@
 body {
-    background-color: #f7f6f6;
+    /* background-color: #F5F5F5!important; */ /*Use this to make background gray*/
+    position: absolute;
+    width: 100%;
 }
 
 .title_bar {
     overflow: hidden;
     background-color: #1B255A;
-    left: 0;
-    right: 0;
     top: 0;
-    position: absolute;
+    width: 100%;
 }
 
 .title_bar h1{
@@ -44,20 +44,31 @@ hr {
 .details-block {
     width: 80%;
     margin: auto;
-    margin-top: 25px;
+    margin-top: 40px;
     padding: 10px;
     display: block;
     align-items: center;
     justify-content: center;
+    display: inline-block;
 }
 
-.link {
-    width: 80%;
-    margin: auto;
-    margin-top: 75px;
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    height: 100%;
     display: block;
     align-items: center;
     justify-content: center;
+    max-width: 1000px;
+    background-color: white;
+}
+
+.link {
+    padding: 10px;
+    background-color: white !important;
+    display: inline-block;
+    vertical-align: top;
 }
 
 span .more-text {
@@ -69,7 +80,7 @@ span .more-text {
 }
 
 .labels {
-    font-size: 12px;
+    font-size: 15px;
     font-family: 'Roboto Condensed', sans-serif;
     color: #929292;
     padding-right: 10px;
@@ -78,7 +89,7 @@ span .more-text {
 .title {
     font-family: 'Playfair Display', serif;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 30px;
     color: #1c2559;
 }
 
@@ -89,7 +100,7 @@ span .more-text {
 
 .details {
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
+    font-size: 15px;
     color: #1c2559;
     text-align: left;
 }
@@ -168,6 +179,11 @@ button:hover {
     font-size: 24px;
 }
 
+.create-user {
+    margin-top: 20px;
+    float: right;
+}
+
 .description {
     width: 100%;
     display: block;
@@ -206,7 +222,7 @@ button:hover {
 
 .button_css{
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 9px;
+    font-size: 12px;
     padding: 8px;
     width: auto;
     font-weight: normal;
@@ -222,17 +238,18 @@ button:hover {
 
 .user-title {
     margin-top: 50px;
+    display: inline-block;
 }
 
 .users_list{
-    margin-left: 40px;
+    margin: auto;
     margin-top: 20px;
     width: 100%;
 }
 
 .users_list table{
     border-collapse: collapse;
-    width: auto;
+    width: 100%;
     background-color: #f7f6f6;
 }
 
@@ -383,6 +400,11 @@ button:hover {
     background-color: #f7f6f6;
 }
 
+.site_tabs {
+    background-color: #1c2559;
+    padding: 15px;
+    color: white;
+}
 
 .profile-icon {
     color: #ef320a;
@@ -399,67 +421,6 @@ button:hover {
 }
 
 .company {
-    font-size: 50px;
+    width: 300px;
 }
 
-.tab {
-    margin-left: 7%;
-    display: inline-block;
-    width: 80%;
-    padding: 11.5px;
-  }
-  
-  .tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 15px;
-    transition: 0.3s;
-    font-size: 17px;
-    background-color: #1c2559;
-    color: white;
-  }
-
-  .tablinks {
-      margin-right: 5px;
-  }
-  
-  .tab button:hover {
-    background-color: white;
-    color: #1c2559;
-  }
-  
-  .tab button.active {
-    background-color: white;
-    padding: 15px;
-    color: #1c2559;
-  }
-  
-  .tabcontent {
-    display: none;
-    text-align: center;
-  }
-
-  .NoResults {
-      margin: 0px;
-  }
-
-  .searching {
-      margin-bottom: 50px;
-  }
-
-  .book_padding {
-      padding-top: 35px;
-  }
-
-  .image-constraints {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  hr {
-    color: #1c2559;
-  }

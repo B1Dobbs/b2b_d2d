@@ -3,6 +3,7 @@ body {
     box-sizing: none;
 }
 
+<<<<<<< HEAD
 .date-box{
     display: inline-block;
     white-space: nowrap;
@@ -51,6 +52,8 @@ body {
 
 }
 
+=======
+>>>>>>> 152_reportingPage
 .active_page{
     border-bottom: 2px solid #ef320a!important;
 }

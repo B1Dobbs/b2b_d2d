@@ -1,0 +1,92 @@
+{%load static%}
+    <div class="title_bar"> 
+            <img src="{% static 'Images/d2d-logo.png' %}">
+            <span class="navigation">
+            <a href="{% url 'search' %}">Search</a>
+            <a href="{% url 'company_list' %}" class="active_page">Profiles</a>
+            <!-- <a href="">Reporting</a> -->
+            <div class="dropdown-exit" onmouseout="normalImg(this)"></div>
+            <div class="dropdown" id="dropdown">
+                    <i  class="fas fa-user-circle user-circle" id="dropdown" onmouseover="bigImg(this)"></i>
+                <div class="dropdown-content" id="dropdown-div" onmouseover="bigImg(this)">
+                    <div class="arrow-div">
+                        <div class="arrow-up"></div>
+                    </div>
+                    <!-- Uncomment and change 1 to company.pk-->
+                    <!-- <a href="{% url 'company_detail' 1 %}">Profile</a> -->
+                    <a class="reset" data-toggle="modal" data-target="#reset-password" href="#">Reset Password</a>
+                    <a class="logout" data-toggle="modal" data-target="#logout">Logout</a>
+                </div>
+            </div>
+            </div>
+        </span> 
+        <!-- LOGOUT MODAL -->
+        <div class="modal fade" id="logout" role="dialog">
+            <div class="modal-dialog">
+            
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                <h4 class="modal-title">Logout</h4>
+                </div>
+                <div class="modal-body">
+                <p>You will be returned to the login screen.</p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default">Logout</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+        
+        <!-- RESET PASSWORD MODAL -->
+        <div class="modal fade" id="reset-password" role="dialog">
+            <div class="modal-dialog">
+            
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                <h4 class="modal-title">Reset Password</h4>
+                </div>
+                <div class="modal-body">
+                <p id="confirm-reset">Are you sure you want to reset your password?</p>    
+                <p id="send-email" style="display: none;">A link to reset your password has been sent to your email.</p>
+                </div>
+                <div class="modal-footer">
+                <button onclick="sendEmail()" id="reset-btn" type="button" class="btn btn-default">Reset</button>
+                <button onclick="resetPasswordPopup()" id="reset-cancel" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+
+    function bigImg(x) {
+        document.getElementById("dropdown-div").style.visibility = "visible";  
+    }
+
+    function normalImg(x) {
+        document.getElementById("dropdown-div").style.visibility = "hidden";
+    }
+
+    function sendEmail() {
+        document.getElementById("send-email").style.display = "block";
+        document.getElementById("confirm-reset").style.display = "none";
+        document.getElementById("reset-btn").style.display = "none";
+        document.getElementById("reset-cancel").innerHTML = "Close";
+    }
+
+    function resetPasswordPopup() {
+        document.getElementById("send-email").style.display = "none";
+        document.getElementById("confirm-reset").style.display = "block";
+        document.getElementById("reset-btn").style.display = "block";
+        document.getElementById("reset-cancel").innerHTML = "Cancel";
+    }
+
+</script>
+ 
+    

@@ -5,9 +5,9 @@
   {% csrf_token %}
 
   <div class="modal-header">
-    <div class="center">
-      <h3 class="modal-title">Edit User</h3>
-    </div>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
   </div>
 
   <div class="modal-body">
@@ -20,10 +20,8 @@
 
     {% for field in form %}
       <div class="form-group">
-        <label class="popup-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
-        <div class="popup-text">
-        {% render_field field class="form-control" placeholder=field.label%}
-        </div>
+        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {% render_field field class="form-control" placeholder=field.label %}
         <div class="{% if field.errors %} invalid{% endif %}">
           {% for error in field.errors %}
             <p class="help-block">{{ error }}</p>
@@ -35,8 +33,8 @@
 
   <div class="modal-footer">
     <!-- DO NOT CHANGE THIS BUTTON-->
-    <input type="submit" value="Update" class="submit btn btn-primary add-company">
-    <!-- <input type="submit" class="submit-btn popup-button popup-save" value="UPDATE"></input> -->
+    <input type="submit" value="UPDATE" class="submit btn btn-primary add-company">
+    <!-- <button type="button" class="submit-btn popup-button popup-save">UPDATE</button> --> 
     <button type="button" class="popup-button" data-dismiss="modal" aria-label="Close">CANCEL
     </button>
   </div>

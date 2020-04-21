@@ -6,16 +6,6 @@
     {% include "_modal.html" %}           
 
 
-    <div class="title_bar"> 
-        <img src="{% static 'Images/d2d-logo.png' %}">
-        <span class="navigation">
-            <a href="{% url 'company_list' %}" class="active_page">Profiles</a>
-            <a href="">Reporting</a>
-            <i class="fas fa-user-circle user-circle"></i>             
-        </span>      
-    </div>
-
-
     <div class='detailz'>
 
         <div class="title">Company Profiles
@@ -36,9 +26,9 @@
 
                 {% for company in company_list %}
                 <tr>
-                    <td><a href="/company/{{company.pk}}"><strong>{{company.name}}</strong></a></td>
-                    <td class="center">{{company.contactNumber}}</td>
-                    <td class="center">Report</td>
+                    <td><a href="{% url 'company_detail' company.pk %}"><strong>{{company.name}}</strong></a></td>
+                    <td class="center">{{company.contact_number}}</td>
+                    <td class="center"><a href="{% url 'report' company.pk %}"><strong>Report</strong></a></td>
                 </tr>
                 {% endfor %}
             </table>

@@ -24,13 +24,88 @@
                 <span style="float: right; padding-right: 150px;">To</span>
             </div>
             <br>
-
-            <span class="inline-block style">
-                <input type="month" id="start" name="start" min="2018-01" max="2021-12" value="2018-01" class="date-box" style="width: 175px; margin-left: 20px;">
-                <input type="month" id="start" name="start" min="2018-01" max="2021-12" value="2018-02" class="date-box" style="width: 175px; margin-left: 115px;">
+            <span style="padding-left: 20%">
+                <form method="POST" action="{% url 'report' pk %}">
+                    {% csrf_token %}
+                    <select name="first_month" style="width:15%;">
+                        {% for month in month_list %}
+                            <option value = "{{ month }}">{{ month }}</option>
+                        {% endfor %}
+                    </select>
+                    <select name="first_year" style="width:15%">
+                        {% for year in year_list %}
+                            <option value = "{{ year }}">{{ year }}</option>
+                        {% endfor %}
+                    </select>
+                    <span style="padding-left: 20%">
+                    <select name="second_month" style="width:15%">
+                        {% for month in month_list %}
+                            <option value = "{{ month }}">{{ month }}</option>
+                        {% endfor %}
+                    </select>
+                    <select name="second_year" style="width:15%">
+                        {% for year in year_list %}
+                            <option value = "{{ year }}">{{ year }}</option>
+                        {% endfor %}
+                    </select>
+                    <input type="submit" value="Submit">
+                    </form>
+                </span>
             </span>
-
         </div>
+
+
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                margin-left:auto; 
+                margin-right:auto;
+            }
+            th, td {
+                padding: 5px;
+            }
+            th {
+              text-align: left;
+            }
+            </style>
+
+        <ul>
+        {% if user_split %}
+        <table style="width:35%">
+        <h1 style="text-align: center;">All Months</h1>
+            <tr>
+            <th>User</th>
+            <th>Query Count</th>
+            <th>Percentage</th>
+            </tr>
+        {% for user, query_num in total_user_queries.items %}
+            <tr>
+            <td>{{ user }}</td>
+            <td>{{ query_num.0 }}</td>
+            <td>{{ query_num.1 }}%</td>
+            </tr>
+        {% endfor %}
+        </table>
+        {% for month, users in user_split.items %}    
+        <table style="width:35%">
+            <h1 style="text-align: center;">{{ month }}</h1>
+                <tr>
+                <th>User</th>
+                <th>Query Count</th>
+                <th>Percentage</th>
+            </tr>
+        {% for user, query_num in users.items %}
+            <tr>
+            <td>{{ user }}</td>
+            <td>{{ query_num.0 }}</td>
+            <td>{{ query_num.1 }}%</td>
+            </tr>
+        {% endfor %}
+        </table>
+        {% endfor %}
+        {% endif %}
+        </ul>
+
     </div>
 
 {% endblock content %}

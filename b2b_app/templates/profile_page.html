@@ -8,43 +8,63 @@
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto|Roboto+Condensed&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="{% static 'style.css'%}">
+        <link rel="stylesheet" type="text/css" href="{% static 'header.css'%}">
+        <link rel="stylesheet" type="text/css" href="{% static 'pages.css'%}">
 
     </head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <body>
     {% block content %}
-    <div class="title_bar">
-       <!-- <img src="d2d-logo.png">-->
-       <p style="color: white">D2D</p>
+    <div class="title_bar">        
+        <img src="{% static 'images/d2d-logo.png' %}" class="logo">
+        <span class="nav">
+            <h1>Profiles</h1>
+            <h1>Reporting</h1>
+            <i class="fas fa-user-circle user-circle"></i>             
+        </span>      
     </div>
     <div class="link">
-        <button><a href="../../companyProfiles" class = "labels"> &#x2190 Profiles</a></button>
         <div class = "details-block">
-        <span id = "title" class = "title"> <strong>{{ company_name }} </strong></span>
-        <span><i class='fas fa-pen icons'></i>
-        <i class='fas fa-trash icons'></i></span>
-            <div class="indent">
-                <span class = "labels">Contact Person </span>
-                <span class = "details" id = "contact">{{ company_contact }}</span>
-                <br>
-                <span class = "labels">Company Number </span>
-                <span class = "details" id = "number"> {{ company_number }}</span>
-            </div>
-            <div class = "grid-x grid-padding-x profile-custom">
-                <div class = "large-6 medium-6 small-12 cell">
-                    <span class = "labels">Searchable Websites</span>
-                        {% for site in site_list %}
-                            <p class="details bolded">{{site}}</p>
-                        {% endfor %}
+        {% if editMode %}
+            <form action="/b2b/" method="post">
+                <input id = "title" class = "title company" type="text" value="{{ company_name }}">
+                <label class="labels" for="your_name">Contact Person </label>
+                <input class="details person" id="your_name" type="text" name="your_name" value="{{ company_contact }}">
+                <label class="labels" for="your_name">Contact Number </label>
+                <input class="details number" id="your_name" type="text" name="your_name" value="{{ company_number }}">
+                <button class="button_css" type="submit">SAVE</button>
+                <button class="button_css" type="submit">CANCEL</button>
+            </form>
+
+        {% else %}
+            <button><a href="../../companyProfiles" class = "labels"> &#x2190 Profiles</a></button>
+            <div class = "details-block">
+            <span id = "title" class = "title"> <strong>{{ company_name }} </strong></span>
+            <span><i class='fas fa-pen icons'></i>
+            <i class='fas fa-trash icons'></i></span>
+                <div class="indent">
+                    <span class = "labels">Contact Person </span>
+                    <span class = "details" id = "contact">{{ company_contact }}</span>
+                    <br>
+                    <span class = "labels">Company Number </span>
+                    <span class = "details" id = "number"> {{ company_number }}</span>
                 </div>
-                <div class = "small-12 medium-6 large-6 cell">
-                        <span class = "labels">Book Formats </span>
-                        {% for bookFormat in bookFormat_list %}
-                            <p class="details bolded">{{bookFormat}}</p>
-                        {% endfor %}
+                <div class = "grid-x grid-padding-x profile-custom">
+                    <div class = "large-6 medium-6 small-12 cell">
+                        <span class = "labels">Searchable Websites</span>
+                            {% for site in site_list %}
+                                <p class="details bolded">{{site}}</p>
+                            {% endfor %}
+                    </div>
+                    <div class = "small-12 medium-6 large-6 cell">
+                            <span class = "labels">Book Formats </span>
+                            {% for bookFormat in bookFormat_list %}
+                                <p class="details bolded">{{bookFormat}}</p>
+                            {% endfor %}
+                    </div>
                 </div>
-            </div>
+        {% endif %}
             <div class = "grid-x grid-padding-x">
                 <div class = "large-8 medium-8 small-6 cell user-title">
                     <span class = "title">Users</span>
