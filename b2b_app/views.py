@@ -240,4 +240,4 @@ def pretty_request(request):
 
 
 class LoginView(TemplateView):
-    template_name = 'user/login.html'
+    template_name = 'login.html'

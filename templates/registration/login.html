@@ -1,36 +1,68 @@
 
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    {% block title %}<title>B2B Site</title>{% endblock %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto|Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+  </head>
+
+  <body class=" login-background">
+
 {% block content %}
 
-  {% if form.errors %}
-    <p>Your username and password didn't match. Please try again.</p>
-  {% endif %}
+<div class="content">
+  <div class="title_bar"> 
+      <img src="{% static 'Images/d2d-logo.png' %}">
+  </div>
+
+    <div class="center">
+        <div class="login-box">
+          <h1 class="login-title">Log in</h1>
+          <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <table>
+              <tr>
+                <td class="login-text">{{ form.username }}</td>
+              </tr>
+              <tr>
+                <td class="login-text">{{ form.password }}</td>
+              </tr>
+            </table>
+            <div class='center'>
+              {% if form.errors %}
+                <p class="login-text navy">Your username and password didn't match. Please try again.</p>
+              {% endif %}
+              
+              {% if next %}
+                {% if user.is_authenticated %}
+                  <p class="login-text navy">Your account doesn't have access to this page. To proceed,
+                  please login with an account that has access.</p>
+                {% else %}
+                  <p class="login-text navy">Please login to see this page.</p>
+                {% endif %}
+              {% endif %}
+            </div>
+            <input type="submit" class="login-button" value="LOG IN" />
+            <input type="hidden" name="next" value="{{ next }}" />
+          </form>
+          
+          {# Assumes you setup the password_reset view in your URLconf #}
+          <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+        </div>
+    </div>
+</div>
   
-  {% if next %}
-    {% if user.is_authenticated %}
-      <p>Your account doesn't have access to this page. To proceed,
-      please login with an account that has access.</p>
-    {% else %}
-      <p>Please login to see this page.</p>
-    {% endif %}
-  {% endif %}
-  
-  <form method="post" action="{% url 'login' %}">
-    {% csrf_token %}
-    <table>
-      <tr>
-        <td>{{ form.username.label_tag }}</td>
-        <td>{{ form.username }}</td>
-      </tr>
-      <tr>
-        <td>{{ form.password.label_tag }}</td>
-        <td>{{ form.password }}</td>
-      </tr>
-    </table>
-    <input type="submit" value="login" />
-    <input type="hidden" name="next" value="{{ next }}" />
-  </form>
-  
-  {# Assumes you setup the password_reset view in your URLconf #}
-  <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+
   
 {% endblock %}
+  </body>
