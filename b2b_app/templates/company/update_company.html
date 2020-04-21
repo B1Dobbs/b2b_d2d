@@ -1,4 +1,5 @@
 {% load widget_tweaks %}
+{% load static %}
 
 <form method="post" action="">
   {% csrf_token %}
@@ -31,7 +32,11 @@
   </div>
 
   <div class="modal-footer">
-    <button type="button" class="submit-btn btn btn-primary">SAVE</button>
+    <!-- DO NOT CHANGE THIS BUTTON-->
+    <input type="submit" value="UPDATE" class="submit btn btn-primary add-company">
+    <!-- <button type="button" class="submit-btn popup-button popup-save">UPDATE</button> --> 
+    <button type="button" class="popup-button" data-dismiss="modal" aria-label="Close">CANCEL
+    </button>
   </div>
 
 </form>
