@@ -1,3 +1,9 @@
+{% extends 'form_background.html' %}
+
+{%load static%}
+
+{% block content %} 
+    {% include "_modal.html" %} 
 <h1>{{company.name}}</h1>
 <style>
 table, th, td {
@@ -72,3 +78,4 @@ th {
 {% endfor %}
 {% endif %}
 </ul>
+{% endblock content %}
