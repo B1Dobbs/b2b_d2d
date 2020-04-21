@@ -50,6 +50,16 @@ class CompanyDetailView(DetailView):
         context = {'company': company, 'users' : users}
         return render(request, 'company_detail.html', context)
 
+class CompanyReportView(DetailView):
+    model = Company
+    template = loader.get_template('company_report.html')
+    
+    def get(self, request, *args, **kwargs):
+        company = get_object_or_404(Company, pk=kwargs['pk'])
+        users = User.objects.filter(company = kwargs['pk'])
+        context = {'company': company, 'users' : users}
+        return render(request, 'company_report.html', context)
+
 class UserCreateView(BSModalCreateView):
     form_class = UserForm
     template_name = 'user/create_user.html'

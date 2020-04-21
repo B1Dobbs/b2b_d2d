@@ -1,0 +1,36 @@
+{% extends 'form_background.html' %}
+
+{%load static%}
+
+{% block content %} 
+    {% include "_modal.html" %}           
+    <div style="min-width:700px;white-space: nowrap;">
+
+        <!-- <div class="title_bar"> 
+            <img src="{% static 'Images/d2d-logo.png' %}">
+            <span class="navigation">
+                <a href="{% url 'company_list' %}">Profiles</a>
+                <a href="" class="active_page">Reporting</a>
+                <i class="fas fa-user-circle user-circle"></i>             
+            </span>      
+        </div> -->
+
+
+        <div class='detailz'>
+            <div class="title">Select a Data Range to Generate a Report</div>     
+            
+            <div class="range">
+                <span>From</span>
+                <span style="float: right; padding-right: 150px;">To</span>
+            </div>
+            <br>
+
+            <span class="inline-block style">
+                <input type="month" id="start" name="start" min="2018-01" max="2021-12" value="2018-01" class="date-box" style="width: 175px; margin-left: 20px;">
+                <input type="month" id="start" name="start" min="2018-01" max="2021-12" value="2018-02" class="date-box" style="width: 175px; margin-left: 115px;">
+            </span>
+
+        </div>
+    </div>
+
+{% endblock content %}
