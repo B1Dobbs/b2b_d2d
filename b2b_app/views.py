@@ -86,19 +86,42 @@ class SearchCheckmateView(View): #LoginRequiredMixin
 
     def post(self, request, **kwargs):
         company = request.user.getCompany()
+        newQuery = Query()
+        newQuery.user = request.user
+        newQuery.save()
 
         if 'searchJSON' in request.POST:
             search = True
             searchJSON = request.POST['searchJSON']
-            book_data = json.loads(searchJSON)
-            print("Book Data:" + str(book_data))
+            json_book_data = json.loads(searchJSON)
+            print("Book Data:" + str(json_book_data))
 
-            result_data = []
-            #for site in Company.search_sites.choices:
-                #result_data[site] = get_book_site(site).find_book_matches(book_data)
-                
+            book_data = BookData()
+            if 'title' in json_book_data:
+                print("There's a title")
+                book_data.title = json_book_data['title']
+            if 'authors' in json_book_data:
+                book_data.author = json_book_data['authors']
+            if 'ISBN' in json_book_data:
+                book_data.ISBN = json_book_data['ISBN']
+
+            site_name_list = str(company.search_sites).split(",")
+            site_slug_list = []
+            site_list = []
+            for site_name in site_name_list:
+                Site = {"name": site_name, "slug": siteToSlug(site_name)}
+                site_list.append(Site)
+                site_slug_list.append(siteToSlug(site_name))
+
+            result_data = {} 
+
+            for site in site_slug_list:
+                result_data[site] = [i for i in (Sort(get_book_site(site).find_book_matches(book_data))) if i[0] > .20]
+
             context = {
+                'company': company,
                 'searchResults': result_data,
+                'site_list': site_list,
                 'search' : search,
             }
             
@@ -121,8 +144,6 @@ class SearchCheckmateView(View): #LoginRequiredMixin
                 Site = {"name": site_name, "slug": siteToSlug(site_name)}
                 site_list.append(Site)
                 site_slug_list.append(siteToSlug(site_name))
-    
-            print(site_slug_list)
 
             result_data = {} 
 
