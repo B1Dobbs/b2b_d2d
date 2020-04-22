@@ -2,7 +2,7 @@
     {% if book.title %}
 <div class = "large-6 medium-6 small-12 cell book_padding">
     <img class="image-constraints" src="{{ book.image_url }}">
-    <a href="{{ book.url }}" class = "details bolded" target="_blank">{{book.title}}</a>
+    <p class = "details bolded"><a href="{{ book.url }}" class = "details bolded" target="_blank">{{book.title}}</a></p>
     {% for author in book.authors %}
     <p class = "details">{{author}}</p>
     {% endfor %}
