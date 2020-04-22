@@ -281,7 +281,7 @@ class ReportingView(TemplateView):
                 for users in user_list:
                     query_num = Query.objects.filter(user = users, date__icontains = month).count()
                     query_count += query_num
-                    user_queries_list += str(query_num)
+                    user_queries_list.append(query_num)
                 
                 user_dict = get_user_dict(self, user_list, user_queries_list, query_count)
 
