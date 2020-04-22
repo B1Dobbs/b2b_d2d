@@ -3,10 +3,14 @@
 <div class = "large-6 medium-6 small-12 cell book_padding">
     <img class="image-constraints" src="{{ book.image_url }}">
     <p class = "details bolded"><a href="{{ book.url }}" class = "details bolded" target="_blank">{{book.title}}</a></p>
-    {% for author in book.authors %}
-    <p class = "details">{{author}}</p>
-    {% endfor %}
+    {% if book.subtitle != None %}
+    <p class = "details">{{book.subtitle}}</p>
+    {% endif %}
     <div class="left">
+        <span class = "labels">Author(s) </span>
+        {% for author in book.authors %}
+        <p class = "details">{{author}}</p>
+        {% endfor %}
         <span class = "labels">Format </span>
         <span class = "details">{{book.format}}</span>
         <br>
