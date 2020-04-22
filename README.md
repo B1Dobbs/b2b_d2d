@@ -32,3 +32,13 @@ To test the tool, input data into the search fields and run a search.
 Once the page has finished loading, click any of the website names to see the search results.
 Use the reporting link to visit a page which generates usage reports for the company.
 Use the icon on the top right to visit the user’s profile, edit information, or log out.
+
+#### Folder Structure
+```
+b2b_d2d \
+  |---api_app \	        - Application for the API
+	|---b2b \             - Settings for the whole project
+	|---b2b_app\		      - Application for B2B Interface
+    |---static \		    - Folder for css
+    |---templates \	    - Folder for templates
+```
