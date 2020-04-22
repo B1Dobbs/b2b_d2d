@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'allauth', 
     'allauth.account', 
     'b2b_app',
+    'api_app'
 ]
 
 MIDDLEWARE = [
