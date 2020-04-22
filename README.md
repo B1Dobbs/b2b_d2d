@@ -6,12 +6,12 @@ Functionality of each branch is determined by branch name
 - **master:** the main release branch<br>
 - **development:** the branch used for integration and testing before merging to master
 - **\<issueID>_\<issueTitle>:** naming scheme for feature branches
--**<issueTitle>** naming scheme for feature branches
+- **<issueTitle>** naming scheme for feature branches
 
 
 ## Setting Up Environment
 
- Run the following commands in the terminal to setup the server
+Run the following commands in the terminal to setup the server
 
 cd b2b_d2d
 pip install -r requirements.txt
