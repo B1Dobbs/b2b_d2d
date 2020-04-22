@@ -13,12 +13,12 @@ Functionality of each branch is determined by branch name
 
 Run the following commands in the terminal to setup the server
 
-git clone https://github.com/B1Dobbs/b2b_d2d.git<br/>
-cd b2b_d2d<br/>
-pip install -r requirements.txt<br/>
-python manage.py makemigrations b2b_app<br/>
-python manage.py migrate<br/>
-Python manage.py createsuperuser<br/>
+1. git clone https://github.com/B1Dobbs/b2b_d2d.git<br/>
+2. cd b2b_d2d<br/>
+3. pip install -r requirements.txt<br/>
+4. python manage.py makemigrations b2b_app<br/>
+5. python manage.py migrate<br/>
+6. python manage.py createsuperuser<br/>
 
 
 ## Testing the Application
