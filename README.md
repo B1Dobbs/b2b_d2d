@@ -37,8 +37,12 @@ Use the icon on the top right to visit the user’s profile, edit information, o
 ```
 b2b_d2d \
   |---api_app \	        - Application for the API
-	|---b2b \             - Settings for the whole project
-	|---b2b_app\		      - Application for B2B Interface
-    |---static \		    - Folder for css
-    |---templates \	    - Folder for templates
+  |---b2b \             - Settings for the whole project
+  |---b2b_app\		- Application for B2B Interface
+    |---static 		- Folder for css
+    |---templates \	- Folder for templates
+    	|---company \ 	- CRUD templates for a company
+	|---user \ 	- CRUD templates for user
+    |---checkmate_test.py - Simple test to test checkmate
+  |---templates \ 	- Templates for django.auth
 ```
