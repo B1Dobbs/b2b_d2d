@@ -18,7 +18,7 @@ docutils==0.16
 idna==2.9
 isbnlib==3.9.10
 keyring==21.2.0
-lxml==4.5.0
+lxml==4.6.3
 numpy==1.18.3
 oauthlib==3.1.0
 onixcheck==0.9.6
